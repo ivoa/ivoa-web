@@ -1,0 +1,7 @@
+/* Style for a public "Proposed Recommendation" */
+
+@import "ivoa_doc.css";
+
+body {
+  background-image: url(/icons/ivoa_pr_v.png);
+}

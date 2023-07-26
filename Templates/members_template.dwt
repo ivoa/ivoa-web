@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>IVOA.net</title>
+<!-- TemplateEndEditable -->
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="all" />
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29466125-2', 'ivoa.net');
+  ga('send', 'pageview');
+
+</script>
+<body>
+<!-- Header -->
+<div id="header">
+  <div class="shell">
+    <!-- Logo -->
+    <h1 id="logo" class="notext"><a href="http://www.ivoa.net"></a></h1>
+    <!-- End Logo -->
+    <!-- Navigation -->
+    <div id="navigation">
+      <ul>
+        
+        <li><a href="http://www.ivoa.net/"><span>Home</span></a></li>
+        <li ><a href="http://www.ivoa.net/astronomers/"><span>Astronomers</span></a></li>
+        <li><a href="http://www.ivoa.net/deployers"><span>Deployers</span></a></li>
+        <li class="active"><a href="http://www.ivoa.net/members/"><span>Members</span></a></li>
+        <li><a href="http://www.ivoa.net/about/"><span>About</span></a></li>
+
+      </ul>
+    </div>
+    <!-- End Navigation -->
+  </div>
+</div>
+<!-- END Header -->
+<!-- Heading -->
+<div id="heading">
+  <div class="shell">
+    <div class="cl">&nbsp;</div>
+    <div class="heading-cnt">
+      <!-- TemplateBeginEditable name="PageTitle" --><h2>This is where the Page Title Goes</h2><!-- TemplateEndEditable -->
+      <!-- TemplateBeginEditable name="PageBody" -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar laoreet justo eu fringilla. Phasellus accumsan augue id neque fringilla dictum. Vestibulum laoreet bibendum augue, vitae venenatis tellus rutrum vel. Fusce vehicula enim id arcu dictum faucibus. In quam massa, tempus at scelerisque eget, tempus at est. Nulla euismod luctus arcu, at volutpat mauris mattis sit amet. In a sagittis purus.</p>
+      <p> Suspendisse elementum fringilla mauris vel bibendum. Pellentesque porttitor semper massa sed ullamcorper. Praesent non est eu risus sodales ullamcorper a eu est. Etiam sagittis, tellus porttitor volutpat pharetra, turpis justo eleifend est, non mattis nunc est sed turpis. Quisque enim ipsum, pellentesque quis ullamcorper non, sodales non massa. Suspendisse aliquet euismod sapien ac porttitor. Maecenas molestie ultrices scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non ligula et nulla mollis accumsan. Aliquam consectetur odio non sapien aliquet ut pharetra justo sodales. Cras faucibus nisi vel velit iaculis nec tempus lacus condimentum. Aenean ut vulputate ante. In at dolor libero, condimentum iaculis dui. Aenean dignissim ante in nisl hendrerit luctus. Duis arcu leo, rutrum ut eleifend eget, luctus vel nibh. </p>
+      <p>Nulla sit amet lacus diam, a lacinia tellus. Duis lacinia est id dui bibendum egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus congue eros et lacus blandit venenatis. Phasellus eu turpis vitae nulla malesuada feugiat at eu sapien. Nunc eleifend nibh et sapien rhoncus eleifend. Cras et dui sed massa porttitor condimentum eget a ipsum. Praesent at mi nunc, ut dignissim erat. Sed congue eleifend nulla a fermentum. </p>
+      <p>Cras vulputate lorem ac ligula euismod in malesuada nulla blandit. Phasellus molestie, ante sed elementum lacinia, erat orci rhoncus leo, ullamcorper dignissim mi nisl vitae magna. Suspendisse sit amet quam ut quam consequat lobortis. Mauris faucibus semper ante. Pellentesque pretium ligula mauris, vel aliquam nibh. In suscipit ullamcorper urna ut euismod. Integer gravida elit ac tellus pellentesque varius. Duis porttitor pulvinar leo at facilisis. Nulla commodo ante congue libero imperdiet vel rutrum elit facilisis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent non posuere erat. Pellentesque eleifend ipsum elementum eros auctor elementum. </p>
+      <p>In hac habitasse platea dictumst. Nunc id sapien ut eros sollicitudin egestas pulvinar vel nibh. Curabitur sapien velit, adipiscing vitae posuere ut, pretium luctus tellus. Nam accumsan orci vitae risus fringilla id varius nisl varius. Etiam vel quam odio. Donec elit mauris, posuere id lacinia ut, ornare eu massa. Donec tortor nunc, accumsan nec hendrerit eget, imperdiet ac velit. Pellentesque facilisis luctus aliquet. Vestibulum turpis lectus, congue ornare semper eu, condimentum vel nulla. Praesent pellentesque ipsum non sapien condimentum faucibus. </p>
+      <!-- TemplateEndEditable --></div>
+    <p>&nbsp;</p>
+    <p><img src="https://www.ivoa.net/images/ivoa_logoc2.jpg" alt="" width="238" height="129" align="middle" class="right" /></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><br />
+      <br />
+    <img src="https://www.ivoa.net/images/upcoming_meetings.png" alt="upcoming meetings" width="205" height="25" class="right" /></p>
+    <p>&nbsp;</p>
+    <p align="right"><a href="http://www.sciops.esa.int/index.php?project=CONF2014&amp;page=IVOA2014"><img src="../members/interop_thumbnails/InteropMay2014.png" width="200" height="180" alt="hawaii interop" /></a></p>
+    <p align="right">&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><a href="http://voi.iucaa.ernet.in:9090/InterOp_2011"><span class="right"><a href="http://voi.iucaa.ernet.in:9090/InterOp_2011"></a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <div class="cl"><span class="right">&nbsp;</span></div>
+  </div>
+</div>
+<span class="right">
+<!-- End Heading -->
+<!-- Features -->
+</span>
+<div id="features">
+  <div class="shell">
+    <div class="features-cnt">
+      <div class="cl"><span class="right">&nbsp;</span></div>
+      <!-- Feature 1 -->
+      <div class="feature">
+            <h2>For Astronomers</h2>
+        <a href="http://www.ivoa.net/astronomers/" class="left"><img src="https://www.ivoa.net/css/images/ivoa_astronomers.jpg" alt="" /></a>
+        <p><a class="blueback" href="http://www.ivoa.net/astronomers/getting_started.html">Getting Started</a> / <a href="http://www.ivoa.net/astronomers/using_the_vo.html" class="blueback">Using the VO<br />
+        </a><a href="http://www.ivoa.net/astronomers/vo_glossary.html" class="blueback">VO Glossary</a> / <a href="../astronomers/applications.html" class="blueback">VO Applications</a><br />
+        <a href="http://www.ivoa.net/newsletter/index.html" class="blueback">IVOA newsletter</a> / <a href="http://www.ivoa.net/astronomers/vo_for_public.html" class="blueback">VO for Students &amp; Public</a><br />
+        <a href="http://www.ivoa.net/astronomers" class="more"></a></p>
+        
+      </div>
+      <!-- End Feature 1 -->
+      <!-- Feature 2 -->
+      <div class="feature less-padding">
+        <h2>For Deployers/Developers</h2>
+        <a href="http://www.ivoa.net/deployers/" class="left"><img src="https://www.ivoa.net/css/images/ivoa_deployers.jpg" alt="" /></a>
+        <p><a href="http://www.ivoa.net/deployers/intro_to_vo_concepts.html" class="blueback">Intro to VO Concepts</a> / <a href="http://www.ivoa.net/" class="blueback"><br />
+IVOA Standards</a> / <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/PublishingInTheVONew" class="blueback">Guide to Publishing in the VO</a> / <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/VOGlossary" class="blueback"> Technical Glossary</a><a href="http://www.ivoa.net/deployers"></a><br /><a href="http://www.ivoa.net/deployers/" class="more"></a></p>
+      </div>
+      <!-- End Feature 2 -->
+      <!-- Feature 3 -->
+      <div class="feature no-padding">
+<h2>For Members</h2>
+        <a href="http://www.ivoa.net/members/" class="left"><img src="https://www.ivoa.net/css/images/ivoa_members.jpg" alt="" /></a>
+        <p><a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/IvoaEvents" class="blueback">IVOA Calendar </a>/ <a href="http://www.ivoa.net/members/index.html" class="blueback">Working Groups</a>/ <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/WebHome" class="blueback">Twiki</a> / <a href="http://www.ivoa.net/documents/" class="blueback">Documents in Progress</a> / <a href="http://www.ivoa.net/members/index.html" class="blueback">Mailing Lists</a> / <a href="../about/roadmap.html" class="blueback">IVOA Roadmap</a><br /><a href="http://www.ivoa.net/members/" class="more"></a></p>
+        
+      </div>
+      <!-- End Feature 3 -->
+      <div class="cl">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!-- End Feature 3 -->
+<div class="cl">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!-- End Features -->
+<!-- Main -->
+<!-- End Main -->
+<!-- Footer -->
+<div id="footer">
+  <div class="shell">
+    <div class="cl">&nbsp;</div>
+    <p class="copy">&copy; IVOA.net. Contact the<a href="mailto:ivoadoc@ivoa.net"> IVOA Webmaster</a></p>
+    <div class="cl">&nbsp;</div>
+  </div>
+</div>
+<!-- End Footer -->
+</body>
+</html>

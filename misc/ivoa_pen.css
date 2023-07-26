@@ -1,0 +1,7 @@
+/* Style for a "Proposed Endorsed Note" */
+
+@import "ivoa_doc.css";
+
+body {
+  background-image: url(/icons/ivoa_pen_v.png);
+}

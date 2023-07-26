@@ -1,0 +1,19 @@
+/************ banner styles **************/
+#banner {
+	background-image: url(../pics/eurovo_bar-fc.jpg);
+	background-repeat: no-repeat;
+}
+
+/*
+#sub-banner {
+	background-image: url(../pics/sub-banner-fc.gif);
+	background-repeat: no-repeat;
+}*/
+
+a:link.selectedLink, a:visited.selectedLink {
+	background-image: url(../pics/bullet-fc.gif); background-repeat: no-repeat;
+	display:block; 
+	background-color:#99cc66; 
+	color:#ffffff; 
+	font-weight:bold; 
+}

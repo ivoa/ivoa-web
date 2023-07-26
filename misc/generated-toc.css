@@ -1,0 +1,41 @@
+
+#generated-toc {
+    border: thin dashed gray; 
+    background: #eeeeee;
+    opacity: .90;
+    position: fixed; top: 1px; left: 31px;
+    display: none;
+    overflow: auto;
+}
+#generated-toc-show {
+    position: fixed; top: 0px; left: 0px; width:30px; height: 300px; 
+    cursor: pointer;
+}
+#generated-toc .title {
+    font-size: x-small;
+    font-weight: bold;
+    color: white;
+    display: block;
+    background: gray;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+#generated-toc .title a {
+    cursor: pointer;
+}
+#generated-toc ul { 
+    list-style-type: none;
+    padding: 0.5em;
+    margin: 0;
+    font-size: small;
+}
+#generated-toc ul a {
+    color: inherit;
+    background: none;
+}
+
+// fix for IE bug (can't do position: fixed): http://www.cssplay.co.uk/layouts/fixed.html
+body { height:100%; overflow-y:auto; }
+* html #generated-toc {position:absolute;}
+* html #generated-toc-show {position:absolute;}
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/astronomers_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>IVOA.net</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="file:///Macintosh HD/Users/sarah/Documents/Sites/css/style.css" type="text/css" media="all" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29466125-2', 'ivoa.net');
+  ga('send', 'pageview');
+
+</script>
+<body>
+<!-- Header -->
+<div id="header">
+  <div class="shell">
+    <!-- Logo -->
+    <h1 id="logo" class="notext"><a href="http://www.ivoa.net"></a></h1>
+    <!-- End Logo -->
+    <!-- Navigation -->
+    <div id="navigation">
+      <ul>
+        <li></li>
+        <li><a href="/"><span>Home</span></a></li>
+        <li class="active"><a href="/astronomers/"><span>Astronomers</span></a></li>
+        <li><a href="/deployers"><span>Deployers</span></a></li>
+        <li><a href="/members/"><span>Members</span></a></li>    
+        <li><a href="/about/"><span>About</span></a></li>
+        
+        
+        
+      </ul>
+    </div>
+    <!-- End Navigation -->
+  </div>
+</div>
+<!-- END Header -->
+<!-- Heading -->
+<div id="heading">
+  <div class="shell">
+    <div class="cl">&nbsp;</div>
+    <div class="heading-cnt">
+      <!-- InstanceBeginEditable name="PageTitle" -->
+      <h2>Getting Started</h2><!-- InstanceEndEditable -->
+      <!-- InstanceBeginEditable name="PageBody" -->
+      <p>Here are three simple blow-by-blow examples of using VO tools and services : <a href="#BrowsingImages">browsing images</a>, <a href="#SearchingCatalogs">searching catalogs</a>, and <a href="#FindingData">finding available data for an object</a>. </p>
+      <p><strong><a name="BrowsingImages" id="BrowsingImages"></a>Browse all sky images      </strong></p>
+      <p><a href="getting_started_images/aladin.png"><img src="getting_started_images/aladin_thumb.png" alt="aladin" width="200" height="184" hspace="3" vspace="3" align="right" /></a>Several image analysis tools, such as DS9, Aladin, and Gaia, can browse VO image services, as well as loading local files. As an example, try Aladin.</p>
+      <ol>
+        <li> If you don't already have it, <a href="http://aladin.u-strasbg.fr">download</a> it and start it up.<br />
+          <br />
+        </li>
+        <li> Type &quot;3c 227&quot; into the box at the top and press return. That text string is sent to the Simbad name resolver which returns the RA/Dec of 3c 227 and you get a DSS image of the region surrounding 3c227. You can zoom in and out, and pan over the whole sky. <br />
+          <br />
+        </li>
+        <li>Next, from the row below, click on &quot;2MASS&quot;. This overlays objects from the 2MASS catalog. If you click on one of these, you get information from the 2MASS catalog. Leave this displayed while you try the next example.<br />
+          <br />
+        </li>
+      </ol>
+      <hr />
+      <p>&nbsp;</p>
+      <p><strong><a name="SearchingCatalogs" id="SearchingCatalogs"></a>Getting a UKIDSS catalogue with Topcat</strong></p>
+      <p>Topcat is a tool for fetching, manipulating, and plotting tables of data. If you don't have it already, <a href="http://www.star.bris.ac.uk/~mbt/topcat">download</a> it and start it up. </p>
+      <ol>
+        <li>Go to the &quot;VO&quot; menu and choose &quot;cone search&quot;. Around the world, thousands of different datasets are set up as cone search services, and listed in registries of VO services. Topcat can find the one you want and then search it. <a href="getting_started_images/topcat-aladin.png"><img src="getting_started_images/topcat-aladin-thumb.png" width="250" height="247" hspace="3" vspace="3" align="right" /></a><br />
+          <br />
+        </li>
+        <li>In &quot;keywords&quot; type &quot;UKIDSS&quot; and then click &quot;submit query&quot;. Topcat returns a longish list of conesearch services with a UKIDSS connection.<br />
+          <br />
+        </li>
+        <li>Scroll down to UKIDSS DR4 and click on that. The window below lists several different tables available within UKIDSS DR4.<br />
+          <br />
+        </li>
+        <li>Lets say we want the Large Area Survey. Scroll down to &quot;lasSource&quot; and highlight that. <br />
+          <br />
+        </li>
+        <li>Now go down to &quot;Object Name&quot;, type in &quot;3c 227&quot;, and click &quot;Resolve&quot; to get the RA/Dec. In &quot;radius&quot; put 3 arcminutes, and then click &quot;OK&quot;. Topcat now searches the UKIDSS LAS database at that position, and returns a table with 175 objects in it. You can now examine, analyse, and plot this table. <br />
+          <br />
+        </li>
+        <li>Finally, spot the &quot;transmit&quot; icon in Topcat's top row. VO compatible tools, like Aladin and Topcat, can swap messages between each other. Highlight the 3c 227 table you just made and click the transmit icon. The table now appears as an overlay in Aladin, so you can compare the UKIDSS and 2MASS sources. If you explore more in Aladin, you can get the UKIDSS images too.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <hr />
+      <p>&nbsp;</p>
+<p><strong><a name="FindingData" id="FindingData"></a>Find all data at a given position </strong></p>
+      <p><img src="getting_started_images/data_discovery_tool.png" alt="ddt" width="250" height="111" align="right" />Suppose you want more data on 3c227 but don't know exactly what you want ? The US VAO project provides a tool called the Data Discovery Tool to do this. Its part of a <a href="http://www.usvao.org">web portal</a> that can do a variety of things. </p>
+      <ol>
+        <li>Go to the <a href="http://www.usvao.org">portal</a>, navigate to the <strong>Data Discovery Tool</strong> and click &quot;Launch&quot;. <br />
+          <br />
+        </li>
+        <li>In the box at the top, type &quot;3c 227&quot;, use a radius of 3 arcmin, and click search. The tool sends a message to every known service asking whether it has any data within 3 arcmin of that position, and returns a table with an entry for every resource that responds. <br />
+          <br />
+        </li>
+        <li>This can be quite a long list, but you can narrow it down with the filters on the left. Check the boxes for &quot;Images&quot; and &quot;optical&quot;. You will now have a much shorter list.  <br />
+          <br />
+        </li>
+        <li>Highlight the row that says &quot;SDSSDR5&quot;. The pop-up box tells you more information about that resource. <br />
+          <br />
+        </li>
+        <li>Click the &quot;Continue to Data&quot; button at top left. You now get a new tab with a table where each entry is an image file. Click one of these, and you get another pop-up box. Click &quot;Broadcast (SAMP)&quot; and the SDSS image will appear in Aladin.<br />
+          <br />
+        </li>
+        <li>Now go back to the first tab, uncheck &quot;Images&quot; and check &quot;Catalog&quot;. Highlight the SDSS DR5 catalog and click load. The catalog appears in a new tab. You can explore this within the tool, sorting by various columns etc, or you can click &quot;Export Table As...&quot; and then click &quot;Broadcast&quot;. The table will now appear both in Topcat, and in Aladin, overlaid on your SDSS image.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <hr />
+      <p><br />
+      <strong>Going Further</strong></p>
+<p>To learn a little more, its mostly a matter of explaining the tools and portals, but you can get more explanation and links in &quot;<a href="using_the_vo.html">Using the VO</a>&quot; and &quot;<a href="applications.html">Tools and portal</a>s&quot; worldwide. </p>
+      <!-- InstanceEndEditable --></div>
+    <p>&nbsp;</p>
+    <p><img src="../images/ivoa_logoc2.jpg" alt="" width="238" height="129" align="middle" class="right" />
+    </p>
+    <div class="cl">&nbsp;</div>
+  </div>
+</div>
+<!-- End Heading -->
+<!-- Features -->
+<div id="features">
+  <div class="shell">
+    <div class="features-cnt">
+      <div class="cl">&nbsp;</div>
+      <!-- Feature 1 -->
+      <div class="feature">
+            <h2>For Astronomers</h2>
+        <a href="/astronomers/" class="left"><img src="/css/images/ivoa_astronomers.jpg" alt="" /></a>
+        <p><a class="blueback" href="/astronomers/getting_started.html">Getting Started</a> / <a href="/astronomers/using_the_vo.html" class="blueback">Using the VO<br />
+        </a><a href="/astronomers/vo_glossary.html" class="blueback">VO Glossary</a> / <a href="/astronomers/applications.html" class="blueback">VO Applications</a><br />
+        <a href="/newsletter/index.html" class="blueback">IVOA newsletter</a> / <a href="/astronomers/vo_for_public.html" class="blueback">VO for Students &amp; Public</a><br /><a href="/astronomers" class="more"></a><br />
+        </p>
+        
+      </div>
+      <!-- End Feature 1 -->
+      <!-- Feature 2 -->
+      <div class="feature less-padding">
+        <h2>For Deployers/Developers</h2>
+        <a href="/deployers/" class="left"><img src="/css/images/ivoa_deployers.jpg" alt="" /></a>
+        <p><a href="/deployers/intro_to_vo_concepts.html" class="blueback">Intro to VO Concepts</a> / <a href="http://www.ivoa.net/" class="blueback"><br />
+IVOA Standards</a> / <a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/PublishingInTheVONew" class="blueback">Guide to Publishing in the VO</a> / <a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/VOGlossary" class="blueback"> Technical Glossary</a><a href="/deployers"></a><br />
+<a href="/deployers/" class="more"></a></p>
+      </div>
+      <!-- End Feature 2 -->
+      <!-- Feature 3 -->
+      <div class="feature no-padding">
+<h2>For Members</h2>
+        <a href="/members/" class="left"><img src="/css/images/ivoa_members.jpg" alt="" /></a>
+        <p><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents" class="blueback">IVOA Calendar </a>/ <a href="/members/index.html" class="blueback">Working Groups</a>/ <a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/WebHome" class="blueback">Twiki</a> / <a href="/documents/" class="blueback">Documents in Progress</a> / <a href="/members/index.html" class="blueback">Mailing Lists</a> / <a href="/about/roadmap.html" class="blueback">IVOA Roadmap</a><br /><a href="/members/" class="more"></a></p>
+        
+      </div>
+      <!-- End Feature 3 -->
+      <div class="cl">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!-- End Feature 3 -->
+<div class="cl">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!-- End Features -->
+<!-- Main -->
+<!-- End Main -->
+<!-- Footer -->
+<div id="footer">
+  <div class="shell">
+    <div class="cl">&nbsp;</div>
+    <p class="copy">&copy; IVOA.net. Contact the<a href="mailto:ivoadoc@ivoa.net"> IVOA Webmaster</a></p>
+    <div class="cl">&nbsp;</div>
+  </div>
+</div>
+<!-- End Footer -->
+</body>
+<!-- InstanceEnd --></html>

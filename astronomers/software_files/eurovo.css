@@ -1,0 +1,237 @@
+/*********************************************/
+/* eurovo.css                               */
+/*                                         */
+/* Marco C. Leoni                         */
+/* European Virtual Observatory          */
+/* ESO, Garching bei Muenchen           */
+/***************************************/
+
+/***********************************************/
+/* HTML tag styles                             */
+/***********************************************/
+body{font-family:Arial,sans-serif; color:#333; line-height:1.166; margin:0px; padding:0px; background:#ccc url("bg_grad.jpg") fixed;}
+
+/******* hyperlink and anchor tag styles *******/
+a:link, a:visited{color: #005FA9; text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+/************** header tag styles **************/
+h1{font:bold 120% Arial,sans-serif; color: #334d55; margin: 0px; padding: 0px;}
+h2{font:bold 114% Arial,sans-serif; color: #069; margin: 0px; padding: 0px;}
+h3{font:bold 100% Arial,sans-serif; color: #334d55; margin: 0px; padding: 0px;}
+h4{font:bold 100% Arial,sans-serif; color: #333; margin: 0px; padding: 0px;}
+h5{font: 100% Arial,sans-serif; color: #334d55; margin: 0px; padding: 0px;}
+
+/*************** list tag styles ***************/
+ul{list-style-type: square;}
+ul ul{list-style-type: disc;}
+ul ul ul{list-style-type: none;}
+
+tt{font-size: 9pt}
+
+/********* form and related tag styles *********/
+form {margin:0;padding:0;vertical-align:middle;}
+label{font: bold 1em Arial,sans-serif;color: #334d55;}
+input{font-family: Arial,sans-serif;vertical-align: middle;}
+
+/***********************************************/
+/* Layout Divs                                 */
+/***********************************************/
+/*#pagecell1{position:absolute; left:1%; right:1%; width:99%; background-color:#fff;}*/
+#pagecell1{position:relative; width:900px; background-color:#fff; margin-left:auto; margin-right:auto;}
+#tl {position:absolute; top:-1px; left:-1px; margin:0px; padding: 0px; z-index:100;}
+#tr {position:absolute; top:-1px; right:-1px; margin:0px; padding:0px; z-index:100;}
+/*#masthead{position:absolute; top: 0px; left:1%; right:1%; width:99%;}*/
+#masthead{position:relative; top:0px; width:99%; margin-left:auto; margin-right:auto;}
+#pageNav{float:left; width:178px; padding:0px; background-color:#f5f7f7; border-right:1px solid #ccc; border-bottom:1px solid #ccc; font:small Verdana,sans-serif;}
+#content{padding:0px 10px 0px 0px; margin:15px 0px 0px 178px; border-left:1px solid #ccd2d2;}
+
+/***********************************************/
+/* Component Divs                              */
+/***********************************************/
+#siteName{margin: 0px; padding: 16px 0px 8px 0px; color: #fff; font-weight: normal;}
+
+/************** utility styles *****************/
+#utility{font: 75% Verdana,sans-serif; position: absolute; top: 16px; right: 0px; color: #919999;}
+#utility a{color: #fff;}
+#utility a:hover{text-decoration: underline;}
+
+/************** pageName styles ****************/
+#pageName{padding: 0px 0px 14px 10px; margin: 0px; border-bottom:1px solid #ccd2d2;}
+#pageName h2{font: bold 175% Arial,sans-serif; color: #000; margin:0px; padding: 0px;}
+#pageName img{position: absolute; top: 0px; right: 6px; padding: 0px; margin: 0px;}
+
+/************* globalNav styles ****************/
+#globalNav{position: relative; width: 100%; min-width: 640px; height: 32px; color: #ccc; padding: 0px; margin: 0px; background-image:   url("glbnav_background.gif");}
+#globalNav img{margin-bottom: -4px;}
+#gnl {position: absolute; top: 0px; left:0px;}
+#gnr {position: absolute; top: 0px;	right:0px;}
+#globalLink{position: absolute; top: 6px; height: 22px; min-width: 640px; padding: 0px; margin: 0px; left: 10px; z-index: 100;}
+a.glink, a.glink:visited{font-size: small; color: #000; font-weight: bold; margin: 0px; padding: 2px 5px 4px 5px; border-right: 1px solid #8FB8BC;}
+a.glink:hover{background-image:   url("glblnav_selected.gif"); text-decoration: none;}
+.skipLinks {display: none;}
+
+/************ subglobalNav styles **************/
+.subglobalNav{position: absolute; top: 84px; left: 0px;	min-width: 640px; height: 20px; padding: 0px 0px 0px 10px; visibility: hidden; color: #fff;}
+.subglobalNav a:link, .subglobalNav a:visited {font-size: 80%; color: #fff;}
+.subglobalNav a:hover{color: #ccc;}
+
+/*************** search styles *****************/
+/*#search{position: absolute; top: 5px; right: 10px; z-index: 101;}*/
+#search{position: relative; top: 0px; right: 10px; z-index: 101;}
+/*#search input{font-size: 70%; margin: 0px  0px 0px 10px;}*/
+#search input{font-size: 70%; margin: auto  0px auto auto;}
+#search a:link, #search a:visited {font-size: 80%; font-weight: bold;}
+#search a:hover{margin: 0px;}
+
+/************* breadCrumb styles ***************/
+#breadCrumb{padding: 5px 0px 10px 10px; font: small Verdana,sans-serif; color: #aaa; vertical-align:middle;}
+#breadCrumb a{color: #aaa; vertical-align:middle;}
+#breadCrumb a:hover{color: #005FA9; text-decoration: underline;}
+
+/************** feature styles *****************/
+.feature{padding: 0px 0px 10px 10px; font-size: 80%; overflow: hidden;}
+.feature h3{font: bold 175% Arial,sans-serif; color: #000; padding: 5px 0px 5px 0px;}
+.feature img{float: left; padding: 7px 10px 0px 0px;}
+
+/*************** story styles ******************/
+.story {padding: 10px 0px 0px 10px; font-size: 80%; }
+.story h3{font: bold 125% Arial,sans-serif; color: #000;}
+.story p {padding: 0px 0px 10px 0px;}
+.story .capsule{font: bold 1em Arial,sans-serif; color: #005FA9; display:block; padding-bottom: 5px;}
+.story a.capsule:hover{text-decoration: underline;}
+td.storyLeft{padding-right: 12px;}
+
+/************** siteInfo styles ****************/
+#siteInfo{clear: both; border-top: 1px solid #ccc; font-size: small; color: #ccc; padding: 1px 10px; margin-top: 0px; vertical-align:middle;}
+#siteInfo img{padding: 4px 4px 4px 0px; vertical-align: middle;}
+
+/************ sectionLinks styles **************/
+#sectionLinks{margin:0px; padding:0px;}
+#sectionLinks h3{padding:10px 0px 2px 10px; border-bottom:1px solid #ccc;}
+#sectionLinks a:link, #sectionLinks a:visited {display:block; border-top:1px solid #fff; border-bottom:1px solid #ccc;
+	background-image:  url("bg_nav.jpg"); padding:1px 0px 1px 10px; color:#21536A;} /*font-weight:bold; */
+#sectionLinks a:hover{border-top: 1px solid #ccc; background-color: #eb9a21; background-image: none; text-decoration: none;} /*font-weight:bold; */
+
+/************* relatedLinks styles **************/
+.relatedLinks{margin: 0px; padding: 0px 0px 10px 10px; border-bottom: 1px solid #ccc;} /* font-weight:900;*/
+.relatedLinks h3{padding: 10px 0px 2px 0px;}
+.relatedLinks a{display: block;}
+
+
+
+/****************** current page ****************/
+.qui {display:block; color:#eb9a21; font-weight:bold; padding:1px 0px 1px 10px; border-top:1px solid #fff; border-bottom:1px solid #ccc;}
+.quo {display:block; color:#eb9a21; font-weight:bold; padding:0px; border-top:0px; border-bottom:0px;}
+
+/*************** alert styles ******************/
+.alert {font-weight:bold; padding: 10px 0px 0px 10px; color: #FF0000; border-bottom: 1px solid #CCC;}
+.alert h1{color: #FF0000;}
+
+/**************** advert styles *****************/
+#extra{padding: 10px;}
+#extra img{display: block;}
+
+/**************** images *****************/
+img {border:0;}
+
+/************ banner styles **************/
+#banner {
+	background-image: url(../pics/eurovo_bar.jpg);
+	background-repeat: no-repeat;
+	background-color: black;
+}
+#banner-print {
+	display: none;
+}
+
+#sub-banner {
+	padding-left:10px; padding-top:5px; padding-bottom:5px;
+	background-color: #f5f7f7;
+	border-bottom: 1px solid #cccccc;
+	font-family: Verdana,sans-serif;
+	font-size: small;
+	font-weight: bold;
+}
+#sub-banner-fc { border-color: #99cc66; }
+#sub-banner-tc { border-color: #6699cc; }
+#sub-banner-dca { border-color: #ffcc66; }
+#sub-banner-fc .sub-banner-head { background-color: #99cc66; }
+#sub-banner-tc .sub-banner-head { background-color: #6699cc; }
+#sub-banner-dca .sub-banner-head { background-color: #ffcc66; }
+.sub-banner { border: solid 2px; margin-right: 30px; }
+.sub-banner-head { padding:1px 7px 2px 7px; }
+.sub-banner-item { padding:0px 7px 0px 7px; }
+
+
+/*	background-image: url(../pics/sub-banner.gif);
+	background-repeat: no-repeat;
+*/
+
+#sub-banner a:link, #sub-banner a:active, #sub-banner a:hover, #sub-banner a:visited {
+	color: #404080;
+}
+
+
+
+/************* menu Link styles **************/
+.sectionLinks{margin:0px; padding:0px;}
+.sectionLinks h3{padding:10px 0px 2px 10px; border-bottom:1px solid #ccc;}
+.sectionLinks a:link, .sectionLinks a:visited {display:block; border-top:1px solid #fff; border-bottom:1px solid #ccc;
+	background-image:  url("bg_nav.jpg"); padding:1px 0px 1px 10px; color:#21536A;} /*font-weight:bold; */
+.sectionLinks a:hover{border-top: 1px solid #fff; background-color: #eb9a21; background-image: none; text-decoration: none;} /*font-weight:bold; */
+
+a:link.homeLink, a:visited.homeLink, a:hover.homeLink, a:link.fcLink, a:visited.fcLink, a:hover.fcLink, a:link.dcaLink, a:visited.dcaLink, a:hover.dcaLink, a:link.tcLink, a:visited.tcLink, a:hover.tcLink  {color: #21536A; }
+a:hover.homeLink{background-color: #cccccc; }
+a:link.homeLink, a:visited.homeLink{background-image: url(../pics/bullet-home.gif); background-repeat: no-repeat; }
+a:hover.fcLink{background-color: #99cc66; background-image: none;}
+a:link.fcLink, a:visited.fcLink{background-image: url(../pics/bullet-fc.gif); background-repeat: no-repeat; }
+a:hover.dcaLink{background-color: #ffcc66; }
+a:link.dcaLink, a:visited.dcaLink{background-image: url(../pics/bullet-dca.gif); background-repeat: no-repeat; }
+a:hover.tcLink{background-color: #6699cc; }
+a:link.tcLink, a:visited.tcLink{background-image: url(../pics/bullet-tc.gif); background-repeat: no-repeat; }
+a:hover.aidaLink{background-color: #cccccc; }
+a:link.aidaLink, a:visited.aidaLink{background-image: url(../pics/bullet-home.gif); background-repeat: no-repeat; }
+
+a:hover.selectedLink{background-color: #f5f7f7; display:block; border-top:1px solid #fff; border-bottom:1px solid #ccc; }
+
+/************* alertBox styles **************/
+.alertBox {border: 2px solid gray; padding: 6px;}
+
+/************* oddlist table styles **************/
+table.oddlist {
+	border: solid 0px #f5f7f7;
+}
+
+table.oddlist tr.even {
+	background-color: #f5f7f7;
+}
+
+
+
+
+/********************* end **********************/
+
+
+@media print {
+	#pageNav, #banner, #sub-banner, #siteInfo {
+		display: none;
+	}
+
+	#banner-print {
+		display: block;
+	}
+
+	body{
+		background:none
+	}
+
+	#pagecell1{
+		width:100%;
+		background: none;
+	}
+
+	#content{
+		padding:0; margin:0; border:none;
+	}
+}

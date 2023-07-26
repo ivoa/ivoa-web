@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/astronomers_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>IVOA.net</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="file:///Macintosh HD/Users/sarah/Documents/Sites/css/style.css" type="text/css" media="all" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29466125-2', 'ivoa.net');
+  ga('send', 'pageview');
+
+</script>
+<body>
+<!-- Header -->
+<div id="header">
+  <div class="shell">
+    <!-- Logo -->
+    <h1 id="logo" class="notext"><a href="http://www.ivoa.net"></a></h1>
+    <!-- End Logo -->
+    <!-- Navigation -->
+    <div id="navigation">
+      <ul>
+        <li></li>
+        <li><a href="/"><span>Home</span></a></li>
+        <li class="active"><a href="/astronomers/"><span>Astronomers</span></a></li>
+        <li><a href="/deployers"><span>Deployers</span></a></li>
+        <li><a href="/members/"><span>Members</span></a></li>    
+        <li><a href="/about/"><span>About</span></a></li>
+        
+        
+        
+      </ul>
+    </div>
+    <!-- End Navigation -->
+  </div>
+</div>
+<!-- END Header -->
+<!-- Heading -->
+<div id="heading">
+  <div class="shell">
+    <div class="cl">&nbsp;</div>
+    <div class="heading-cnt">
+      <!-- InstanceBeginEditable name="PageTitle" -->
+      <h2>Using the VO</h2><!-- InstanceEndEditable -->
+      <!-- InstanceBeginEditable name="PageBody" -->
+      <p>Using the VO is really just a question of getting stuck in with tools and data services which understand VO rules. Try the examples in <a href="getting_started.html">Getting Started</a> and look at the list of <a href="applications.html">VO tools and portals</a>. However, it can help if you have some of the key concepts in mind. </p>
+<p><strong>Data Services</strong></p>
+      <p>The VO can be seen as a kind of club of <strong>data services</strong> that all follow the same rules. Tools and web portals that understand these rules can fetch data from these services and know what to do with the data when they get it. Of course many datasets have been available online for some time, but the advantage of standardised services is that you don't have to go to lots of different web pages and learn a different interface for each one. You can use your favourite tool or portal, which can get at hundreds of datasets, knowing that the dialogue and parameter boxes will always be pretty much the same. For example, a <strong>cone search service</strong> always asks for an RA, Dec, and radius, and returns a table of objects. The tool you are using will know when something is a cone-search service and so will pop up the right dialogue. </p>
+      <p><strong>Registries : the VO Yellow Pages</strong></p>
+      <p>How do you find the data service you want ? This is made possible by the fact that any data service following standard rules will be <strong>registered</strong> by its creators in one of several Registries round the world. (They periodically update themselves by checking out other registries). The registry entry will have descriptive <strong>metadata</strong> - what kind of service is it ? What is the URL you need to get at it ? What parameters do you need to put in to a request ? What kind of data comes back ? and so on. In principle, a human being could look at these metadata entries, but really they are there for the tools, so that they know how to deal with a given data service. For example, consider the VOSpec tool, which specialises in Spectral Access services. You can put a keyword into the &quot;target&quot; box and click &quot;query&quot;, which will cause VOSpec to search the registry for spectral services that match that keyword. When you pick one of these services, you will find that some have extra input parameters, but VOSpec knows this because this information is in the registry. </p>
+      <p>It is helpful to bear in mind the distinction between querying the registry, and querying the actual data services. The first step is like looking for plumbers in Yellow Pages. The second step is the equivalent of actually phoning a plumber after you have picked one. Of course you might keep the phone number of your favourite plumber handy and go straight to that step. Likewise, some tools build in fixed connections to popular services, as well as providing a registry search facility. Some tools, like Datascope or VO Desktop, actually specialise in searching the registry, and bookmarking favourite resources, and then hand over the analysis of the data to a different tool. </p>
+      <p><strong>Standard data formats</strong></p>
+      <p>VO services are expected to return standard data formats, so that tools can make sensible use of the data. Generally this either means industry standard formats such as JPG, or well known astronomical formats such as FITS. However, you will also come across a specialised VO format for tables of information, known as VOTable. All VO tools know how to deal with VO Tables, so you don't need to understand the structure, but the main advantage is that VOTable has more flexible descriptive metadata than for example CSV files or FITS tables. </p>
+      <p>Another VO improvement for data tables is that any table column has an associated &quot;Universal Content Descriptor&quot; or UCD, which tells software using the table what kind of quantity is in that column. For example, if the name of a table column is &quot;alpha&quot; it would be unclear what it is, but if its UCD is given as &quot;pos.eq.RA&quot; then the software will knows that it is a Right Ascension. </p>
+      <p><strong>Passing data between applications </strong></p>
+      <p>The VO aims at making it easy to access data over the internet, but it also aims at making tools in the VO club inter-operate with each other. For example, imagine you have used Aladin or DS9 to get an image cut out from SDSS data, and then separately have used Topcat to do a cone-search for FIRST radio sources in the same region. You can then ask Topcat to &quot;broadcast&quot; the FIRST data table, and it will be overplotted on your SDSS image. This works using a &quot;messaging hub&quot; system known as SAMP. </p>
+      <p><strong>Types of data service</strong></p>
+      <p>Here is a brief summary of some of the main kinds of data service which have so far been standardised by the IVOA. </p>
+      <p><strong>Cone search</strong>services offer the simplest access to astronomical catalogues. The input is sky-position and radius. The return is a subset of the catalogue within that radius. </p>
+      <p><strong>Table Access Protocol (TAP)</strong> services offer more flexible access to data tables, along the lines astronomers have become used to in making queries to databases like those of SDSS or UKIDSS. The input is a query in Astronomical Data Query Language (ADQL), which is basically a standardised version of SQL. The return is a data table. You don't necessarily have to learn ADQL, if for example the tool you are using can show you a list of the columns for that database, and give you an interactive way of building a query. </p>
+      <p><strong>Simple Image Access Protocol (SIAP)</strong> services offer access to pixel data. The input is a position and a size. If the SIAP service is a &quot;cut-out&quot; service, the return will be an image  centred at the requested position, with the requested size. If it is an &quot;Atlas&quot; service, which holds a collection of standard sized data frames, then the size is used to look for frames centred within that distance of the requested position, and the whole data frame(s) returned. </p>
+      <p><strong>Simple Spectral Access Protocol (SSAP) </strong>services provide access to spectra. The input is a position and size. Like the &quot;atlas&quot; version of image access, the return will be any spectra whose target positions are within the stated distance of the requested position. </p>
+      <p>The &quot;simple&quot; part of the image and spectral access protocols refer to the fact that the search is only by position. Newer versions of the protocols are under development which will allow more flexible searching. </p>
+      <p><strong>Registry Searching</strong> As discussed above, services put all sorts of useful information in their registry entries, and some tools make use of this. So for example, you can look specifically for image services, for X-ray data, for data curated by HEASARC, for services that are new this month, and so on. </p>
+      <p><strong>Single Sign-on</strong></p>
+      <p>So far, VO tools and services have concentrated on fully public data services, but of course every day astronomers are using data to which they have private access - because they have PI time on a space mission, or because they are a member of a consortium that owns the data. The usual practice is enter a username and password at the relevant website. The IVOA is discussing how to standardise expressing identity, so that secure data services can be included in the VO, and you only need to &quot;sign on&quot; once. Watch this space. </p>
+      <p><strong>Application Services</strong></p>
+      <p>As well as data services, it would be useful to able to run applications remotely in a standardised way - for example, uploading your own image to a catalogue extraction service, or running a theoretical calculation. Some VO projects have already set up tools of this kind. The IVOA is discussing how to standardise this kind of service so that it should become as easy as accessing data.</p>
+      <!-- InstanceEndEditable --></div>
+    <p>&nbsp;</p>
+    <p><img src="/images/ivoa_logoc2.jpg" alt="" width="238" height="129" align="middle" class="right" />
+    </p>
+    <div class="cl">&nbsp;</div>
+  </div>
+</div>
+<!-- End Heading -->
+<!-- Features -->
+<div id="features">
+  <div class="shell">
+    <div class="features-cnt">
+      <div class="cl">&nbsp;</div>
+      <!-- Feature 1 -->
+      <div class="feature">
+            <h2>For Astronomers</h2>
+        <a href="/astronomers/" class="left"><img src="/css/images/ivoa_astronomers.jpg" alt="" /></a>
+        <p><a class="blueback" href="/astronomers/getting_started.html">Getting Started</a> / <a href="/astronomers/using_the_vo.html" class="blueback">Using the VO<br />
+        </a><a href="/astronomers/vo_glossary.html" class="blueback">VO Glossary</a> / <a href="applications.html" class="blueback">VO Applications</a><br />
+        <a href="/newsletter/index.html" class="blueback">IVOA newsletter</a> / <a href="/astronomers/vo_for_public.html" class="blueback">VO for Students &amp; Public</a><br /><a href="/astronomers/" class="more"></a><br />
+        </p>
+        
+      </div>
+      <!-- End Feature 1 -->
+      <!-- Feature 2 -->
+      <div class="feature less-padding">
+        <h2>For Deployers/Developers</h2>
+        <a href="/deployers/" class="left"><img src="/css/images/ivoa_deployers.jpg" alt="" /></a>
+        <p><a href="/deployers/intro_to_vo_concepts.html" class="blueback">Intro to VO Concepts</a> / <a href="http://www.ivoa.net/" class="blueback"><br />
+IVOA Standards</a> / <a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/PublishingInTheVONew" class="blueback">Guide to Publishing in the VO</a> / <a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/VOGlossary" class="blueback"> Technical Glossary</a><a href="/deployers"></a><br />
+<a href="/deployers/" class="more"></a></p>
+      </div>
+      <!-- End Feature 2 -->
+      <!-- Feature 3 -->
+      <div class="feature no-padding">
+<h2>For Members</h2>
+        <a href="/members/" class="left"><img src="/css/images/ivoa_members.jpg" alt="" /></a>
+        <p><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents" class="blueback">IVOA Calendar </a>/ <a href="/members/index.html" class="blueback">Working Groups</a>/ <a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/WebHome" class="blueback">Twiki</a> / <a href="/documents/" class="blueback">Documents in Progress</a> / <a href="/members/index.html" class="blueback">Mailing Lists</a> / <a href="../about/roadmap.html" class="blueback">IVOA Roadmap</a><br /><a href="/members/" class="more"></a></p>
+        
+      </div>
+      <!-- End Feature 3 -->
+      <div class="cl">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!-- End Feature 3 -->
+<div class="cl">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!-- End Features -->
+<!-- Main -->
+<!-- End Main -->
+<!-- Footer -->
+<div id="footer">
+  <div class="shell">
+    <div class="cl">&nbsp;</div>
+    <p class="copy">&copy; IVOA.net. Contact the<a href="mailto:ivoadoc@ivoa.net"> IVOA Webmaster</a></p>
+    <div class="cl">&nbsp;</div>
+  </div>
+</div>
+<!-- End Footer -->
+</body>
+<!-- InstanceEnd --></html>

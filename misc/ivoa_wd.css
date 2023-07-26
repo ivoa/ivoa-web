@@ -1,0 +1,10 @@
+/* Style for a public "Working Draft" */
+
+@import "ivoa_doc.css";
+
+body {
+  background-image: url(/icons/ivoa_wd_v.png);
+}
+
+
+

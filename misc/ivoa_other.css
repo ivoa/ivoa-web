@@ -1,0 +1,3 @@
+/* Fallback style for documents that aren't Notes, REC, WD, PR  */
+
+@import "ivoa_doc.css";

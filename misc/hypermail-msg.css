@@ -1,0 +1,35 @@
+@import url(hypermail-idx.css);
+
+@import url(hypermail-msg-main.css);
+
+
+dfn {font-weight: bold;}
+#received { float:right;}
+.head { border-bottom:1px solid black;}
+.foot { border-top:1px solid black;}
+
+
+
+
+h1 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.headers {
+  background-color: #DDDDDD;
+  padding-bottom: 10px;
+}
+
+.mail {
+  background-color: #F3F3F3;
+  padding-bottom: 20px;
+}
+
+.headers, .mail p, .mail pre {
+  padding-left: 10px;
+}
+
+.mail pre {
+  font-size: 1.2em;
+}
+

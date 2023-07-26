@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+    <title>IVOA Newsletter</title>
+    <link>http://www.ivoa.net/newsletter/</link>
+    <description>The IVOA newsletter aims to bring the latest news about Virtual
+Observatory applications to astronomers by drawing upon developments
+throughout the international VO community and the national projects
+linked by the IVOA.</description>
+    <language>en-US</language>
+    <copyright>IVOA 2008</copyright>
+    <managingEditor>ivoa-news-editors@ivoa.net</managingEditor>
+    <image>
+        <url>http://www.ivoa.net/pub/images/ivoa_logo137x77.jpg</url>
+        <title>IVOA</title>
+        <link>http://www.ivoa.net/</link>
+    </image>
+	
+	<item>
+        <title>IVOA Newsletter 008 - May 2012</title>
+        <link>http://www.ivoa.net/newsletter/008/</link>
+        <description></description>
+        <pubDate>Weds, 16 May 2012</pubDate>
+    </item
+	
+	<item>
+        <title>IVOA Newsletter 007 - October 2011</title>
+        <link>http://www.ivoa.net/newsletter/007/</link>
+        <description>IVOA Docs in arXiv/ADS, VAO Iris SED tool, VOIPortal, VOI Android Application, VOPlot1.7, FITSManager</description>
+        <pubDate>Mon, 16 Oct 2011</pubDate>
+    </item>
+	
+	<item>
+        <title>Issue #6</title>
+        <link>http://www.ivoa.net/newsletter/006/</link>
+        <description>Argentina joins IVOA, VODance, TOPCAT Talks TAP, Euro-VO Science Tutorials</description>
+        <pubDate>Weds, 11 May 2011 11:24:00 CEST</pubDate>
+    </item>
+	
+<item>
+        <title>Issue #5</title>
+        <link>http://www.ivoa.net/newsletter/005/</link>
+        <description>IVOA Science Priorities, CDS Portal, SAMPy, VOSA SED Analyser, WebSampConnector, Aladin 7</description>
+        <pubDate>4 December 2010 11:24:00 CEST</pubDate>
+    </item>
+
+    <item>
+        <title>Issue #4</title>
+        <link>http://www.ivoa.net/newsletter/004/</link>
+        <description>Skyalert.org, VOSED: SED Building and Fitting Tool, The GalMer database - simulations of galaxies for observers, China-VO Skymouse Client, SIMBAD Annotations Service</description>
+        <pubDate>Tue, 11 May 2010 11:24:00 CEST</pubDate>
+    </item>
+    <item>
+        <title>Issue #3</title>
+        <link>http://www.ivoa.net/newsletter/003/</link>
+        <description>VO Interoperability in DS9, SPLAT-VO: Spectral Analysis Tool, VirGO - New capabilities for browsing VO resources, ATPy - VOTables in python, Your databases in the VO with Saada</description>
+        <pubDate>Tue, 10 Nov 2009 10:00:00 CET</pubDate>
+    </item>
+    <item>
+        <title>Issue #2</title>
+        <link>http://www.ivoa.net/newsletter/002/</link>
+        <description>VO Applications: US-VO Data Discovery Website, VisIVO Server: Huge Data Exploration, VOPlatform, TOPCAT: Does what you want with tables, JVO On-Line Mosaicing Service, VOSpec version 5.0</description>
+        <pubDate>Fri, 22 May 2009 11:12:00 CEST</pubDate>
+    </item>
+    <item>
+        <title>Issue #1</title>
+        <link>http://www.ivoa.net/newsletter/001/</link>
+        <description>What is the VO? What is the IVOA? AstroGrid VO Desktop Suite, VirGO v1.3.1, VO-CLI - Command Line Tools for the VO, Large Images in Aladin</description>
+        <pubDate>Fri, 28 Nov 2008 16:57:00 CET</pubDate>
+    </item>
+</channel>
+</rss>

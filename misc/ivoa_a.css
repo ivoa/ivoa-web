@@ -1,0 +1,262 @@
+body {
+    height:99%;
+    background-color:#ffffff;
+    color:#0D0F7E;
+    font-family: helvetica,'new century schoolbook','gothic light';
+    font-size: 10pt;
+}
+
+.titleText {
+	color:#0D0F7E;
+	text-decoration:none;
+	font-style:normal;
+	font-size:24pt}
+
+a:link, a:visited, a:active {
+    color:#547FAA;
+    text-decoration:none}
+
+
+h:link, h:visited, h:active {
+    color:#547FAA;
+    text-decoration: none}
+
+img {border:0}
+
+.rollcall {
+	padding:0;
+	margin:0.2em;}
+
+.rollcall li {
+	display:inline;
+	border-right:1px solid;
+	padding:0 0.33em;
+	color:#ffffff;
+	text-decoration:none;
+	background-color:#547FAA;
+	font-style: normal;
+	font-size: 12pt;
+	font-weight: bold;
+	margin:0.1em;
+}
+
+.rollcall a, .rollcall a:link, .rollcall a:visited, .rollcall a:active  {
+	color:#ffffff;
+	text-decoration:none;
+}
+.here {color:#f30;}
+
+
+.tabledocs {
+    font-style:normal;
+    font-size:10pt;
+    font-weight:300;
+    margin:0;
+    padding:0;
+    spacing:0;
+    #border-width:1px;
+    #border-style:groove;
+    border: solid 1px #547FAA;
+}
+
+caption, .caption {
+    font-size:18pt;
+    font-weight:900;
+    text-align:left;
+    width:99%;}
+
+.tabledocs th {
+    //border-width:1px;
+    //border-style:groove;
+    border: solid 1px #547FAA;
+    vertical-align:middle;
+    white-space: nowrap;
+}
+
+.tabledocs th.subtitle {
+    border: none;
+    border-bottom: solid 1px #547FAA;
+    text-align: left;
+}
+
+.tabledocs tr {
+    display:table-row;
+    padding:0;
+    margin:0;
+    width:90%;
+    font-weight:300;}
+
+.tabledocs td {
+    display:table-cell;
+    padding-top:0;
+    padding-bottom:0;
+    margin-top:0;
+    margin-bottom:0;
+    vertical-align:middle;
+    white-space: nowrap;
+}
+
+.tabledocs td.doctitle  {
+    padding-right:50px;
+}
+
+.tabledocs td.versionnew {
+    text-align: center;
+    word-spacing: 3pt;
+}
+.tabledocs td.versionstable {
+    text-align: center;
+}
+.tabledocs td.versionold {
+    text-align: left;
+    /*word-spacing: 3pt; -- removed because of Safari */
+    padding-left: 8pt;
+}
+
+.tabledocs td.versionnew a, .tabledocs td.versionstable a, .tabledocs td.versionold a {
+    border-style: solid;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    padding-left: 1px;
+    padding-right: 1px;
+    font-weight: bold;
+}
+.tabledocs td.versionnew a.rfc {
+    border-style: none;
+}
+.tabledocs a.rec {
+    border-color: #009900;
+    background-color: #009900;
+    color: white;
+}
+.tabledocs a.pr {
+    border-color: #99cc99;
+    background-color: #99cc99;
+    color: white;
+}
+.tabledocs a.wd {
+    border-color: #e0e0e0;
+    background-color: #e0e0e0;
+}
+.tabledocs td.versionstable a.note {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    font-weight: lighter;
+}
+
+.legenda .head {
+    font-weight: bold;
+}
+.legenda .item {
+	font-size:8pt;
+	font-weight:bold;
+	margin-right:1px;
+	padding:0;}
+.legenda .desc {
+	font-size:8pt;
+	margin-right:5px;
+	padding:0;}
+
+.legenda .rec {
+    background-color: #009900;
+}
+.legenda .pr {
+    background-color: #99cc99;
+}
+.legenda .wd {
+    background-color: #e0e0e0;
+}
+.onthispage {
+    padding-top: 6pt;
+    margin-left: 3pt;
+    font-style: italic;
+}
+
+
+.searchbox {
+    font-style:normal;
+    font-size:10pt;
+    font-weight:300;
+    margin:0px;
+    padding:0;
+    border: solid 1px #547FAA;
+    border-spacing: 5pt;
+}
+.searchbox th {
+    border: solid 1px #547FAA;
+    vertical-align:middle;
+    white-space: nowrap;
+}
+
+
+.forumlist {
+    font-style:normal;
+    font-size:10pt;
+    font-weight:300;
+    margin:0px;
+    padding:0;
+    border: solid 1px #547FAA;
+}
+
+.forumlist th {
+    border: solid 1px #547FAA;
+    vertical-align:middle;
+    white-space: nowrap;
+}
+
+.forumlist td {
+    padding: 1pt 6pt 1pt 6pt;
+    white-space: nowrap;
+}
+
+.forumlist td.list {
+    width: 140pt;
+    white-space: nowrap;
+}
+
+
+.tabledocs .details {
+/*
+*/
+	display: none;
+/**/
+}
+
+.tabledocs .expanded {
+    border: solid 2px #547FAA;
+    width: 100%;
+}
+
+.tabledocs .details th {
+    border: none;
+    text-align: left;
+    font-weight: normal;
+    /*width: 200px;*/
+    width: 1%;
+}
+
+.tabledocs .details .xml {
+	padding-left: 8pt;
+}
+
+.tabledocs .details .xml a {
+    font-weight: bold;
+    padding-left: 0.45em;
+    padding-right: 0.4em;
+    color: #a0a0a0;
+}
+
+.tabledocs .details .xml a:first-child {
+    /*background-color: #e0e0e0;*/
+    border: solid thin #547FAA;
+    color: #547FAA;
+}
+.tabledocs .details .deprecated .xml a:first-child {
+    background-color: inherit;
+    border: inherit;
+    color: #a0a0a0;
+    margin-left: 2.7em;
+}
+

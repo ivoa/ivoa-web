@@ -1,0 +1,273 @@
+/* www.ivoa.net styles, by Marco C. Leoni */
+body {
+	height:99%; 
+	background-color:#ffffff; 
+	color:#0D0F7E;
+	font-family: helvetica,'new century schoolbook','gothic light';
+}
+
+.titleText {
+	color:#0D0F7E; 
+	text-decoration:none; 
+	font-style:normal; 
+	font-size:24pt}
+
+.menuText {
+	color:#ffffff; 
+	text-decoration:none; 
+	font-style:normal; 
+	font-size:12pt; 
+	font-weight:600}
+
+.descText {
+	color:#0D0F7E; 
+	text-decoration:none; 
+	font-style:normal; 
+	font-size:12pt}
+
+.nText {
+	color:#0D0F7E; 
+	text-decoration:none; 
+	font-style:normal}
+
+.sText {
+	color:#0D0F7E; 
+	text-decoration:none; 
+	font-style:normal; 
+	font-size: 8pt}
+
+.menuSpecial, .menuSpecial:link, .menuSpecial:visited, .menuSpecial:active {
+	color:#ffffff; 
+	text-decoration:none}
+
+a:link, a:visited, a:active {
+	color:#547FAA; 
+	text-decoration:none}
+
+body:link, body:visited, body:active {
+	color:#547FAA; 
+	text-decoration: none}
+
+h:link, h:visited, h:active {
+	color:#547FAA;
+	text-decoration: none}
+
+img {border:0}
+
+#latest {font-family:helvetica,'new century schoolbook','gothic light';}
+
+#tabledocs {
+	font-style:normal; 
+	font-size:10pt; 
+	font-weight:300; 
+	table-layout:fixed;
+	width:880px; 
+	display:table; 
+	border-width:1px; 
+	border-style:groove;}
+
+#tabledocs caption {
+	font-size:18pt; 
+	font-weight:900; 
+	text-align:left;
+	width:99%;}
+
+#linehead, #linehead a {
+	width:99%; 
+	font-size: 12pt; 
+	font-weight: 900;}
+
+#tabledocs th {
+	border-width:1px; 
+	border-style:groove; 
+	vertical-align:middle;}
+
+#tabledocs tr {
+	display:table-row; 
+	padding:0; 
+	margin:0; 
+	width:90%; 
+	font-weight:300;}
+
+#tabledocs td {
+	display:table-cell; 
+	padding-top:0; 
+	padding-bottom:0; 
+	margin-top:0; 
+	margin-bottom:0; 
+	vertical-align:middle;}
+
+#docver {
+	display:table-cell; 
+	width:4em; 
+	text-align:right; 
+	margin-right:10px;}
+
+#doctitle {
+	display:table-cell; 
+	width:80%; 
+	border-left:3px; 
+	margin-left:3px; 
+	text-align:left; 
+	vertical-align:top;}
+
+#doccover {
+	display:table-cell; 
+	width:3em; 
+	text-align:center;}
+
+#date {
+	width:6em;
+	text-align:center;}
+
+#docid {
+	display:table-cell; 
+	width:22em; 
+	text-align:left; 
+	vertical-align:top;}
+
+#initiator {
+	display:table-cell; 
+	width:10em; 
+	text-align:left;}
+
+#group {
+	display:table-cell; 
+	width:4em; 
+	text-align:center;}
+
+#action {
+	width:5em;
+	text-align:center;}
+
+#rollcall {
+	padding:0;
+	margin:0;}
+
+#rollcall li {
+	display:inline; 
+	width:20%; 
+	border-right:1px solid; 
+	padding:0 0.33em;
+	margin:0.33em 0;
+	color:#ffffff; 
+	text-decoration:none; 
+	background-color:#547FAA;
+	font-family: helvetica,'new century schoolbook','gothic light'; 
+	font-style: normal; 
+	font-size: 12pt;
+	font-weight: 600}
+
+#rollcall a {
+	color:#ffffff;
+	text-decoration:none;}
+
+#legenda {
+	padding:0;
+	margin:0;
+	border:0;
+	color:#0D0f7e;
+	width:766px;}
+
+#legenda li {
+	display:inline; 
+	padding:0 0.33em; 
+	text-decoration:none; 
+	font-size:8pt;
+	font-weight:300;}
+
+#legenda #item {
+	font-weight:900; 
+	margin-right:1px;
+	padding:0;}
+
+#legenda #desc {
+	margin-right:5px;
+	padding:0;}
+
+#legenda li:first-child {
+	font-weight:900; 
+	background-color:#0D0f7e;
+	color:#ffffff; 
+	margin-right:5px;
+	text-align:center;}
+
+#head {/* fix for IE */
+	font-weight:900;
+	background-color:#0D0f7e; 
+	color:#ffffff;
+	margin-right:5px; 
+	text-align:center;}
+
+.here {color:#f30;}
+.doccoordinator {
+	font-size:11px; 
+	line-height:11px; 
+	margin-top:22px; 
+	margin-bottom:12px; 
+	padding-top:0px; 
+	padding-bottom:0px;
+	position:relative; right:100px; 
+	bottom:0; 
+	left:9px; 
+	text-align:left; 
+	max-width:90%}
+
+.titleTextPrew {
+	color: #0D0F7E;
+	text-decoration: none;
+	font-family: helvetica,'new century schoolbook','gothic light';
+	font-style: normal;
+	font-size: 24pt}
+
+.nodecPrew {
+	text-decoration: none;
+	color: #547FAA}
+
+h1, h2, h3, h4, h5, h6 { text-align: left }
+/* background should be transparent, but WebTV has a bug */
+h1, h2, h3 { color: #005A9C;}
+h1 { font: 170% sans-serif }
+h2 { font: 140% sans-serif }
+h3 { font: 120% sans-serif }
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+.doccoordinatorPrew
+	{
+	font-size:11px;
+	line-height:11px;
+	margin-top:4px;
+	margin-bottom:7px;
+	padding-top:0px;
+	padding-bottom:0px;
+	position:relative;
+	right: 100px;
+	bottom: 0;
+	left: 9px;
+	text-align:left;
+	max-width:90%
+	}
+
+dt, dd { 
+	margin-top: 0; 
+	margin-bottom: 0 } /* opera 3.50 */
+
+dt { font-weight: bold }
+
+
+#preview {
+  padding: 2em 1em 2em 70px;
+  margin: 0;
+  font-family: sans-serif;
+  color: black;
+  background: white;
+  background-position: top left;
+  background-attachment: fixed;
+}
+
+.Input {
+  font-style:italic;
+  background-color:#EDEDED;
+}
