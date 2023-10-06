@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+<div class="carrousel" id="carrousel">
+    {{ range $elem_index, $elem_val := where .Site.Pages "Params.tags" "intersect" (slice "banner") }}
+    {{ if (eq $elem_index 0)}}
+    <div id="carrousel-{{$elem_index}}">
+    {{ else }}
+    <div id="carrousel-{{$elem_index}}" class="w3-hide">
+    {{ end }}
+
+        {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+        <img class="carrousel-img" src="{{ $featured_image }}" />
+
+        <div class="carrousel-title">{{ .Title }}</div>
+
+        {{ with .Params.author | default .Site.Params.author }}
+        <div class="carrousel-author">{{.}}</div>
+        {{end}}
+
+        <a href="{{ .RelPermalink }}" class="carrousel-action">
+            READ <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+    {{ end }}
+
+    <div class="carrousel-btn carrousel-btn-left" id="carrousel-left">
+        <i class="fa-solid fa-chevron-left"></i>
+    </div>
+
+    <div class="carrousel-btn carrousel-btn-right" id="carrousel-right">
+        <i class="fa-solid fa-chevron-right"></i>
+    </div>
+</div>
+
+<div class="cards">
+    <div class="card">
+        <div class="card-title">
+            IVOA News & Upcoming Meetings
+        </div>
+        <div class="card-list">
+            <ul>
+                {{ range first 3 (where .Site.Pages "Params.tags" "intersect" (slice "news")) }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- rendered content from content/_index.html -->
+{{- .Content -}}
+
+{{ end }}

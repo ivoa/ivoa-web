@@ -1,0 +1,163 @@
+/* === Header ============================================== */
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+    background: #333333;
+    color: #ffffff;
+}
+
+.header-title {
+    margin: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.header-logo {
+    position: absolute;
+    right: 2em;
+    top: 50%;
+    height: 3em;
+    transform: translateY(-1.5em);
+}
+
+/* === Carrousel =========================================== */
+
+.carrousel {
+    position: relative;
+    width: 100%;
+    margin: 1rem auto 0 auto;
+    max-width: 1600px;
+    height: 33vh;
+    max-height: 600px;
+    overflow: hidden;
+    padding: 0 0.25rem;
+}
+
+.carrousel-img {
+    max-width: 100%;
+    height: auto;
+    filter: blur(2px);
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+.carrousel-title {
+    position: absolute;
+    top: 1rem;
+    left: 7rem;
+    right: 7rem;
+    background: rgba(0, 0, 0, 0.66);
+    font-size: 3rem;
+
+    padding: 0.5rem 1rem;
+    color: #FFF;
+}
+
+.carrousel-author {
+    position: absolute;
+    top: 9rem;
+    left: 7rem;
+
+    background: rgba(0, 0, 0, 0.66);
+    font-size: 0.8rem;
+
+    padding: 0.5rem 1rem;
+    color: #FFF;
+}
+
+.carrousel-action {
+    position: absolute;
+    bottom: 1rem;
+    right: 7rem;
+
+    background: rgba(0, 0, 0, 0.66);
+    font-size: 1.4rem;
+
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.carrousel-action:hover {
+    background: rgba(0, 100, 255, 0.8);
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.carrousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.33);
+    font-size: 2rem;
+
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.carrousel-btn:hover {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.carrousel-btn-left {
+    left: 2rem;
+}
+
+.carrousel-btn-right {
+    right: 2rem;
+}
+
+/* === Groups ============================================== */
+
+.cards {
+    margin: 1rem auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-top:4px solid rgba(0, 0, 0, 0.75);
+    background:rgba(0, 0, 0, 0.1);
+    margin: 0 0.5rem;
+    padding: 0.75rem 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-list {
+    flex-grow: 1;
+}
+
+.card-list ul {
+    padding-left: 0;
+}
+
+.card-list li {
+    list-style: none;
+    line-height: 2rem;
+}
+
+/* === Footer ============================================ */
+
+.footer {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #333333;
+    color: #FFF
+}

@@ -1,0 +1,4 @@
+baseURL = "http://localhost/ivoa.new"
+languageCode = "en-us"
+title = "International Virtual Observatory Alliance"
+author = "IVOA.net"
