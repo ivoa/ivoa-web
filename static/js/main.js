@@ -6,7 +6,7 @@ function mod(n, m) {
 (function () {
 
     let carrousel = 0;
-    const CARROUSEL_LENGTH = 3;
+    const CARROUSEL_LENGTH = 2;
 
     function handleLeft() {
         carrousel = mod(carrousel - 1, CARROUSEL_LENGTH);
