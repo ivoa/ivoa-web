@@ -34,5 +34,6 @@ jobs:
           username: webstage
           server: web.ivoa.net
           dry-run: ${{ env.DRY_RUN }}
+          key: ${{ secrets.STAGE_ID }}
           uploads: |
             ./public/ => ./ivoa-web-stage/
