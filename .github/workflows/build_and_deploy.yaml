@@ -32,7 +32,7 @@ jobs:
         uses: Dylan700/sftp-upload-action@latest
         with:
           username: webstage
-          host: web.ivoa.net
+          server: web.ivoa.net
           dry-run: ${{ env.DRY_RUN }}
           uploads: |
             ./public/ => ./ivoa-web-stage/
