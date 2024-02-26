@@ -1,0 +1,35 @@
+name: "Build and deploy the website"
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+env:
+  HUGO_VERSION: 0.123.4
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+          tar -zxvf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz hugo
+
+      - name: Build the website
+        run: ./hugo
+
+      - name: Deploy the website
+        uses: Dylan700/sftp-upload-action@latest
+        with:
+          username: webstage
+          host: web.ivoa.net
+          uploads: |
+            ./public/ => ./ivoa-web-stage/
+        if: github.event_name != 'pull_request'
