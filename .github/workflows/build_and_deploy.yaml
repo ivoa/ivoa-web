@@ -25,11 +25,14 @@ jobs:
       - name: Build the website
         run: ./hugo
 
+      - name: Set dry run
+        run: echo "DRY_RUN=${{ github.event_name == 'pull_request' && 'true' || 'false' }}" >> $GITHUB_ENV
+
       - name: Deploy the website
         uses: Dylan700/sftp-upload-action@latest
         with:
           username: webstage
           host: web.ivoa.net
+          dry-run: ${{ env.DRY_RUN }}
           uploads: |
             ./public/ => ./ivoa-web-stage/
-        if: github.event_name != 'pull_request'
