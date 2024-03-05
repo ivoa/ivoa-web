@@ -8,5 +8,5 @@ hugo_stats.json
 .hugo_build.lock
 
 # ignore hugo in case you have installed it in the project directory
-hugo
-hugo*.tar.gz
+/hugo
+/hugo*.tar.gz
