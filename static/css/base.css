@@ -153,6 +153,16 @@
     line-height: 2rem;
 }
 
+/* === Creation/Update page dates =========================================== */
+
+.pageDates {
+    text-align: right;
+    font-size : .9em;
+    color     : #777;
+    font-style: italic;
+}
+
+
 /* === Footer ============================================ */
 
 .footer {
