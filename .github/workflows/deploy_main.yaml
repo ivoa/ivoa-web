@@ -1,0 +1,29 @@
+name: "Deploy the main version of the website"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: ./.github/actions/setup-hugo
+
+      - name: Build the website
+        run: ~/hugo
+
+      - name: Deploy the website
+        uses: Dylan700/sftp-upload-action@latest
+        with:
+          username: webstage
+          server: web.ivoa.net
+          key: ${{ secrets.STAGE_ID }}
+          uploads: |
+            ./public/ => ./ivoa-web-stage/

@@ -1,0 +1,34 @@
+name: "Deploy a branch version of the website"
+
+on:
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "BRANCH_NAME=$(echo ${{ github.head_ref }} | sed 's/\//-/g')" >> $GITHUB_ENV
+
+      - name: Debug print branch name
+        shell: bash
+        run: echo "BRANCH_NAME=${{ env.BRANCH_NAME }}"
+
+      - name: Setup Hugo
+        uses: ./.github/actions/setup-hugo
+
+      - name: Build the website
+        run: ~/hugo -b https://webtest.ivoa.info/v/${{ env.BRANCH_NAME }}
+
+      - name: Upload the branch version of the website
+        uses: Dylan700/sftp-upload-action@latest
+        with:
+          username: webstage
+          server: web.ivoa.net
+          key: ${{ secrets.STAGE_ID }}
+          uploads: |
+            ./public/ => ./ivoa-web-stage/v/${{ env.BRANCH_NAME }}
