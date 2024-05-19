@@ -1,8 +1,7 @@
-name: "Build and deploy the website"
+name: "Deploy the main version of the website"
 
 on:
   workflow_dispatch:
-  pull_request:
   push:
     branches:
       - main
@@ -25,15 +24,11 @@ jobs:
       - name: Build the website
         run: ./hugo
 
-      - name: Set dry run
-        run: echo "DRY_RUN=${{ github.event_name == 'pull_request' && 'true' || 'false' }}" >> $GITHUB_ENV
-
       - name: Deploy the website
         uses: Dylan700/sftp-upload-action@latest
         with:
           username: webstage
           server: web.ivoa.net
-          dry-run: ${{ env.DRY_RUN }}
           key: ${{ secrets.STAGE_ID }}
           uploads: |
             ./public/ => ./ivoa-web-stage/
