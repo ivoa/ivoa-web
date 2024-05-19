@@ -1,0 +1,23 @@
+name: 'Download and extract Hugo'
+description: 'Downloads and extracts a specified version of Hugo'
+inputs:
+  hugo_version:
+    description: 'Version of Hugo to download'
+    required: false
+    default: '0.123.4'
+runs:
+  using: 'composite'
+  steps:
+    - name: Cache Hugo
+      uses: actions/cache@v2
+      with:
+        path: ~/hugo
+        key: ${{ runner.os }}-hugo-${{ inputs.hugo_version }}
+    - name: Download and extract Hugo
+      run: |
+        if [ ! -f ~/hugo ]; then
+          wget https://github.com/gohugoio/hugo/releases/download/v${{ inputs.hugo_version }}/hugo_${{ inputs.hugo_version }}_Linux-64bit.tar.gz
+          tar -zxvf hugo_${{ inputs.hugo_version }}_Linux-64bit.tar.gz
+          mv hugo ~/hugo
+        fi
+      shell: bash

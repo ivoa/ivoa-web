@@ -3,9 +3,6 @@ name: "Deploy a branch version of the website"
 on:
   pull_request:
 
-env:
-  HUGO_VERSION: 0.123.4
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -21,13 +18,11 @@ jobs:
         shell: bash
         run: echo "BRANCH_NAME=${{ env.BRANCH_NAME }}"
 
-      - name: Download hugo
-        run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-          tar -zxvf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz hugo
+      - name: Setup Hugo
+        uses: ./.github/actions/setup-hugo
 
       - name: Build the website
-        run: ./hugo -b https://webtest.ivoa.info/v/${{ env.BRANCH_NAME }}
+        run: ~/hugo -b https://webtest.ivoa.info/v/${{ env.BRANCH_NAME }}
 
       - name: Upload the branch version of the website
         uses: Dylan700/sftp-upload-action@latest
