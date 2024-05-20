@@ -1,11 +1,11 @@
 {{ define "main" }}
 
-<div class="carrousel" id="carrousel">
+<div class="carrousel">
     {{ range $elem_index, $elem_val := where .Site.Pages "Params.tags" "intersect" (slice "banner") }}
     {{ if (eq $elem_index 0)}}
-    <div id="carrousel-{{$elem_index}}">
+    <div id="carrousel-{{$elem_index}}" class="carrousel-item active">
     {{ else }}
-    <div id="carrousel-{{$elem_index}}" class="w3-hide">
+    <div id="carrousel-{{$elem_index}}" class="carrousel-item">
     {{ end }}
 
         {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
@@ -33,24 +33,28 @@
     </div>
 </div>
 
-<div class="cards">
-    <div class="card">
-        <div class="card-title">
-            IVOA News & Upcoming Meetings
-        </div>
-        <div class="card-list">
-            <ul>
-                {{ range first 3 (where .Site.Pages "Params.tags" "intersect" (slice "news")) }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                {{ end }}
-            </ul>
+<!-- rendered content from content/_index.html -->
+<div class="horizontal-blocks">
+    <div>
+    {{- .Content -}}
+    </div>
+
+    <div class="vertical cards">
+        <div class="card">
+            <div class="card-title">
+                IVOA News & Upcoming Meetings
+            </div>
+            <div class="card-list">
+                <ul>
+                    {{ range first 3 (where .Site.Pages "Params.tags" "intersect" (slice "news")) }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+
         </div>
 
     </div>
-
 </div>
-
-<!-- rendered content from content/_index.html -->
-{{- .Content -}}
 
 {{ end }}
