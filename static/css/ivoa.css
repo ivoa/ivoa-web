@@ -275,7 +275,7 @@ section > main + aside  { margin-left: 1em }
     left: 7rem;
     right: 7rem;
     background: rgba(0, 0, 0, 0.66);
-    font-size: 3rem;
+    font-size: 2.3rem;
 
     padding: 0.5rem 1rem;
     color: #FFF;
@@ -283,12 +283,11 @@ section > main + aside  { margin-left: 1em }
 
 .carrousel-item > .carrousel-author {
     position: absolute;
-    top: 6rem;
-    right: 7rem;
+    top: 5rem;
+    left: 7rem;
 
     background: rgba(0, 0, 0, 0.66);
-    font-style: italic;
-    font-size: 0.8rem;
+    font-size: 1rem;
 
     padding: 0.5rem 1rem;
     color: #FFF;
@@ -345,6 +344,10 @@ section > main + aside  { margin-left: 1em }
     right: 2rem;
 }
 
+section > main.carrousel {
+    width: 80vw;
+}
+
 
 /* =============================================================================
    CARDS
@@ -357,7 +360,7 @@ section > main + aside  { margin-left: 1em }
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .card {
@@ -373,6 +376,7 @@ section > main + aside  { margin-left: 1em }
 .card-title {
     margin-bottom: 1em;
     font-size: 1.2em;
+    font-weight: bold;
     padding-bottom: 1em;
     border-bottom: 8px solid #BBB;
 }
