@@ -93,7 +93,7 @@ Now, you will be able to see a local preview of the site at this address in your
 
 ## Adding Content to the Site
 
-The ["What is the VO?" page](content/pages/about/what_is_vo.md) provides a simple example of a markdown file. Most pages that you would likely add or change will similarily be located under [content/pages](https://github.com/ivoa/ivoa-web/tree/main/content/pages) in the repository.
+The ["What is the VO?" page](content/about/what_is_vo.md) provides a simple example of a markdown file. Most pages that you would likely add or change will similarily be located under [content/pages](https://github.com/ivoa/ivoa-web/tree/main/content/pages) in the repository.
 
 A typical markdown file will have a header followed by the page content, as in:
 
@@ -119,7 +119,7 @@ For example, here is the link in the index to the "What is the VO" webpage.
 
 ```
 <li>
-    <a href="{{<ref "pages/about/what_is_vo">}}">What is the VO?</a>
+    <a href="{{<ref "about/what_is_vo">}}">What is the VO?</a>
 </li>
 ```
 
