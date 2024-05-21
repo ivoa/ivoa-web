@@ -5,6 +5,7 @@ draft: false
 tags:
 - applications
 ---
+
 In this section, scientists can find available VO-compatible applications for their immediate use to do science. The level of maturity of the applications depends on a high degree on the level of maturity of the corresponding IVOA protocols and standards.. As a consequence of the flexibility of the standards, several of the applications might overlap in functionality. **The IVOA does not manage or guarantee these services/tools.**
 
 | Applications  <br>(in alphabetical order) |
