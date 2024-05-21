@@ -42,12 +42,6 @@ article {
     margin: 2em auto;
 }
 
-.horizontal-blocks {
-    display: flex;
-    flex-direction: row;
-    column-gap: 1em;
-}
-
 table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -182,6 +176,58 @@ body > footer a:hover {
 }
 
 body > footer { text-align: right }
+
+
+/* =============================================================================
+   SECTION WITH HEADER, MAIN, LEFT-/RIGHT ASIDE AND FOOTER
+ */
+
+section {
+    display              : grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows   : auto;
+    grid-template-areas  : 
+        "header header header"
+        "left-aside main right-aside"
+        "footer footer footer";
+    
+    /* Use all the section container width: */
+    justify-content: stretch;
+    /* Place this section at the top of the section container: */
+    align-content: start;
+
+    /* Use all the section inner width for its content: */
+    justify-items: stretch;
+    /* Use all the section inner height for its content: */
+    align-items  : stretch;
+}
+
+section.with-only-right-aside {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        "header header"
+        "main right-aside"
+        "footer footer";
+}
+
+section.with-only-left-aside {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "left-aside main"
+        "footer footer";
+}
+
+section > header      { grid-area: header }
+section > main        { grid-area: main }
+section > aside.left  { grid-area: left-aside }
+section > aside.right { grid-area: right-aside }
+section > footer      { grid-area: footer }
+
+section > header + main { margin-bottom: 1em }
+section > main + footer { margin-top: 1em }
+section > aside + main  { margin-right: 1em }
+section > main + aside  { margin-left: 1em }
 
 
 /* =============================================================================
