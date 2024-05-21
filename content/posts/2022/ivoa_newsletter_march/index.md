@@ -24,7 +24,7 @@ A new and important IVOA Architecture document (lead author Pat Dowler) was rele
 The Closing Plenary and presentation by the TCG, emphasized progress of standards over the last 6 months, and reminded the audience of the Technical Coordination Group (TCG) and their role in the IVOA. The TCG is made up of Chairs and Vice-Chairs of working groups, interest groups, and committees. They are tasked with building consensus in the WG and community, assure coordination between WG/IG & the Committee for Science Priorities (CSP), liaison with the Executive committee, and support committee roles in the IVOA documents and standards process. TCG membership has a 3 year term with a possible 1 year extension. Members of the astronomical community are welcome to get involved in the IVOA and to consider a role in the TCG.
 
 Here are several links to get involved:
-|                   |                                   |                                                   |
+| Name              | URL                               | Description                                       |
 | ----------------- | --------------------------------- | ------------------------------------------------- |
 | IVOA Website      | https://www.ivoa.net/             | Place to start                                    |
 | IVOA Wiki pages   | https://wiki.ivoa.net/            | Collaboration area                                |

@@ -1,0 +1,405 @@
+
+/* =============================================================================
+   GENERAL STYLES
+ */
+
+@font-face {
+    font-family: 'Inter';
+    src: URL('../webfonts/Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
+
+/* Size of all elements always includes the border. */
+* { box-sizing: border-box }
+
+/* Reset the margin and padding of the document body. */
+html,
+body {
+    margin : 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+    color: #012647;
+}
+
+body > main > article > header > h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+p { text-align: justify }
+
+a {
+    color: #004d91;
+    font-weight: 500;
+    text-decoration: none;
+}
+a:hover { text-decoration: underline }
+
+article {
+    max-width: 80em;
+    margin: 2em auto;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #004d91;
+    color: white;
+}
+
+
+/* =============================================================================
+   MAIN PAGE LAYOUT
+   Footer at bottom of the page even if empty content.
+ */
+
+body {
+    display       : flex;
+    flex-direction: column;
+    height        : 100vh; /* needed to push the footer at the bottom of the page */
+}
+
+/* Let the main content takes as much vertical space as possible: */
+body > main {
+    flex-grow: 1;
+    padding: 1em;
+}
+
+/* In case their height is dynamic (i.e. use of min-/max-height), prevent
+   them to shrink when the page is smaller: */
+body > header,
+body > footer {
+    flex-shrink: 0;
+}
+
+body > header,
+body > .sitemap,
+body > footer {
+    background-color: #012647;
+}
+
+
+/* =============================================================================
+   HEADER
+ */
+
+body > header {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+
+    position: relative;
+    padding : 0 1em;
+
+    height     : 5em;
+    line-height: 5em;
+}
+
+body > header > .header-logo {
+    position: relative;
+
+    display: flex;
+
+    color          : white;
+    font-size      : 1.5em;
+    text-decoration: none;
+}
+
+body > header > .header-logo > img {
+    height      : calc( 100% - 1rem);
+    margin      : .5rem 0;
+    margin-right: 1rem;
+}
+
+body > header > .header-logo > span {
+    position: relative;
+    top: .75rem;
+    line-height: 1.8rem;
+    text-wrap: nowrap;
+}
+
+body > header > nav {
+    display       : flex;
+    flex-direction: row;
+}
+
+body > header > nav > a {
+    font-size      : 1.3em;
+    color          : white;
+    text-decoration: none;
+}
+
+body > header > nav > a:hover { text-decoration: underline }
+
+body > header > nav > a + a { margin-left: 1em }
+
+
+/* =============================================================================
+   FOOTER
+ */
+
+body > .sitemap,
+body > footer {
+    padding: .5em;
+    
+    color     : white;
+    font-size : 1.1em;
+}
+
+body > .sitemap a,
+body > footer a {
+    color: #92d5ff;
+    text-decoration: none;
+}
+body > .sitemap a:hover,
+body > footer a:hover {
+    text-decoration: underline;
+}
+
+body > footer { text-align: right }
+
+
+/* =============================================================================
+   SECTION WITH HEADER, MAIN, LEFT-/RIGHT ASIDE AND FOOTER
+ */
+
+section {
+    display              : grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows   : auto;
+    grid-template-areas  : 
+        "header header header"
+        "left-aside main right-aside"
+        "footer footer footer";
+    
+    /* Use all the section container width: */
+    justify-content: stretch;
+    /* Place this section at the top of the section container: */
+    align-content: start;
+
+    /* Use all the section inner width for its content: */
+    justify-items: stretch;
+    /* Use all the section inner height for its content: */
+    align-items  : stretch;
+}
+
+section.with-only-right-aside {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        "header header"
+        "main right-aside"
+        "footer footer";
+}
+
+section.with-only-left-aside {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "left-aside main"
+        "footer footer";
+}
+
+section > header      { grid-area: header }
+section > main        { grid-area: main }
+section > aside.left  { grid-area: left-aside }
+section > aside.right { grid-area: right-aside }
+section > footer      { grid-area: footer }
+
+section > header + main { margin-bottom: 1em }
+section > main + footer { margin-top: 1em }
+section > aside + main  { margin-right: 1em }
+section > main + aside  { margin-left: 1em }
+
+
+/* =============================================================================
+   PAGE CREATION AND UPDATED DATES
+ */
+
+.pageDates {
+    text-align: right;
+    font-size : .9em;
+    color     : #777;
+    font-style: italic;
+}
+
+
+/* =============================================================================
+   CARROUSEL
+ */
+
+.carrousel {
+    position: relative;
+    width: 100%;
+    margin: 1rem auto;
+    max-width: 1600px;
+    height: 33vh;
+    min-height: 300px;
+    max-height: 600px;
+    overflow: hidden;
+    padding: 0 0.25rem;
+}
+
+.carrousel-item        { display: none }
+.carrousel-item.active { display: block }
+
+.carrousel-item > .carrousel-img {
+    width: 100%;
+    height: auto;
+    filter: contrast(.4);
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+
+.carrousel-item > .carrousel-title {
+    position: absolute;
+    top: 1rem;
+    left: 7rem;
+    right: 7rem;
+    background: rgba(0, 0, 0, 0.66);
+    font-size: 2.3rem;
+
+    padding: 0.5rem 1rem;
+    color: #FFF;
+}
+
+.carrousel-item > .carrousel-author {
+    position: absolute;
+    top: 5rem;
+    left: 7rem;
+
+    background: rgba(0, 0, 0, 0.66);
+    font-size: 1rem;
+
+    padding: 0.5rem 1rem;
+    color: #FFF;
+}
+
+.carrousel-item > .carrousel-author::before {
+    content: "by "
+}
+
+.carrousel-item > .carrousel-action {
+    position: absolute;
+    bottom: 1rem;
+    right: 7rem;
+
+    background: rgba(0, 0, 0, 0.66);
+    font-size: 1.4rem;
+
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.carrousel-item > .carrousel-action:hover {
+    background: rgba(0, 100, 255, 0.8);
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.carrousel-btn {
+    position: absolute;
+    top     : 50%;
+    padding : 0.5rem 1rem;
+
+    border-radius: 4px;
+    
+    transform: translateY(-50%);
+
+    font-size: 2rem;
+    color    : rgba(255, 255, 255, 0.8);
+
+    background: rgba(0, 0, 0, 0.66);
+}
+
+.carrousel-btn:hover {
+    color : rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.carrousel-btn-left {
+    left: 2rem;
+}
+
+.carrousel-btn-right {
+    right: 2rem;
+}
+
+section > main.carrousel {
+    width: 80vw;
+}
+
+
+/* =============================================================================
+   CARDS
+ */
+
+ .cards {
+    margin: 1rem 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 1em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 1em;
+    border: 1px solid #BBB;
+    border-radius: 1em;
+}
+
+.card-title {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 1em;
+    border-bottom: 8px solid #BBB;
+}
+
+.card-list {
+    flex-grow: 1;
+}
+
+.card-list ul {
+    padding-left: 0;
+    margin : 0;
+    padding: 0;
+}
+
+.card-list li {
+    list-style: none;
+}
+
+.card-list li + li {
+    margin-top: 1em;
+}
+
+.sitemap .card { border: none }
+.sitemap .card:nth-child(1) > .card-title { border-bottom-color: #5dbbf5 }
+.sitemap .card:nth-child(2) > .card-title { border-bottom-color: #399110 }
+.sitemap .card:nth-child(3) > .card-title { border-bottom-color: #aa3f3f }
