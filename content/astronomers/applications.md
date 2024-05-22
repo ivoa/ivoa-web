@@ -7,30 +7,27 @@ tags:
 
 In this section, scientists can find available VO-compatible applications for their immediate use to do science. The level of maturity of the applications depends on a high degree on the level of maturity of the corresponding IVOA protocols and standards.. As a consequence of the flexibility of the standards, several of the applications might overlap in functionality. **The IVOA does not manage or guarantee these services/tools.**
 
-| Applications  <br>(in alphabetical order) |
-| --- |
-| [Aladin](http://aladin.u-strasbg.fr/aladin.gml) |
-| [APERICubes](https://voparis-apericubes.obspm.fr/) |
-| [AppLauncher](http://www.jmmc.fr/applauncher) |
-| [Astroquery](https://astroquery.readthedocs.io/en/latest/) |
-| [CASSIS](http://cassis.irap.omp.eu) |
-| [CDS Xmatch Service](http://cdsxmatch.u-strasbg.fr/xmatch) |
-| [Data Discovery Tool](https://mast.stsci.edu/portal/Mashup/Clients/Mast/portal.html) |
-| [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) |
-| [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
-| [Montage](http://montage.ipac.caltech.edu/docs/index.html) |
-| [PyVO](https://pyvo.readthedocs.io/en/latest/)
-| [SkyView](http://skyview.gsfc.nasa.gov/) |
-| [SPLAT](http://star-www.dur.ac.uk/%7Epdraper/splat/splat-vo/) |
-| [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool) |
-| [TAPHandle](http://saada.u-strasbg.fr/taphandle/) |
-| [TESELA](http://sdc.cab.inta-csic.es/tesela/index.jsp) |
-| [TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/) |
-| [STILTS](http://www.star.bris.ac.uk/%7Embt/stilts/) |
-| [VESPA](http://vespa.obspm.fr) |
-| [VOSA](http://svo2.cab.inta-csic.es/theory/vosa/) |
-| [VOServices](http://www.voservices.org/) ([Footprint](http://voservices.net/footprint/), [Spectrum](http://voservices.net/spectrum/), [Filters](http://voservices.net/filter/), ...) |
-| [VOSpec](http://www.cosmos.esa.int/web/esdc/vospec) |
+| Applications  <br>(in alphabetical order) | Publisher | Short Description |
+| --- | --- | --- |
+| [Aladin](http://aladin.u-strasbg.fr/aladin.gml) | CDS | Aladin is an interactive sky atlas allowing the user to visualize digitized astronomical images or full surveys, superimpose entries from astronomical catalogues or databases, and interactively access related data and information from the Simbad database, the VizieR service and other archives for all known astronomical objects in the field. |
+| [APERICubes](https://voparis-apericubes.obspm.fr/) | VOFrance | TBD | 
+| [Astroquery](https://astroquery.readthedocs.io/en/latest/) | | Astroquery is a set of tools for querying astronomical web forms and databases. |
+| [CASSIS](http://cassis.irap.omp.eu) | | |
+| [CDS Xmatch Service](http://cdsxmatch.u-strasbg.fr/xmatch) | CDS | Crossmatch Service |
+| [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) | SVO | Filter Profile Service - A repository of Filter information for the VO |
+| [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) | |  |
+| [Montage](http://montage.ipac.caltech.edu/docs/index.html) | IRSA | Astronomical Image mosaic engine |
+| [PyVO](https://pyvo.readthedocs.io/en/latest/) | | PyVO is a package providing access to remote data and services of the Virtual observatory (VO) using Python. |
+| [SkyView](http://skyview.gsfc.nasa.gov/) | NASA/HEASARC | A Virtual Observatory on the Net application for generating images of any part of the sky at wavelengths in all regimes from Radio to Gamma-Ray. |
+| [SPLAT](http://star-www.dur.ac.uk/%7Epdraper/splat/splat-vo/) | GAVO | SPLAT is a graphical tool for displaying, comparing, modifying and analysing astronomical spectra stored in several file formats. Spectra can be read from local files or retrieved through VO protocols. |
+| [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool) | SVO | A Spanish VO (SVO) service to look for images, spectra, physical parameters of photometry in the VO. |
+| [TAPHandle](http://saada.u-strasbg.fr/taphandle/) | GAVO | Search your TAP service and explore database content |
+| [TESELA](http://sdc.cab.inta-csic.es/tesela/index.jsp) | SVO | A service developed to provide access to a catalogue of blank regions, based on the application of the Delaunay triangulation of the sky. The present implementation of TESELA uses as source for the star coordinates the Tycho-2 Catalogue (Hog et al. 2000), or the USNO_B Catalgue (Moret et al. 2003). |
+| [TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/) | | TOPCAT is an interactive graphical viewer and editor for tabular data. Its aim is to provide most of the facilities that astronomers need for analysis and manipulation of source catalogues and other tables, though it can be used for non-astronomical data as well. It understands a number of different astronomically important formats (including FITS, VOTable and CDF) and more formats can be added. It is especially good at interactive exploration of large (multi-million row, lots of columns) tables. |
+| [STILTS](http://www.star.bris.ac.uk/%7Embt/stilts/) | | The STIL Tool Set is a set of command-line tools based on STIL, the Starlink Tables Infrastructure Library. It deals with the processing of tabular data; the package has been designed for, but is not restricted to, astronomical tables such as source catalogues. Some of the tools are generic and can work with multiple formats (including FITS, VOTable, CDF, ECSV, CSV, PDS4, Parquet, MRT, Feather, GBIN, SQL and ASCII), and others are specific to the VOTable format. STILTS is the command-line counterpart of the GUI table analysis tool TOPCAT. The package is robust, fully documented, and designed for efficiency, especially with very large datasets. |
+| [VESPA](http://vespa.obspm.fr) | | VESPA (Virtual European Solar and Planetary Access) is a web-based data search interface for Planetary Science and Heliophysics data. VESPA is a project of the Europlanet-2024 programme funded by European Community. |
+| [VOSA](http://svo2.cab.inta-csic.es/theory/vosa/) | | VO SED Analyzer |
+| [VOSpec](http://www.cosmos.esa.int/web/esdc/vospec) | | A multi-wavelength spectral analysis tool from ESA with access to spectra, theoretical models and atomic and molecular line databases registered in the VO. The latest version also includes access to experimental photometry services. The standard tools of VOSpec include line and continuum fitting, redshift and reddening correction, spectral arithmetic and convolution between spectra, equivalent width and flux calculations, and a best fitting algorithm for fitting selected Spectral Energy Distributions (SEDs) to a TSAP service. VOSpec offers several display modes (tree vs table) and organising functionalities according to the available metadata for each service, including distance from the observation position. |
 
 | Functionality |
 | --- |
