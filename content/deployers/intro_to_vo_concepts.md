@@ -24,11 +24,11 @@ The VO is based around the two key concepts of Resources and Services. The term 
 
 The IVOA Technical Co-ordination Group (TCG) maintains [a document](https://ivoa.net/documents/IVOAArchitecture/) which gives an overview of the IVOA Architecture at three different levels, and shows diagramatically how the various standards fit into this architecture. We strongly recommend that potential deployers read this document carefully. (It will be updated more often than this web page). Here we provide a short summary, followed by a brief description of the key areas of standardisation.
 
-![VO basic architecture](/images/VOarchitecture0.png)
+![VO basic architecture](VOArchitecture0.png)
 
 At "Level 0" we can see the VO ecosystem as divided into the User Layer, the Resource Layer, and the VO Middle Layer, which connects the two transparently. Communication goes two ways, so we need to pay attention both to finding resources, and to getting stuff from the resources. VO standards also make it possible to communicate horizontally, between resource providers, and between user applications.
 
-![VO Level 1 Architecture](/images/VOarchitecture1.png)
+![VO Level 1 Architecture](VOArchitecture1.png)
 
 The "Level 1" diagram makes things a little more specific. "Finding" involves everything to do with Registries, the Yellow Pages of the VO, including how to name resources, how to list resource metadata, how to interface with a registry, and so on. "Getting" becomes the Data Access Protocols. In the "VO Core" we need to specify the various types of allowed data model, the semantics that should be followed, and how to construct a query in a standardised manner. Note that most of these details are not things users need to know about - rather, they are for service providers and applications writers.
 
