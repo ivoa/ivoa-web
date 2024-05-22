@@ -17,12 +17,16 @@ given in the [Deployers](../deployers) section.
 progress](../documents) | [Meeting
 Calendar](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents)
 
-## Code of Conduct
+[IVOA Code of Conduct](IVOA_Code_of_Conduct.pdf)
 
-[pdf](IVOA_Code_of_Conduct.pdf)
+<!-- iss42: Restore search form here.
+<form id="search_form" action="https://mail.ivoa.net/search/" method="get">
+     <input id="esmail_search_bar" placeholder="" type="text" name="search" />
+     <button formtarget="esmail_tab" type="submit">SEARCH</button>
+     </form>
+-->
 
-## Mail Archive Search
-The mail search engine for refined searches can be found [here](http://mail.ivoa.net/search).
+The mailing list archive can be searched [here](http://mail.ivoa.net/search).
 
 ## Working Groups
 
