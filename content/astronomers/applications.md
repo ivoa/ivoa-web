@@ -17,7 +17,7 @@ In this section, scientists can find available VO-compatible applications for th
 | [CDS Xmatch Service](http://cdsxmatch.u-strasbg.fr/xmatch) |
 | [Data Discovery Tool](https://mast.stsci.edu/portal/Mashup/Clients/Mast/portal.html) |
 | [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) |
-| [Firefly](https://github.com/Caltech-IPAC/firefly) |
+| [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 | [Montage](http://montage.ipac.caltech.edu/docs/index.html) |
 | [Octet](http://www1.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/cvo/) |
 | [SkyView](http://skyview.gsfc.nasa.gov/) |
@@ -34,22 +34,22 @@ In this section, scientists can find available VO-compatible applications for th
 
 | Functionality |
 | --- |
-| **Search for Images:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [Datascope](http://heasarc.gsfc.nasa.gov/cgi-bin/vo/datascope/init.pl), [SkyView](http://skyview.gsfc.nasa.gov/), [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool), [Firefly](https://github.com/Caltech-IPAC/firefly) |
+| **Search for Images:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [Datascope](http://heasarc.gsfc.nasa.gov/cgi-bin/vo/datascope/init.pl), [SkyView](http://skyview.gsfc.nasa.gov/), [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 | **Search for Spectra:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [CASSIS](http://cassis.irap.omp.eu), [Datascope](http://heasarc.gsfc.nasa.gov/cgi-bin/vo/datascope/init.pl), [SPLAT](http://star-www.dur.ac.uk/%7Epdraper/splat/splat-vo/), [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool), [VOServices](http://voservices.net/spectrum/) |
-| **Search for Catalogues:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [Datascope](http://heasarc.gsfc.nasa.gov/cgi-bin/vo/datascope/init.pl), [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool), [TOPCAT](http://www.star.bris.ac.uk/~mbt/topcat/), [Firefly](https://github.com/Caltech-IPAC/firefly) |
-| **Search for Time Series Data:**  <br>[Firefly](https://github.com/Caltech-IPAC/firefly) |
-| **Image visualisation:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [SkyView](http://skyview.gsfc.nasa.gov/), [Firefly](https://github.com/Caltech-IPAC/firefly) |
+| **Search for Catalogues:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [Datascope](http://heasarc.gsfc.nasa.gov/cgi-bin/vo/datascope/init.pl), [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool), [TOPCAT](http://www.star.bris.ac.uk/~mbt/topcat/), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
+| **Search for Time Series Data:**  <br>[IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
+| **Image visualisation:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [SkyView](http://skyview.gsfc.nasa.gov/), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 | **Spectra visualisation:**  <br>[CASSIS](http://cassis.irap.omp.eu), [SPLAT](http://star-www.dur.ac.uk/%7Epdraper/splat/splat-vo/), [VOServices](http://voservices.net/spectrum/), [VOSpec](http://www.sciops.esa.int/index.php?project=SAT&page=vospec) |
-| **Catalogues visualisation:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [Firefly](https://github.com/Caltech-IPAC/firefly) |
+| **Catalogues visualisation:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 | **Cross-correlation:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [STILTs](http://www.star.bris.ac.uk/%7Embt/stilts/),[TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [CDS Xmatch Service](http://cdsxmatch.u-strasbg.fr/xmatch) |
-| **Scatter, 3D plots and histograms:**  <br>[TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [Firefly](https://github.com/Caltech-IPAC/firefly) |
+| **Scatter, 3D plots and histograms:**  <br>[TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 | **Statistics:**  <br>[AstroStat](http://voi.iucaa.in/voi/AstroStat.html) |
 | **Footprint Service:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [VOServices](http://voservices.net/footprint/) |
 | **Table format conversion:**  <br>[TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [STILTS](http://www.star.bris.ac.uk/%7Embt/stilts/) |
 | **Filter curves:**  <br>[VOServices](http://voservices.net/filter/), [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) |
 | **SED building:**  <br>[VOSA](http://svo2.cab.inta-csic.es/theory/vosa/), [VOSpec](http://www.sciops.esa.int/index.php?project=SAT&page=vospec)) |
 | **Fixing WCS:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml) |
-| **Query Databases**  <br>[TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [TAPHandle](http://saada.u-strasbg.fr/taphandle/), [Firefly](https://github.com/Caltech-IPAC/firefly) |
+| **Query Databases**  <br>[TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [TAPHandle](http://saada.u-strasbg.fr/taphandle/), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 
 | VO-compliant Tools & Services |
 | --- |
@@ -73,7 +73,7 @@ In this section, scientists can find available VO-compatible applications for th
 | [Aladin](http://aladin.cds.unistra.fr/java/AladinManual.pdf) User manual |
 | [CASSIS](http://cassis.irap.omp.eu/?page=documentation) documentation |
 | [Datascope](http://heasarc.gsfc.nasa.gov/vo/datascope/helpInc.html) how to |
-| [Firefly](https://github.com/Caltech-IPAC/firefly/tree/dev/docs) documentation |
+| [IPAC Firefly](https://github.com/Caltech-IPAC/firefly/tree/dev/docs) documentation |
 | [SkyView](http://skyview.gsfc.nasa.gov/current/help/help.html) documentation |
 | [SPLAT](http://star-www.dur.ac.uk/~pdraper/splat/splat-vo/sun243.pdf) documentation |
 | [STILTS](http://www.star.bris.ac.uk/%7Embt/stilts/sun256/sun256.html) documentation |
