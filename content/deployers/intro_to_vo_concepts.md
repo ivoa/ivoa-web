@@ -1,6 +1,6 @@
 ---
 title: "Introduction to VO concepts"
-date: 
+date:
 draft: false
 tags:
 - about
