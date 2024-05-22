@@ -27,11 +27,23 @@ Here is a very brief explanation of some of the terms you may come across in the
 **FITS**
 : Flexible Image Transport System. The standard format for astronomical images and tables. FITS also specifies a standard way of expressing metadata in keyword-value pairs, and specifies a small number of mandatory keywords, along with a slightly larger number of reserved keywords, which have to have a particular meaning if a file uses them. Every FITS table can be expressed as a VOTable, but not necessarily vice versa, as the VOTable format can contain more complicated metadata.
 
+**HEALPix**
+: HEALPix is an acronym for Hierarchical Equal Area isoLatitude Pixelation of a sphere. As suggested in the name, this pixelation produces a subdivision of a spherical surface in which each pixel covers the same surface area as every other pixel.
+
+**HiPS**
+: The Hierarchical Progressive Survey enables dedicated client/browser tools to access and display an astronomical survey progressively, based on the principle that “the more you zoom in on a particular area the more details show up”. It is based on the HEALPix tessellation.
+
+**Interoperability**
+: The ability of software and/or hardware on different machines to share data or collaborate without special effort on the part of the user.
+
 **IVOA**
 : International Virtual Observatory Alliance. An organisation encouraging collaboration between Virtual Observatory efforts worldwide, and agreeing the standards necessary to make the VO work.
 
 **Metadata**
 : Data about data. Normally used to mean standardised descriptive information that goes with a data file (e.g. FITS keywords), or information in a registry entry that describes a resource such as a data service, or information that specifies the structure of a database - a list of its tables, their column names, and their UCDs.
+
+**MOC**
+: The Multi-Order Coverage map is an IVOA standard to manipulate coverages in order to provide very fast union, intersection and equality operations between them. It is based on the HEALPix tessellation.
 
 **NED**
 : NASA/IPAC Extragalactic Database. A very large database of astronomical objects maintained by IPAC at Caltech. Queryable via a custom web-interface and also as a single large cone-search service.
@@ -51,7 +63,7 @@ Here is a very brief explanation of some of the terms you may come across in the
 **SIAP**
 : Simple Image Access Protocol. SIAP services are archives that return astronomical images within a specified position and radius. Some services return a cutout of the specified size, and some a fixed-sized image from an atlas of images.
 
-**Simbad**
+**SIMBAD**
 : A very large VO compatible database of astronomical objects maintained at CDS in Strasbourg. It can be queried in several different ways, including both fixed pattern web forms, or completely flexibly using an ADQL query, using the VO TAP standard.
 
 **Single Sign on**
