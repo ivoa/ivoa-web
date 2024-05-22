@@ -1,11 +1,10 @@
 {{ define "main"}}
 
-{{- partial "page-dates.html" . }}
-
-<article class="w3-container w3-content">
+<article>
     <header>
         <h1>{{ .Title }}</h1>
     </header>
+    {{- partial "page-dates.html" . }}
     {{ .Content }}
 </article>
 

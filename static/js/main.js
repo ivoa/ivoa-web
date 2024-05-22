@@ -22,9 +22,9 @@ function mod(n, m) {
         for (let i = 0; i !== CARROUSEL_LENGTH; ++i) {
             const el = document.getElementById("carrousel-" + i);
             if (i === carrousel) {
-                el.className = "w3-show";
+                el.classList.add('active');
             } else {
-                el.className = "w3-hide";
+                el.classList.remove('active');
             }
         }
     }
