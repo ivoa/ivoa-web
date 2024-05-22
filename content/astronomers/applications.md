@@ -9,17 +9,17 @@ In this section, scientists can find available VO-compatible applications for th
 
 | Applications  <br>(in alphabetical order) |
 | --- |
-| [3D View](http://3dview.irap.omp.eu) |
 | [Aladin](http://aladin.u-strasbg.fr/aladin.gml) |
 | [APERICubes](https://voparis-apericubes.obspm.fr/) |
 | [AppLauncher](http://www.jmmc.fr/applauncher) |
+| [Astroquery](https://astroquery.readthedocs.io/en/latest/) |
 | [CASSIS](http://cassis.irap.omp.eu) |
 | [CDS Xmatch Service](http://cdsxmatch.u-strasbg.fr/xmatch) |
 | [Data Discovery Tool](https://mast.stsci.edu/portal/Mashup/Clients/Mast/portal.html) |
 | [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) |
 | [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 | [Montage](http://montage.ipac.caltech.edu/docs/index.html) |
-| [Octet](http://www1.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/cvo/) |
+| [PyVO](https://pyvo.readthedocs.io/en/latest/)
 | [SkyView](http://skyview.gsfc.nasa.gov/) |
 | [SPLAT](http://star-www.dur.ac.uk/%7Epdraper/splat/splat-vo/) |
 | [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool) |
@@ -53,7 +53,7 @@ In this section, scientists can find available VO-compatible applications for th
 
 | VO-compliant Tools & Services |
 | --- |
-| [DS9](http://hea-www.harvard.edu/RD/ds9/): Image visualiasation |
+| [DS9](http://hea-www.harvard.edu/RD/ds9/): Image visualisation |
 | [VirGO: Search for Images and Spectra](http://archive.eso.org/cms/tools-documentation/visual-archive-browser.html) |
 | [World Wide Telescope](http://www.worldwidetelescope.org/) |
 | [Gaia](http://star-www.dur.ac.uk/~pdraper/gaia/gaia.html) - Graphical Astronomy and Image Analysis |
