@@ -1,5 +1,5 @@
 ---
-title: "Information for IVOA Members"
+title: "For Members"
 draft: false
 tags:
 - members
