@@ -8,6 +8,10 @@ You should [install git](https://github.com/git-guides/install-git) if it is not
 
 An account on [Github](https://github.com) is required, along with write permissions on the [ivoa-web repository](https://github.com/ivoa/ivoa-web). Please refer to the [Getting Help](#getting-help) section for information on how to request write access to the repository.
 
+In the future, the administrators plan to accept pull requests from forks, after which write access will not be required.
+
+Pushing changes to the repository also requires working authentication, which is covered in the [set up git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) documentation.
+
 ## Checkout the Repository
 
 The site's repository may be checked out from Github as folows:
@@ -27,37 +31,36 @@ Here is the complete process for creating an issue:
 - Go to the [ivoa-web issues page](https://github.com/ivoa/ivoa-web/issues) and click on "New Issue."
 - Under "Add a title," write a brief phrase describing what you plan to do in the present tense, for example, "Add a page describing what the IVOA does." (You do not need to include punctuation in the title itself.)
 - Add a description with additional details about what you plan to do under "Add a description," if you feel that it would be helpful.
-- Optionally, assign an appropriate tag
+- Optionally, assign an appropriate tag such as "enhancement."
 - Finally, click on "Submit new issue."
 
-You will now be redirected to the new page that was created for your issue. Take note of the number by the title (starts with "#"), as this will be used in creating the Git branch corresponding to the issue.
+You will now be redirected to the new issue page. The number of the issue by the title (starts with "#") will be used in creating the Git branch corresponding to the issue.
 
 ## Creating a Branch
 
 You will need to create a branch which will contain the updates to the site.
 
-If you are working from an existing copy of the repository rather than checking it out for the first time, always update the `main` branch before creating your issue branch, like this:
+If you are working from an existing copy of the repository rather than checking it out for the first time, always update the `main` branch before creating your issue branch, as follows:
 
 ```
 git checkout main && git pull
 ```
 
-Assuming your issue number was "1234", which is just an example, a branch can be created as follows:
+Assuming your issue number was "1234", which is just an example, a branch can be created as follows from your local `ivoa-web` directory:
 
 ```
-cd ivoa-web
 git checkout -b iss1234
 ```
 
-The above naming pattern is preferred since it clearly connects your branch to its corresponding issue in the Github tracker for future reference.
+The above naming pattern is preferred to clearly connect your branch to a corresponding issue in the Github tracker for future reference and documentation of what changes are being made and by whom.
 
-You may additionally include some brief text in the branch name to describe what you plan on doing, such as `iss1234-add-a-page-about-the-ivoa`. The most important part is starting the branch name with `iss` followed by the number of the issue in the tracker.
+You may optionally include some brief text in the branch name to describe your work, such as `iss1234-add-a-page-about-the-ivoa`. The most important part is starting the branch name with `iss` followed by the number of the issue in the tracker.
 
 # Working with Hugo
 
 ## Installation
 
-Hugo is required for building the site locally in order to preview your changes. You may follow the [installation instructions](https://gohugo.io/installation/) for your platform.
+Hugo can be used to build the site locally and preview your changes. You may follow the [installation instructions](https://gohugo.io/installation/) for your platform.
 
 You can test that the `hugo` command works by executing this command:
 
@@ -69,21 +72,15 @@ This will show a lot of usage information in the terminal.
 
 ## Building the Site
 
-Once you have changed an existing page or added a new one, Hugo can regenerate the entire site with this simple command:
-
-```
-hugo
-```
-
-But this will generate links which will not work locally, as they will reference the URL of the actual site rather than your local copy.
-
-So instead, we will deploy a development version of the site:
+Once you have changed an existing page or added a new one, the entire site can be regenerated with this simple command:
 
 ```
 hugo -D
 ```
 
-In order to view your changes, you can run the Hugo web server like this:
+The `-D` argument will make sure that links within the site use the local development URL.
+
+In order to view the local version of the site, you can run the Hugo web server:
 
 ```
 hugo server --watch --port 1313 -DEF --printI18nWarnings
@@ -93,9 +90,9 @@ Now, you will be able to see a local preview of the site at this address in your
 
 ## Adding Content to the Site
 
-The ["What is the VO?" page](content/about/what_is_vo.md) provides a simple example of a markdown file. Most pages that you would likely add or change will similarily be located under [content/pages](https://github.com/ivoa/ivoa-web/tree/main/content/pages) in the repository.
+The ["What is the VO?" page](content/about/what_is_vo.md) provides a simple example of a markdown file. Most pages that you would likely add or change will similarily be located under [content](https://github.com/ivoa/ivoa-web/tree/main/content) in the repository.
 
-A typical markdown file will have a header followed by the page content, as in:
+A typical markdown file will include a header followed by the page content, as in:
 
 ```
 ---
@@ -111,19 +108,9 @@ The goal of the Virtual Observatory (VO) is most easily described by analogy wit
 [rest of content]
 ```
 
-The `date` is provided here for example purposes only. Usually, you can leave it out and the dates from your Git commits will be used automatically.
+The `date` is provided here for example purposes only. Usually, you can leave it out and the dates from your last Git commit to that file will be used automatically.
 
-When a page is added, it should usually be added to the [site index](https://github.com/ivoa/ivoa-web/blob/main/content/_index.html) in the appropriate place if this link is not already present.
-
-For example, here is the link in the index to the "What is the VO" webpage.
-
-```
-<li>
-    <a href="{{<ref "about/what_is_vo">}}">What is the VO?</a>
-</li>
-```
-
-You do not need to include the `.md` file extension to reference a markdown file when linking in this way (`what_is_vo.md` is the file that is being referenced here).
+If not already present, a link should be added to the [site map](https://github.com/ivoa/ivoa-web/blob/main/layouts/partials/sitemap.html) pointing to the new page, or you may need to add one or more links to other parts of the site. Please consult with the site administrators if you have questions about where you might need to add or update links based on your changes.
 
 # Pushing Changes to Github
 
@@ -133,10 +120,10 @@ After you have updated your local repository with changes, you will need to foll
 
 - Use `git add` to stage the changes locally
 - When you type `git status`, the files which were added should show in green (You may want to double check that all the files you intended to add are listed there and that additional files were not included accidentally.)
-- Commit the changes with a message, e.g., `git commit -m "Added about the IVOA page"`
+- Commit the changes with a message, e.g., `git commit -m "Add about the IVOA page"` (You may want to review [How to write better commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/) for some guidelines on this step.)
 - Push your branch with a command such as `git push --set-upstream origin iss1234`
 
-You should be able to push subsequently using only the command `git push`.
+Once your local branch is associated with a remote branch on Github, you should subsequently be able to push using only the simple command `git push`.
 
 ## Making a Pull Request
 
@@ -167,7 +154,7 @@ For now, these development versions are not deleted automatically but may be in 
 
 ## PR Approval and Merging
 
-A reviewer will be assigned by the administrators and will either approve your PR or request changes. Once the PR is approved, the branch can be merged by clicking on the green "Merge" button. Typically, a reviewer will not merge the PR themselves, as you might want to make minor changes after the approval. (Making major changes to a branch after it has been approved is highly discouraged.)
+A reviewer will be assigned by the administrators to look at your PR and approve it or request changes before approval. Once the PR has been approved, the branch can be merged by clicking on the green "Merge" button. Typically, a reviewer will not merge the PR themselves, as you might want to make minor changes after the approval, such as fixing spelling or grammar. (However, major changes should _not_ be made to a PR branch after it has been reviewed, as that might require a re-review.)
 
 ## IVOA Test Website
 
@@ -179,4 +166,6 @@ Once your PR has been merged, the changes you have made will be deployed there a
 
 # Getting Help
 
-To get help about issues related to development of the IVOA website, please [open a ticket](https://github.com/ivoa/ivoa-web/issues/new) and add the "question" label. To do this, select the gear symbol next to "Labels" and click on "question." The developers of the site will attempt to answer your question on the issue page in a timely manner.
+The #ivoa-web channel on the [https://ivoa.slack.com](IVOA Slack) can be used to ask questions related to site development.
+
+You may alternately [open a ticket in the issue tracker](https://github.com/ivoa/ivoa-web/issues/new) and add the "question" label. The developers of the site will attempt to answer your question on the issue page in a timely manner.
