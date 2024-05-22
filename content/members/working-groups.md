@@ -1,5 +1,5 @@
 ---
-title: "For Members"
+title: "Working Groups"
 draft: false
 tags:
 - members
