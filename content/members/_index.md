@@ -1,11 +1,9 @@
 ---
-title: "Members"
+title: "Information for IVOA Members"
 draft: false
 tags:
 - members
 ---
-
-# Information for IVOA Members
 
 This section provides some quick links for members of IVOA working
 groups - twiki pages, events calendar, links to current versions of
