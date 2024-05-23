@@ -1,19 +1,12 @@
-# IVOA static web pages
+# IVOA Website
 
-This repo contains the source code to re-write the current www.ivoa.net
-static web content (front pages).
+This repository contains the source code to re-write the current (www.ivoa.net)[https://www.ivoat.net] webpage.
 
-Starting static HTML pages are initially preserved in the _current-html_
-folder.
-
-The new site will be built using [Hugo](https://gohugo.io/),
-take a look at the [documentation](https://gohugo.io/getting-started/quick-start/) 
-on how to use it.
+The existing HTML pages are present in the _current-html_ folder.
 
 ## Contributing
 
-Use issues to suggest changes and point out errors.
-This source is (should be) visible at this [test location](https://webtest.ivoa.info/)
+Please see the detailed [Contributing Guide](CONTRIBUTING.md) on contributing to the project.
 
 ## License
 
