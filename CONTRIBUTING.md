@@ -138,6 +138,8 @@ Here is the process for doing this:
 
 Now click "Create pull request."
 
+It would also be helpful under "Development" on the righthand menu to select your branch from the list in order to connect it to the PR. (You can search for the issue by its issue number in the search box.)
+
 ## Branch Versions of the Site
 
 Your changes will be included in a new branch version of the website after you open a PR. The deployment of this site is triggered automatically in the PR checks.
