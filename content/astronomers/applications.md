@@ -13,8 +13,8 @@ In this section, scientists can find available VO-compatible applications for th
 | [APERICubes](https://voparis-apericubes.obspm.fr/) | VOFrance | TBD | 
 | [Astroquery](https://astroquery.readthedocs.io/en/latest/) | | Astroquery is a set of tools for querying astronomical web forms and databases. |
 | [CASSIS](http://cassis.irap.omp.eu) | | |
-| [CDS Xmatch Service](http://cdsxmatch.u-strasbg.fr/xmatch) | CDS | Crossmatch Service |
-| [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) | SVO | Filter Profile Service - A repository of Filter information for the VO |
+| [CDS Xmatch Service](http://cdsxmatch.u-strasbg.fr/xmatch) | CDS | A Crossmatch Service |
+| [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) | SVO | Filter Profile Service is a repository of Filter information for the VO |
 | [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) | |  |
 | [Montage](http://montage.ipac.caltech.edu/docs/index.html) | IRSA | Astronomical Image mosaic engine |
 | [PyVO](https://pyvo.readthedocs.io/en/latest/) | | PyVO is a package providing access to remote data and services of the Virtual observatory (VO) using Python. |
@@ -64,17 +64,6 @@ In this section, scientists can find available VO-compatible applications for th
 | [AppLauncher](http://www.jmmc.fr/applauncher) |
 | [EURO-VO Registry](http://registry.euro-vo.org/search.jsp) |
 | [NVO Registry](http://nvo.stsci.edu/vor10/index.aspx) |
-|     |
-| Manuals, Tutorials, How-tos |
-| [ADQL & TAP](http://docs.g-vo.org/adql/html/) Tutorial |
-| [Aladin](http://aladin.cds.unistra.fr/java/AladinManual.pdf) User manual |
-| [CASSIS](http://cassis.irap.omp.eu/?page=documentation) documentation |
-| [Datascope](http://heasarc.gsfc.nasa.gov/vo/datascope/helpInc.html) how to |
-| [IPAC Firefly](https://github.com/Caltech-IPAC/firefly/tree/dev/docs) documentation |
-| [SkyView](http://skyview.gsfc.nasa.gov/current/help/help.html) documentation |
-| [SPLAT](http://star-www.dur.ac.uk/~pdraper/splat/splat-vo/sun243.pdf) documentation |
-| [STILTS](http://www.star.bris.ac.uk/%7Embt/stilts/sun256/sun256.html) documentation |
-| [TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/sun253/sun253.html) documentation |
 
 _If you are interested in having your own project linked here, please [contact us](mailto:ivoadoc@ivoa.net)._
 
