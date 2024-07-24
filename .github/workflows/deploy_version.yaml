@@ -29,6 +29,7 @@ jobs:
         with:
           username: webstage
           server: web.ivoa.net
+          port: ${{ secrets.SFTP_PORT }}
           key: ${{ secrets.STAGE_ID }}
           uploads: |
             ./public/ => ./ivoa-web-stage/v/${{ env.BRANCH_NAME }}
