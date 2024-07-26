@@ -62,7 +62,6 @@ In this section, scientists can find available VO-compatible applications for th
 | [RSS Feed of New & Updated Services in the VO](http://dc.zah.uni-heidelberg.de/registryrss/q/rss/info) |
 | [AppLauncher](http://www.jmmc.fr/applauncher) |
 | [EURO-VO Registry](https://registry.euro-vo.org/evor/) |
-| [NVO Registry](http://nvo.stsci.edu/vor10/index.aspx) |
 
 _If you are interested in having your own project linked here, please [contact us](mailto:ivoadoc@ivoa.net)._
 
