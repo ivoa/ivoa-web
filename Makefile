@@ -15,17 +15,11 @@ HUGO_CMD=${HUGO_DIR}/hugo
 
 #: Display this help (i.e. list all available targets). (DEFAULT TARGET)
 help:
-	@echo
-	@echo "Available targets:"
-	@grep -B1 -E "^[a-zA-Z0-9_-]+\:([^\=]|$$)" Makefile \
-	| grep -v -- -- \
-	| sed 'N;s/\n/###/' \
-	| sed -n "s/^#: \(.*\)###\(.*\):.*/* \2@\1/p" \
-	| fold -s -w 65 \
-	| sed 's/^[ \n\t]*\([^*]\)/@\1/' \
-	| column -t -o '  ' -s '@' \
-	| sed "s/^\* \([a-zA-Z-]\+\) /\n* ${BOLD}\1${NORMAL} /"
-	@echo
+	@echo "Make targets for ivoa-web"
+	@echo "make preview - Start the preview service (on port 1313). All required tools are installed/upgraded automatically, when needed."
+	@echo "make list-draft - List all draft pages (i.e. all pages only visible in preview mode)."
+	@echo "make install - Install Hugo (or upgrade it if a different version is set in Makefile)."
+	@echo "make uninstall - Uninstall Hugo."
 
 
 #: Start the preview service (on port 1313). All required tools are installed/upgraded automatically, when needed.
@@ -55,10 +49,10 @@ ${HUGO_VERSION_FILE}:
 	else \
 		echo "- Installing Hugo..."; \
 	fi
-	
+
 	@echo "  - 1/6 - Downloading Hugo (version: ${HUGO_VERSION})..."
 	@wget -q --show-progress "${HUGO_URL}/v${HUGO_VERSION}/${HUGO_ARCHIVE}"
-	
+
 	@echo "  - 2/6 - Deprecating existing Hugo version..."
 	@if [ -d "${HUGO_DIR}" ]; then \
 		rm -rf "${HUGO_DIR_OLD}"; \
