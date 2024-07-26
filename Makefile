@@ -16,6 +16,7 @@ HUGO_CMD=${HUGO_DIR}/hugo
 #: Display this help (i.e. list all available targets). (DEFAULT TARGET)
 help:
 	@echo "Make targets for ivoa-web"
+	@echo "make help - Display help (default target)."
 	@echo "make preview - Start the preview service (on port 1313). All required tools are installed/upgraded automatically, when needed."
 	@echo "make list-draft - List all draft pages (i.e. all pages only visible in preview mode)."
 	@echo "make install - Install Hugo (or upgrade it if a different version is set in Makefile)."
