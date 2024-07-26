@@ -43,7 +43,7 @@ In this section, scientists can find available VO-compatible applications for th
 | **Footprint Service:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml), [VOServices](http://voservices.net/footprint/) |
 | **Table format conversion:**  <br>[TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [STILTS](http://www.star.bris.ac.uk/%7Embt/stilts/) |
 | **Filter curves:**  <br>[VOServices](http://voservices.net/filter/), [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) |
-| **SED building:**  <br>[VOSA](http://svo2.cab.inta-csic.es/theory/vosa/), [VOSpec](http://www.sciops.esa.int/index.php?project=SAT&page=vospec)) |
+| **SED building:**  <br>[VOSA](http://svo2.cab.inta-csic.es/theory/vosa/), [VOSpec](http://www.sciops.esa.int/index.php?project=SAT&page=vospec) |
 | **Fixing WCS:**  <br>[Aladin](http://aladin.u-strasbg.fr/aladin.gml) |
 | **Query Databases**  <br>[TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [TAPHandle](http://saada.u-strasbg.fr/taphandle/), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 
@@ -61,7 +61,7 @@ In this section, scientists can find available VO-compatible applications for th
 | [WIRR - Web Interface to the Relational Registry](http://dc.zah.uni-heidelberg.de/wirr/q/ui/fixed) |
 | [RSS Feed of New & Updated Services in the VO](http://dc.zah.uni-heidelberg.de/registryrss/q/rss/info) |
 | [AppLauncher](http://www.jmmc.fr/applauncher) |
-| [EURO-VO Registry](http://registry.euro-vo.org/search.jsp) |
+| [EURO-VO Registry](https://registry.euro-vo.org/evor/) |
 | [NVO Registry](http://nvo.stsci.edu/vor10/index.aspx) |
 
 _If you are interested in having your own project linked here, please [contact us](mailto:ivoadoc@ivoa.net)._
