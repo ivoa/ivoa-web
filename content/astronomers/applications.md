@@ -67,4 +67,4 @@ _If you are interested in having your own project linked here, please [contact u
 
 ### IVOA Applications Working Group
 
-Also visit the [Applications Working Group](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaApplications) pages on the [IVOA](/) twiki, where you can find more [VO applications](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaApplications#Links) in different levels of maturity.
+Also visit the [Applications Working Group](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaApplications) pages on the [IVOA twiki](https://wiki.ivoa.net/twiki/bin/view/IVOA), where you can find more [VO applications](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaApplications#Links) in different levels of maturity.
