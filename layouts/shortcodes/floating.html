@@ -1,0 +1,3 @@
+<div class="{{ if .Get 0 }}floating {{ .Get 0 }}{{ else }}floating{{ end }}">
+    {{ .Inner | markdownify }}
+</div>
