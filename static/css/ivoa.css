@@ -246,6 +246,31 @@ section > main + aside  { margin-left: 1em }
 
 
 /* =============================================================================
+   SECTION WITH A SIDE IMAGE
+ */
+
+.with-image {
+    display              : grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas  : "image content";
+    column-gap: 1em;
+}
+
+.with-image.right {
+    grid-template-columns: 1fr auto;
+    grid-template-areas  : "content image";
+}
+
+.with-image > aside {
+    grid-area : image;
+    margin-top: 1em;
+}
+
+.with-image > aside > img { max-width: 30vw }
+.with-image > main        { grid-area: content }
+
+
+/* =============================================================================
    CARROUSEL
  */
 

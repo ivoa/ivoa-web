@@ -1,0 +1,12 @@
+<section class="with-image {{ .Get "position" }}">
+    <aside>
+    {{- if (.Get "thumbnail") }}
+        <a href="{{ .Get "image" }}"><img src="{{- .Get "thumbnail" }}" /></a>
+    {{- else }}
+        <img src="{{- .Get "image" }}" />
+    {{- end }}
+    </aside>
+    <main>
+        {{- .Inner | markdownify }}
+    </main>
+</section>
