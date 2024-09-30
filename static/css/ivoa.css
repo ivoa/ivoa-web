@@ -71,6 +71,16 @@ table th {
 
 
 /* =============================================================================
+   LAYOUTS SPECIFICITIES
+   Special styles of common elements depending on the layouts
+   (e.g. layouts/newsletter/single.html).
+ */
+
+/* Center the sections title in the Newsletters: */
+body > main > article.newsletter > h1 { text-align: center }
+
+
+/* =============================================================================
    MAIN PAGE LAYOUT
    Footer at bottom of the page even if empty content.
  */
