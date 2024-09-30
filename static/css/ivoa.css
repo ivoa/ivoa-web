@@ -447,3 +447,57 @@ section > main.carrousel {
 .floating > img {
     max-width: 30vw;
 }
+
+
+/* =============================================================================
+   SOCIAL LINKS
+ */
+
+#share-buttons {
+    position: relative;
+    width: 28em;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+#share-buttons > a { text-decoration: none }
+
+#share-buttons > a > img {
+    display: inline;
+    width  : 4em;
+
+    padding: 0 .5em;
+
+    border    : 0;
+    box-shadow: 0;
+}
+
+#QRcode {
+    position  : absolute;
+    top       : -200px;
+    left      : calc( 23em - 62px );
+
+    display   : none;
+    padding   : 5px;
+    width     : 125px;
+    overflow  : hidden;
+    
+    text-align: center;
+
+    border: 1px solid #333;
+
+    background-color:#FFF;
+}
+
+#QRcode.is-visible { display: block }
+
+#QRcode > p {
+    text-align: center;
+    margin: .5em 0;
+    font-size: .9em;
+}
+
+#QRcode > img {
+    height: 125px;
+    width : 125px;
+}
