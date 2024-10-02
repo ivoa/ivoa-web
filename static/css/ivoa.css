@@ -21,6 +21,7 @@ body {
 
 h1, h2, h3 {
     color: #012647;
+    clear: both;
 }
 
 body > main > article > header > h1 {
@@ -245,6 +246,31 @@ section > main + aside  { margin-left: 1em }
 
 
 /* =============================================================================
+   SECTION WITH A SIDE IMAGE
+ */
+
+.with-image {
+    display              : grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas  : "image content";
+    column-gap: 1em;
+}
+
+.with-image.right {
+    grid-template-columns: 1fr auto;
+    grid-template-areas  : "content image";
+}
+
+.with-image > aside {
+    grid-area : image;
+    margin-top: 1em;
+}
+
+.with-image > aside > img { max-width: 30vw }
+.with-image > main        { grid-area: content }
+
+
+/* =============================================================================
    CARROUSEL
  */
 
@@ -405,3 +431,19 @@ section > main.carrousel {
 .sitemap .card:nth-child(1) > .card-title { border-bottom-color: #5dbbf5 }
 .sitemap .card:nth-child(2) > .card-title { border-bottom-color: #399110 }
 .sitemap .card:nth-child(3) > .card-title { border-bottom-color: #aa3f3f }
+
+
+/* =============================================================================
+   FLOATING
+ */
+
+.floating {
+    margin: 1em;
+    margin-top: 0;
+}
+.floating.left  { float: left ; margin-left: 0; }
+.floating.right { float: right; margin-right: 0; }
+
+.floating > img {
+    max-width: 30vw;
+}
