@@ -1,6 +1,7 @@
 #!/bin/bash
 
 HUGO_DIR="$1"
+PAGEFIND_INDEX_DIR="$2"
 
 PORT=1313
 TMP_PREVIEW_DIR=preview
@@ -55,8 +56,8 @@ else
         fg %1 >/dev/null
         
         # When preview is stopped, delete temporary files
-        # (i.e. generated preview pages):
-        rm -rf "$TMP_PREVIEW_DIR"
+        # (i.e. generated search index and generated preview pages):
+        rm -rf "$PAGEFIND_INDEX_DIR" "$TMP_PREVIEW_DIR"
     else
         echo "  => ERROR: failed to start preview service! (see error above)"
     fi
