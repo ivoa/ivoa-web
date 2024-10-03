@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="with-only-right-aside">
+<section class="with-only-right-aside" data-pagefind-ignore>
     <main class="carrousel">
         {{ range $elem_index, $elem_val := where .Site.Pages "Params.tags" "intersect" (slice "banner") }}
         {{ if (eq $elem_index 0)}}

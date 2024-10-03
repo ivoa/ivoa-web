@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     {{- partial "head.html" . -}}
     <body>
         {{- partial "header.html" . -}}
-        <main>
+        <main data-pagefind-body data-pagefind-meta="date:{{- .Date.Format "2006-01-02" }}">
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "sitemap.html" . -}}
