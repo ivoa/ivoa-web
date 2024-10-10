@@ -1,0 +1,11 @@
+{{ define "main"}}
+
+<article class="newsletter">
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    {{- partial "page-dates.html" . }}
+    {{ .Content }}
+</article>
+
+{{ end }}
