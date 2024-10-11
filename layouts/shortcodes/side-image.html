@@ -1,3 +1,13 @@
+{{- if (.Get "floating" )}}
+<section class="with-image is-floating">
+    {{- if (.Get "thumbnail") }}
+        <a class="floating {{ .Get "position" }}" href="{{ .Get "image" }}"><img src="{{- .Get "thumbnail" }}" /></a>
+    {{- else }}
+        <img class="floating {{ .Get "position" }}" src="{{- .Get "image" }}" />
+    {{- end }}
+    {{- .Inner | markdownify }}
+</section>
+{{- else }}
 <section class="with-image {{ .Get "position" }}">
     <aside>
     {{- if (.Get "thumbnail") }}
@@ -10,3 +20,4 @@
         {{- .Inner | markdownify }}
     </main>
 </section>
+{{- end }}
