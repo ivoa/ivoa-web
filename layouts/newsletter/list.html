@@ -1,0 +1,30 @@
+{{- define "main"}}
+<h1>{{ .Title }}</h1>
+
+<div class="floating right">
+    <img src="../images/ivoa_logo.png" alt="IVOA logo">
+</div>
+
+{{- .Content }}
+
+{{- with (index .Pages.ByDate.Reverse 0) }}
+<strong>Latest Issue: <a href="{{ .RelPermalink }}">{{ .File.BaseFileName }}, {{ .Date | time.Format "January 2006" }}</a></strong>
+    {{- with .Params.highlights }}
+<ul>
+        {{- range . }}
+    <li>{{ . }}</li>
+        {{- end }}
+    <li>...</li>
+</ul>
+    {{- end }}
+{{- end }}
+
+<h2>Archives:</h2>
+
+<ul>
+    {{- range .Pages.ByDate.Reverse }}
+    <li><a href="{{ .RelPermalink }}" title="- {{ delimit .Params.highlights "\n- " }}">Issue {{ .File.BaseFileName }}, {{ .Date | time.Format "January 2006" }}</a></li>
+    {{- end }}
+</ul>
+
+{{- end }}
