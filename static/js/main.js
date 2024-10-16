@@ -36,3 +36,36 @@ function mod(n, m) {
     rightBtn.addEventListener("click", handleRight);
 
 })();
+
+/* Function used to show a hidden QRCode
+ * (see layouts/shortcodes/newsletter-social-links.html). */
+function toggle_QRCode() {
+    const elQRCode = document.getElementById('QRcode');
+    toggleClass(elQRCode, 'is-visible');
+}
+
+
+/* **************************************************************************
+ * TOOL FUNCTIONS
+ */
+
+function toggleClass(el, className){
+    if (hasClass(el, className))
+        removeClass(el, className);
+    else
+        addClass(el, className);
+}
+
+function hasClass(el, className) {
+    return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className);
+}
+
+function addClass(el, className) {
+    if (el.classList) el.classList.add(className);
+    else if (!hasClass(el, className)) el.className += ' ' + className;
+}
+
+function removeClass(el, className) {
+    if (el.classList) el.classList.remove(className);
+    else el.className = el.className.replace(new RegExp('\\b'+ className+'\\b', 'g'), '');
+}

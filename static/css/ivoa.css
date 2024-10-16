@@ -19,7 +19,7 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3, hr {
     color: #012647;
     clear: both;
 }
@@ -33,7 +33,6 @@ p { text-align: justify }
 
 a {
     color: #004d91;
-    font-weight: 500;
     text-decoration: none;
 }
 a:hover { text-decoration: underline }
@@ -44,6 +43,11 @@ article {
     max-width: 80em;
     margin: 2em auto;
 }
+
+
+/* =============================================================================
+   TABLE
+ */
 
 table {
     font-family: Arial, Helvetica, sans-serif;
@@ -67,6 +71,57 @@ table th {
     text-align: left;
     background-color: #004d91;
     color: white;
+}
+
+/* Make the table's header cells disappear if empty
+ * (i.e. no height, no border, no background): */
+table th:empty {
+    padding   : 0;
+    margin    : 0;
+    max-height: 0;
+
+    border          : none;
+    background-color: transparent;
+}
+
+
+/* =============================================================================
+   FIGURE with caption
+   The figure is dynamic. The caption (if any) should not be longer than the
+   width of the responsive image.
+   (source: https://stackoverflow.com/questions/10264463/can-a-figcaption-be-restricted-to-the-width-of-a-responsively-sized-image#answer-13363408)
+ */
+
+figure { display: table }
+
+figure img {
+    display  : block;
+    max-width: 100%;
+}
+
+figure > figcaption {
+    display     : table-caption;
+    caption-side: bottom;
+    padding     : 1em;
+
+    font-size : .8em;
+    text-align: justify;
+
+    color           : #555;
+    background-color: #eee;
+}
+
+
+/* =============================================================================
+   LAYOUTS SPECIFICITIES
+   Special styles of common elements depending on the layouts
+   (e.g. layouts/newsletter/single.html).
+ */
+
+/* Center the sections title in the Newsletters: */
+body > main > article.newsletter > h1 {
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -249,25 +304,71 @@ section > main + aside  { margin-left: 1em }
    SECTION WITH A SIDE IMAGE
  */
 
-.with-image {
-    display              : grid;
-    grid-template-columns: auto 1fr;
-    grid-template-areas  : "image content";
+.with-image + .with-image {
+    margin-top: 2em;
+}
+
+/* LAYOUT-1: 2 COLUMNS */
+
+.with-image:not(.is-floating) {
+    display   : grid;
     column-gap: 1em;
 }
 
-.with-image.right {
-    grid-template-columns: 1fr auto;
+.with-image:not(.is-floating).left,
+.with-image:not(.is-floating):not(.right) {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas  : "image content";
+}
+
+.with-image:not(.is-floating).right {
+    grid-template-columns: 3fr 1fr;
     grid-template-areas  : "content image";
 }
 
-.with-image > aside {
+.with-image:not(.is-floating) > figure {
     grid-area : image;
     margin-top: 1em;
+
+    /* center the image horizontally and vertically: */
+    align-self: center;
+    place-self: center;
+
 }
 
-.with-image > aside > img { max-width: 30vw }
-.with-image > main        { grid-area: content }
+/* Image not larger than the image area: */
+.with-image:not(.is-floating) > figure img { max-width: 100% }
+
+.with-image:not(.is-floating) > main      { grid-area: content }
+
+/* LAYOUT-2: FLOATING IMAGE */
+
+.with-image.is-floating { display: block }
+
+.with-image.is-floating > h1,
+.with-image.is-floating > h2,
+.with-image.is-floating > h3 {
+    margin-top: 0;
+    clear     : none;
+}
+
+
+/* =============================================================================
+   FLOATING CONTENT
+ */
+
+.floating {
+    margin    : 1em;
+    margin-top: 0;
+}
+.floating.left  { float: left ; margin-left: 0; }
+.floating.right { float: right; margin-right: 0; }
+
+img.floating,
+figure.floating,
+.floating > img {
+    max-width: 30vw;
+}
 
 
 /* =============================================================================
@@ -434,16 +535,54 @@ section > main.carrousel {
 
 
 /* =============================================================================
-   FLOATING
+   SOCIAL LINKS
  */
 
-.floating {
-    margin: 1em;
-    margin-top: 0;
+#share-buttons {
+    position: relative;
+    width: 28em;
+    margin: 0 auto;
+    margin-top: 3em;
 }
-.floating.left  { float: left ; margin-left: 0; }
-.floating.right { float: right; margin-right: 0; }
 
-.floating > img {
-    max-width: 30vw;
+#share-buttons > a { text-decoration: none }
+
+#share-buttons > a > img {
+    display: inline;
+    width  : 4em;
+
+    padding: 0 .5em;
+
+    border    : 0;
+    box-shadow: 0;
+}
+
+#QRcode {
+    position  : absolute;
+    top       : -200px;
+    left      : calc( 23em - 62px );
+
+    display   : none;
+    padding   : 5px;
+    width     : 125px;
+    overflow  : hidden;
+    
+    text-align: center;
+
+    border: 1px solid #333;
+
+    background-color:#FFF;
+}
+
+#QRcode.is-visible { display: block }
+
+#QRcode > p {
+    text-align: center;
+    margin: .5em 0;
+    font-size: .9em;
+}
+
+#QRcode > img {
+    height: 125px;
+    width : 125px;
 }
