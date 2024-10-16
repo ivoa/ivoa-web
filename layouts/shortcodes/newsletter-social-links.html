@@ -2,37 +2,37 @@
     
 <!-- Twitter -->
     <a href="https://twitter.com/share?url={{- .Page.Permalink }}&amp;text=Latest%20IVOA%20Newsletter&amp;hashtags=IVOA" title="See this newsletter in Twitter" target="_blank">
-        <img src="/images/twitter.png" alt="Twitter">
+        <img src="{{ .Site.Home.Permalink}}/images/twitter.png" alt="Twitter">
     </a>
 
 <!-- Facebook -->
     <a href="http://www.facebook.com/sharer.php?u={{- .Page.Permalink }}" title="See this newsletter in Facebook" target="_blank">
-        <img src="/images/facebook.png" alt="Facebook">
+        <img src="{{ .Site.Home.Permalink}}/images/facebook.png" alt="Facebook">
     </a>
 
 <!-- Google+ -->
     <a href="https://plus.google.com/share?url={{- .Page.Permalink }}" title="See this newsletter in Google+" target="_blank">
-        <img src="/images/google.png" alt="Google">
+        <img src="{{ .Site.Home.Permalink}}/images/google.png" alt="Google">
     </a>
 
 <!-- LinkedIn -->
     <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{- .Page.Permalink }}" title="See this newsletter in LinkedIn" target="_blank">
-        <img src="/images/linkedin.png" alt="LinkedIn">
+        <img src="{{ .Site.Home.Permalink}}/images/linkedin.png" alt="LinkedIn">
     </a>
 <!--Weibo-->
     <a href="http://v.t.sina.com.cn/share/share.php?url={{- .Page.Permalink }}&amp;title=Latest IVOA Newsletter" title="See this newsletter in Weibo" target="_blank">
-        <img src="/images/WeiboLOGO_64x64.png" alt="Weibo">
+        <img src="{{ .Site.Home.Permalink}}/images/WeiboLOGO_64x64.png" alt="Weibo">
     </a>
 
 <!--WeChat-->
 
     <a href="javascript:void();" onmouseover="toggle_QRCode()" onmouseout="toggle_QRCode()">
-        <img src="/images/icon64_wx_logo.png" alt="WeChat">
+        <img src="{{ .Site.Home.Permalink}}/images/icon64_wx_logo.png" alt="WeChat">
     </a>
 
     <div id="QRcode">
         <p>Open WeChat to scan</p>
-        <img src="/images/QRCode.png" alt="Wechat_QRcode" />
+        <img src="{{ .Site.Home.Permalink}}/images/QRCode.png" alt="Wechat_QRcode" />
     </div>
 
 </div>
