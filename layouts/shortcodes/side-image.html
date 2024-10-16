@@ -1,21 +1,29 @@
 {{- if (.Get "floating" )}}
 <section class="with-image is-floating">
-    {{- if (.Get "thumbnail") }}
-        <a class="floating {{ .Get "position" }}" href="{{ .Get "image" }}"><img src="{{- .Get "thumbnail" }}" /></a>
-    {{- else }}
-        <img class="floating {{ .Get "position" }}" src="{{- .Get "image" }}" />
-    {{- end }}
-    {{- .Inner | markdownify }}
-</section>
-{{- else }}
-<section class="with-image {{ .Get "position" }}">
-    <aside>
+    <figure class="floating {{ .Get "position" }}">
     {{- if (.Get "thumbnail") }}
         <a href="{{ .Get "image" }}"><img src="{{- .Get "thumbnail" }}" /></a>
     {{- else }}
         <img src="{{- .Get "image" }}" />
     {{- end }}
-    </aside>
+    {{- with (.Get "caption") }}
+        <figcaption>{{ . | markdownify }}</figcaption>
+    {{- end }}
+    </figure>
+    {{- .Inner | markdownify }}
+</section>
+{{- else }}
+<section class="with-image {{ .Get "position" }}">
+    <figure>
+    {{- if (.Get "thumbnail") }}
+        <a href="{{ .Get "image" }}"><img src="{{- .Get "thumbnail" }}" /></a>
+    {{- else }}
+        <img src="{{- .Get "image" }}" />
+    {{- end }}
+    {{- with (.Get "caption") }}
+        <figcaption>{{ . | markdownify }}</figcaption>
+    {{- end }}
+    </figure>
     <main>
         {{- .Inner | markdownify }}
     </main>
