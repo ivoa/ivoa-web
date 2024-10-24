@@ -1,0 +1,16 @@
+{{ define "main"}}
+
+{{- $pdf := printf "newsletter_pdf/%s.pdf" .File.BaseFileName }}
+
+<article class="newsletter">
+    <header>
+        <h1>
+            {{- .Title }}
+            {{- with resources.Get $pdf }} (<a href="{{ .RelPermalink }}">pdf</a>){{- end }}
+        </h1>
+    </header>
+    {{- partial "page-dates.html" . }}
+    {{ .Content }}
+</article>
+
+{{ end }}
