@@ -12,9 +12,17 @@ jobs:
 
       - name: Extract branch name
         shell: bash
-        run: echo "BRANCH_NAME=$(echo ${{ github.head_ref }} | sed 's/\//-/g')" >> $GITHUB_ENV
+        run: |
+          if [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; then
+            FORK_NAME="${{ github.event.pull_request.head.repo.full_name }}"
+            BRANCH_NAME="${FORK_NAME}/$(echo ${{ github.head_ref }})"
+          else
+            BRANCH_NAME=$(echo ${{ github.head_ref }})
+          fi
+          BRANCH_NAME=$(echo $BRANCH_NAME | sed 's/\//-/g')
+          echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
 
-      - name: Debug print branch name
+      - name: Print branch name
         shell: bash
         run: echo "BRANCH_NAME=${{ env.BRANCH_NAME }}"
 
