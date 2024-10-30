@@ -10,6 +10,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Skip workflow for PRs from forks
+        shell: bash
+        run: |
+          if [ "${{ github.event.pull_request.head.repo.fork }}" = "true" ]; then
+            echo "This workflow is not supported for PRs from forks."
+            exit 0
+          fi
+
       - name: Extract branch name
         shell: bash
         run: echo "BRANCH_NAME=$(echo ${{ github.head_ref }} | sed 's/\//-/g')" >> $GITHUB_ENV
