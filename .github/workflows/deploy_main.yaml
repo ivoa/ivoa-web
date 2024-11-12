@@ -16,8 +16,11 @@ jobs:
       - name: Setup Hugo
         uses: ./.github/actions/setup-hugo
 
+      - name: Setup PageFind
+        uses: ./.github/actions/setup-pagefind
+
       - name: Build the website
-        run: ~/hugo
+        run: make html
 
       - name: Deploy the website
         uses: Dylan700/sftp-upload-action@latest
