@@ -3,7 +3,7 @@ BOLD=$(shell tput bold)
 NORMAL=$(shell tput sgr0)
 
 HUGO_URL=https://github.com/gohugoio/hugo/releases/download
-HUGO_VERSION=0.126.1
+HUGO_VERSION=0.135.0
 HUGO_ARCHIVE=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 HUGO_DIR=hugo-bin
 HUGO_DIR_OLD=hugo-bin_old
