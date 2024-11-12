@@ -2,6 +2,6 @@
 title: "Search IVOA pages"
 ---
 
-Here, you can find all pages available in the IVOA website.
+Write keywords matching the IVOA website pages you are searching for.
 
 {{< search-pages >}}

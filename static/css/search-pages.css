@@ -1,6 +1,7 @@
 .search-container > .search-form > input {
     font-size: 1.5em;
     padding  : .2em;
+    width    : 100%;
 }
 
 .search-container > .search-result        { display: block }
