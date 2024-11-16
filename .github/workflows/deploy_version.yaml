@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Skip workflow for PRs from forks
         shell: bash
@@ -29,8 +29,11 @@ jobs:
       - name: Setup Hugo
         uses: ./.github/actions/setup-hugo
 
+      - name: Setup PageFind
+        uses: ./.github/actions/setup-pagefind
+
       - name: Build the website
-        run: ~/hugo -b https://webtest.ivoa.info/v/${{ env.BRANCH_NAME }}
+        run: BASEURL="https://webtest.ivoa.info/v/${{ env.BRANCH_NAME }}" make html
 
       - name: Upload the branch version of the website
         uses: Dylan700/sftp-upload-action@latest

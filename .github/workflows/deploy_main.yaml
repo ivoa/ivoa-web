@@ -11,13 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Hugo
         uses: ./.github/actions/setup-hugo
 
+      - name: Setup PageFind
+        uses: ./.github/actions/setup-pagefind
+
       - name: Build the website
-        run: ~/hugo
+        run: make html
 
       - name: Deploy the website
         uses: Dylan700/sftp-upload-action@latest

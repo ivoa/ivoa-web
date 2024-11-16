@@ -210,6 +210,16 @@ body > header > nav > a:hover { text-decoration: underline }
 
 body > header > nav > a + a { margin-left: 1em }
 
+/* Top bar's search menu item with a search magnifier on the left:  */
+header > nav > a.search {
+    background-image   : url('../images/search.png');
+    background-repeat  : no-repeat;
+    background-position: left 1.5em;
+    background-size    : .8em;
+
+    padding-left: 1.1em;
+}
+
 
 /* =============================================================================
    FOOTER

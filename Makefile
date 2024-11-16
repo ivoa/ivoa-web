@@ -3,30 +3,71 @@ BOLD=$(shell tput bold)
 NORMAL=$(shell tput sgr0)
 
 HUGO_URL=https://github.com/gohugoio/hugo/releases/download
-HUGO_VERSION=0.126.1
+HUGO_VERSION=0.135.0
 HUGO_ARCHIVE=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 HUGO_DIR=hugo-bin
 HUGO_DIR_OLD=hugo-bin_old
 HUGO_VERSION_FILE=${HUGO_DIR}/.v${HUGO_VERSION}
 
+PAGEFIND_URL=https://github.com/CloudCannon/pagefind/releases/download
+PAGEFIND_VERSION=1.1.1
+PAGEFIND_ARCHIVE=pagefind-v${PAGEFIND_VERSION}-x86_64-unknown-linux-musl.tar.gz
+PAGEFIND_DIR=pagefind-bin
+PAGEFIND_DIR_OLD=pagefind-bin_old
+PAGEFIND_VERSION_FILE=${PAGEFIND_DIR}/.v${PAGEFIND_VERSION}
+PAGEFIND_INDEX_DIR=static/pagefind
+PAGEFIND_CMD=${PAGEFIND_DIR}/pagefind
+
+DIR_PUBLIC=public
+DIR_PUBLIC_TMP=.public_tmp
+
 HUGO_CMD=${HUGO_DIR}/hugo
 
-.PHONY: help install list-draft uninstall uninstall-hugo preview
+.PHONY: help preview update-search-index clear-search-index list-draft html generate-public-pages clear-generated-public-pages index-public-pages clear-public-pages-index clear install uninstall uninstall-hugo uninstall-pagefind
 
 #: Display this help (i.e. list all available targets). (DEFAULT TARGET)
 help:
-	@echo "Make targets for ivoa-web"
-	@echo "make help - Display help (default target)."
-	@echo "make preview - Start the preview service (on port 1313). All required tools are installed/upgraded automatically, when needed."
-	@echo "make list-draft - List all draft pages (i.e. all pages only visible in preview mode)."
-	@echo "make install - Install Hugo (or upgrade it if a different version is set in Makefile)."
-	@echo "make uninstall - Uninstall Hugo."
+	@echo "\nMake targets for ivoa-web:\n"
+	@echo "* help        Display help (default target).\n"
+	@echo "* preview     Start the preview service (on port 1313). All required tools\n              are installed/upgraded automatically, when needed.\n"
+	@echo "* html        Generate the HTML version of the IVOA Website (with search\n              index).\n"
+	@echo "* list-draft  List all draft pages (i.e. all pages only visible in preview\n              mode).\n"
+	@echo "* clear       Delete local search index and generated public pages.\n"
+	@echo "* install     Install Hugo and PageFind (or upgrade them if a different\n              version is set in Makefile).\n"
+	@echo "* uninstall   Uninstall Hugo and PageFind.\n"
 
 
 #: Start the preview service (on port 1313). All required tools are installed/upgraded automatically, when needed.
-preview: install list-draft
-	./local_preview.bash "${HUGO_DIR}"
+preview: install update-search-index list-draft
+	./local_preview.bash "${HUGO_DIR}" "${PAGEFIND_INDEX_DIR}"
 
+#: Update local search index (only for preview purpose). All pages (event draft) are generated with Hugo and then indexed by PageFind. The generated index is stored in the 'static/' directory in order to be available in preview mode.
+update-search-index: clear-search-index ${PAGEFIND_INDEX_DIR}
+
+
+${PAGEFIND_INDEX_DIR}:
+	@echo "- Generating search index..."
+
+	@if [ -d "${DIR_PUBLIC_TMP}" ]; then \
+		rm -rf "${DIR_PUBLIC_TMP}"; \
+	fi
+
+	@if [ -d "${PAGEFIND_INDEX_DIR}" ]; then \
+		rm -rf "${PAGEFIND_INDEX_DIR}"; \
+	fi
+
+	@mkdir "${DIR_PUBLIC_TMP}" \
+	&& ${HUGO_CMD} -d "${DIR_PUBLIC_TMP}" -DEF \
+	&& ${PAGEFIND_CMD} --site "${DIR_PUBLIC_TMP}" \
+	&& cp -r "${DIR_PUBLIC_TMP}/pagefind" "${PAGEFIND_INDEX_DIR}" \
+	&& rm -rf "${DIR_PUBLIC_TMP}"
+
+#: Delete the local search index.
+clear-search-index:
+	@if [ -d "${PAGEFIND_INDEX_DIR}" ]; then \
+		echo "- Clearing search index (${PAGEFIND_INDEX_DIR})..."; \
+		rm -rf "${PAGEFIND_INDEX_DIR}"; \
+	fi
 
 #: List all draft pages (i.e. all pages only visible in preview mode).
 list-draft: install
@@ -39,9 +80,41 @@ list-draft: install
 	@echo "################################################################################"
 	@echo
 
+#: Generate the HTML version of the IVOA Website (with search index).
+html: install generate-public-pages index-public-pages
 
-#: Install Hugo (or upgrade it if a different version is set in Makefile).
-install: ${HUGO_VERSION_FILE}
+generate-public-pages: clear-generated-public-pages
+	@echo "- Generating the HTML pages..."
+	@echo "######################################################################"
+	@if [ -z "${BASEURL}" ]; then \
+		${HUGO_CMD} -d "${DIR_PUBLIC}" --ignoreCache; \
+	else \
+		echo "(with base URL: ${BASEURL})"; \
+		${HUGO_CMD} -b "${BASEURL}" -d "${DIR_PUBLIC}" --ignoreCache; \
+	fi
+	@echo "######################################################################\n"
+
+clear-generated-public-pages:
+	@echo "- Deleting all generated public pages..."
+	@rm -rf "${DIR_PUBLIC}"
+
+
+index-public-pages: clear-public-pages-index
+	@echo "- Indexing the generated public pages..."
+	@echo "######################################################################"
+	@${PAGEFIND_CMD} --site "${DIR_PUBLIC}"
+	@echo "######################################################################\n"
+
+
+clear-public-pages-index:
+	@rm -rf "${DIR_PUBLIC}/pagefind"
+
+
+#: Delete local search index and generated public pages.
+clear: clear-search-index clear-generated-public-pages
+
+#: Install Hugo and PageFind (or upgrade them if a different version is set in Makefile).
+install: ${HUGO_VERSION_FILE} ${PAGEFIND_VERSION_FILE}
 
 
 ${HUGO_VERSION_FILE}:
@@ -77,8 +150,44 @@ ${HUGO_VERSION_FILE}:
 	@touch ${HUGO_VERSION_FILE}
 
 
+${PAGEFIND_VERSION_FILE}:
+	@if [ -d "${PAGEFIND_DIR}" ]; then \
+		echo "- Upgrading PageFind to v${PAGEFIND_VERSION}..."; \
+	else \
+		echo "- Installing PageFind..."; \
+	fi
+
+	@echo "  - 1/6 - Downloading PageFind (version: ${PAGEFIND_VERSION})..."
+	@wget -q "${PAGEFIND_URL}/v${PAGEFIND_VERSION}/${PAGEFIND_ARCHIVE}"
+	
+	@echo "  - 2/6 - Deprecating existing PageFind version..."
+	@if [ -d "${PAGEFIND_DIR}" ]; then \
+		rm -rf "${PAGEFIND_DIR_OLD}"; \
+		mv "${PAGEFIND_DIR}" "${PAGEFIND_DIR_OLD}"; \
+	fi
+
+	@echo "  - 3/6 - Installing PageFind in this directory (inside ${PAGEFIND_DIR})..."
+	@mkdir ${PAGEFIND_DIR} && tar -xzf ${PAGEFIND_ARCHIVE} -C ${PAGEFIND_DIR}/ && rm -f ${PAGEFIND_ARCHIVE}
+
+	@echo "  - 4/6 - Giving execute permission..."
+	@chmod 775 ${PAGEFIND_CMD}
+
+	@echo "  - 5/6 - Testing installation (and give version)...."
+	@${PAGEFIND_CMD} --version
+
+	@echo "  - 6/6 - Removing deprecated Pagefind version..."
+	@if [ -d "${PAGEFIND_DIR_OLD}" ]; then \
+		rm -rf "${PAGEFIND_DIR_OLD}"; \
+	fi
+
+	@touch ${PAGEFIND_VERSION_FILE}
+
+
+#: Uninstall everything (Hugo and PageFind).
+uninstall: uninstall-hugo uninstall-pagefind
+
 #: Uninstall Hugo.
-uninstall:
+uninstall-hugo:
 	@if [ -d "${HUGO_DIR}" ]; then \
 		if read -p "Uninstall Hugo? [Y/n] " confirm ; then \
 			if [ $${confirm:-'Y'} = 'n' ]; then \
@@ -91,4 +200,21 @@ uninstall:
 		fi \
 	else \
 		echo "INFO: Hugo is not installed. Nothing to do."; \
+	fi
+
+
+#: Uninstall PageFind.
+uninstall-pagefind:
+	@if [ -d "${PAGEFIND_DIR}" ]; then \
+		if read -p "Uninstall PageFind? [Y/n] " confirm ; then \
+			if [ $${confirm:-'Y'} = 'n' ]; then \
+				echo "=> Aborted"; \
+			else \
+				rm -rf ${PAGEFIND_DIR} \
+				&& echo "=> OK. PageFind successfully uninstalled." \
+				|| echo "=> ERROR: Failed to delete the directory '${PAGEFIND_DIR}'!"; \
+			fi \
+		fi \
+	else \
+		echo "INFO: PageFind is not installed. Nothing to do."; \
 	fi

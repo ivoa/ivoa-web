@@ -1,0 +1,19 @@
+name: 'Download and extract PageFind'
+description: 'Downloads and extracts a specified version of PageFind'
+inputs:
+  pagefind_version:
+    description: 'Version of PageFind to download'
+    required: false
+    default: '1.1.1'
+runs:
+  using: 'composite'
+  steps:
+    - name: Cache PageFind
+      uses: actions/cache@v3
+      with:
+        path: ./pagefind-bin
+        key: ${{ runner.os }}-pagefind-${{ inputs.pagefind_version }}
+    - name: Download and extract PageFind
+      run: |
+        make ./pagefind-bin/.v${{ inputs.pagefind_version }}
+      shell: bash

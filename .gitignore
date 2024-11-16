@@ -1,15 +1,23 @@
-# Generated files by hugo
+# Generated files by Hugo
 /public/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
 
-# tmp hugo file
+# tmp Hugo file
 .hugo_build.lock
 /preview/
 
-# ignore hugo in case you have installed it in the project directory
+# ignore Hugo in case you have installed it in the project directory
 /hugo
 /hugo*.tar.gz
 /hugo-bin/
 /hugo-bin_old/
+
+# Generated files by PageFind
+/static/pagefind/
+
+# ignore PageFind in case you have installed it in the project directory
+/pagefind-bin/
+/pagefind-bin_old/
+/pagefind*.tar.gz
