@@ -112,6 +112,29 @@ The `date` is provided here for example purposes only. Usually, you can leave it
 
 If not already present, a link should be added to the [site map](https://github.com/ivoa/ivoa-web/blob/main/layouts/partials/sitemap.html) pointing to the new page, or you may need to add one or more links to other parts of the site. Please consult with the site administrators if you have questions about where you might need to add or update links based on your changes.
 
+## Adding a newsletter
+
+A newsletter is a content with a fairly similar structure from one newsletter to
+another. In order to help creation of such content, it is possible to use a kind
+of template (Hugo calls this an
+[Archetype](https://gohugo.io/content-management/archetypes/)).
+One exists for newsletters.
+
+To create a newsletter:
+
+1. (Optional) Ensure Hugo is locally installed (`make install`).
+
+2. Run the following command, where `XXX` is the number of the newsletter to
+   create (e.g. `026`):
+
+   ```bash
+   ./hugo-bin/hugo new content newsletter/XXX.md
+   ```
+
+3. Edit the file `content/newsletter/XXX.md`. There are content placeholders all
+   over this file ; search for all occurences of `TBD` and you will find them.
+   Just replace them by the content you would like to have.
+
 # Pushing Changes to Github
 
 ## Committing and Pushing
