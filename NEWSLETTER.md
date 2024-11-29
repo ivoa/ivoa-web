@@ -85,9 +85,9 @@ Social links are inserted in the latest newsletters. This is done by adding the
 following macro or snippet (called _shortcode_ by Hugo) in the desired
 newsletter files:
 
-{{< highlight md >}}
-{{</* newsletter-social-links */>}}
-{{< /highlight >}}
+```md
+{{< newsletter-social-links >}}
+```
 
 As the layout and the archetype, this may also be updated if necessary. One can
 find the corresponding snippet in the file
