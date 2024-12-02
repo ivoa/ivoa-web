@@ -2,3 +2,13 @@ baseURL = "https://webtest.ivoa.info"
 languageCode = "en-us"
 title = "International Virtual Observatory Alliance"
 author = "IVOA.net"
+theme= "ananke"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  writeStats = true
+  useResourceCacheWhen = "fallback"
