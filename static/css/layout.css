@@ -1,0 +1,6 @@
+.bg-primary-dark {
+    background-color: color-mix(in srgb, var(--color-primary) 80%, black);
+}
+.bg-primary-darker {
+    background-color: color-mix(in srgb, var(--color-primary) 60%, black);
+}

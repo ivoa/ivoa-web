@@ -2,9 +2,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!--
     <link rel="stylesheet" href="{{ .Site.Home.Permalink}}/css/fa.min.css">
+-->
+    <link rel="stylesheet" href="{{ .Site.Home.Permalink}}/css/layout.css">
+<!--
     <link rel="stylesheet" href="{{ .Site.Home.Permalink}}/css/ivoa.css">
+-->
     <link href="{{ "css/tailwind.css" | resources.Get | css.PostCSS | resources.Minify | relURL }}" rel="stylesheet">
-
+    <script src="{{ .Site.Home.Permalink}}/js/layout.js" defer></script>
     <title>IVOA.net - International Virtual Observatory Alliance</title>
 </head>
