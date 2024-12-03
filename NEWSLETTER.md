@@ -1,7 +1,7 @@
 
 # How to create a newsletter?
 
-## Using a template
+## From template
 
 A newsletter is a content with a fairly similar structure from one newsletter to
 another. In order to help creation of such content, it is possible to use a kind
@@ -9,6 +9,19 @@ of template (Hugo calls this an
 [Archetype](https://gohugo.io/content-management/archetypes/)).
 One exists for newsletters (and can be modified when desired ; see next main
 section ["How to edit the template?"](#how-to-create-a-newsletter)).
+
+## Using the `make` command (recommended)
+
+1. Run the command `make newsletter`
+
+2. Edit the file returned by this command. There are content placeholders all
+   over this file ; search for all occurences of `TBD` and you will find them.
+   Just replace them by the content you would like to have.
+
+## Using the Hugo command
+
+This method is what the `make` command does behind the scene. These instructions
+are given here for information and documentation.
 
 To create a newsletter:
 
@@ -26,6 +39,10 @@ To create a newsletter:
    Just replace them by the content you would like to have.
 
 ## Manual method
+
+This method is exactly what the Hugo command does behind the scene. Using this
+method will make you create a newsletter completely from scratch. No template
+will be used ; you will start from an empty file.
 
 1. Create a file called `XXX.md` (where `XXX` is the number of the newsletter to
 create ; e.g. `026`) in the directory `content/newsletter/`.
