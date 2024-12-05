@@ -23,13 +23,14 @@ DIR_PUBLIC_TMP=.public_tmp
 
 HUGO_CMD=${HUGO_DIR}/hugo
 
-.PHONY: help preview update-search-index clear-search-index list-draft html generate-public-pages clear-generated-public-pages index-public-pages clear-public-pages-index clear install uninstall uninstall-hugo uninstall-pagefind
+.PHONY: help preview update-search-index clear-search-index newsletter list-draft html generate-public-pages clear-generated-public-pages index-public-pages clear-public-pages-index clear install uninstall uninstall-hugo uninstall-pagefind
 
 #: Display this help (i.e. list all available targets). (DEFAULT TARGET)
 help:
 	@echo "\nMake targets for ivoa-web:\n"
 	@echo "* help        Display help (default target).\n"
 	@echo "* preview     Start the preview service (on port 1313). All required tools\n              are installed/upgraded automatically, when needed.\n"
+	@echo "* newsletter  Create a new newsletter.\n"
 	@echo "* html        Generate the HTML version of the IVOA Website (with search\n              index).\n"
 	@echo "* list-draft  List all draft pages (i.e. all pages only visible in preview\n              mode).\n"
 	@echo "* clear       Delete local search index and generated public pages.\n"
@@ -67,6 +68,24 @@ clear-search-index:
 	@if [ -d "${PAGEFIND_INDEX_DIR}" ]; then \
 		echo "- Clearing search index (${PAGEFIND_INDEX_DIR})..."; \
 		rm -rf "${PAGEFIND_INDEX_DIR}"; \
+	fi
+
+DIR_NEWSLETTER  := content/newsletter
+ID_LAST_NEWSLETTER := $(shell ls -1 $(DIR_NEWSLETTER) | grep '^[0-9]\+\.md$$' | sort -rn | head -n1 | sed 's/^0*\([1-9][0-9]*\)\.md$$/\1/' )
+NEXT_NEWSLETTER := $(shell printf "%03d.md" "$$(( $(ID_LAST_NEWSLETTER) + 1 ))")
+
+#: Create a new newsletter.
+newsletter: install
+	@if ${HUGO_CMD} new content "newsletter/$(NEXT_NEWSLETTER)" ; \
+	then \
+		echo "(from the template 'archetypes/newsletter.md')" ; \
+		echo "=> Next steps are yours:" ; \
+		echo "   1. Edit the file '$(DIR_NEWSLETTER)/$(NEXT_NEWSLETTER)'" ; \
+		echo "   2. Replace all occurences of 'TBD'" ; \
+		echo "   3. Add any other content" ; \
+		echo "   4. Commit and push changes" ; \
+	else \
+		echo "=> FAILED to create the newsletter '$(DIR_NEWSLETTER)/$(NEXT_NEWSLETTER)'!" ; \
 	fi
 
 #: List all draft pages (i.e. all pages only visible in preview mode).
