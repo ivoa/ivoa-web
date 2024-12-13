@@ -11,12 +11,12 @@
             <!-- Second Row -->
             <div class="flex justify-end pb-4">
                 <div class="flex gap-8">
-                    <a href="{{ .Site.Home.Permalink}}" class="text-white hover:text-gray-300">Home</a>
-                    <a href="{{ .Site.Home.Permalink}}astronomers/" class="text-white hover:text-gray-300">Astronomers</a>
-                    <a href="{{ .Site.Home.Permalink}}deployers/" class="text-white hover:text-gray-300">Deployers</a>
-                    <a href="{{ .Site.Home.Permalink}}members/" class="text-white hover:text-gray-300">Members</a>
-                    <a href="{{ .Site.Home.Permalink}}about/" class="text-white hover:text-gray-300">About</a>
-                    <a href="{{ .Site.Home.Permalink}}search/" class="text-white hover:text-gray-300">Search</a>
+                    <a href="{{ .Site.Home.Permalink}}" class="text-white hover:text-accent-hover">Home</a>
+                    <a href="{{ .Site.Home.Permalink}}astronomers/" class="text-white hover:text-accent-hover">Astronomers</a>
+                    <a href="{{ .Site.Home.Permalink}}deployers/" class="text-white hover:text-accent-hover">Deployers</a>
+                    <a href="{{ .Site.Home.Permalink}}members/" class="text-white hover:text-accent-hover">Members</a>
+                    <a href="{{ .Site.Home.Permalink}}about/" class="text-white hover:text-accent-hover">About</a>
+                    <a href="{{ .Site.Home.Permalink}}search/" class="text-white hover:text-accent-hover">Search</a>
                 </div>
             </div>
         </div>
@@ -29,9 +29,9 @@
                     <span class="text-white text-xlg">International Virtual Observatory Alliance</span>
                 </div>
                 <button
+                        id="mobileMenuButton"
                         type="button"
                         class="p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
-                        onclick="toggleMobileMenu()"
                         aria-expanded="false"
                         aria-controls="mobile-menu"
                 >
@@ -44,12 +44,12 @@
 
             <div id="mobile-menu" class="hidden mt-2 border-t border-white/10">
                 <nav class="py-2">
-                    <a href="{{ .Site.Home.Permalink}}" class="block text-white hover:bg-white/10 text-sm px-4 py-2 transition-colors">Home</a>
-                    <a href="{{ .Site.Home.Permalink}}astronomers/" class="block text-white hover:bg-white/10 text-sm px-4 py-2 transition-colors">Astronomers</a>
-                    <a href="{{ .Site.Home.Permalink}}deployers/" class="block text-white hover:bg-white/10 text-sm px-4 py-2 transition-colors">Deployers</a>
-                    <a href="{{ .Site.Home.Permalink}}members/" class="block text-white hover:bg-white/10 text-sm px-4 py-2 transition-colors">Members</a>
-                    <a href="{{ .Site.Home.Permalink}}about/" class="block text-white hover:bg-white/10 text-sm px-4 py-2 transition-colors">About</a>
-                    <a href="{{ .Site.Home.Permalink}}search/" class="block text-white hover:bg-white/10 text-sm px-4 py-2 transition-colors">Search</a>
+                    <a href="{{ .Site.Home.Permalink}}" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Home</a>
+                    <a href="{{ .Site.Home.Permalink}}astronomers/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Astronomers</a>
+                    <a href="{{ .Site.Home.Permalink}}deployers/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Deployers</a>
+                    <a href="{{ .Site.Home.Permalink}}members/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Members</a>
+                    <a href="{{ .Site.Home.Permalink}}about/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">About</a>
+                    <a href="{{ .Site.Home.Permalink}}search/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Search</a>
                 </nav>
             </div>
         </div>

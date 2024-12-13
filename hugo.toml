@@ -11,3 +11,6 @@ author = "IVOA.net"
 [build]
   writeStats = true
   useResourceCacheWhen = "fallback"
+
+[minify]
+  disableJS = true
