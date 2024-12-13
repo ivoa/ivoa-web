@@ -1,4 +1,13 @@
 @tailwind base;
-@tailwind colors;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    a {
+        @apply text-secondary hover:text-secondary/80 hover:underline hover:decoration-1;
+    }
+    p {
+        @apply text-justify;
+    }
+}
+

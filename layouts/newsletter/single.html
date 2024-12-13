@@ -2,9 +2,9 @@
 
 {{- $pdf := printf "newsletter_pdf/%s.pdf" .File.BaseFileName }}
 
-<article class="newsletter">
+<article>
     <header>
-        <h1>
+        <h1 class="text-primary text-xl font-bold leading-tight text-center m-4">
             {{- .Title }}
             {{- with resources.Get $pdf }} (<a href="{{ .RelPermalink }}">pdf</a>){{- end }}
         </h1>

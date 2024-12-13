@@ -4,12 +4,13 @@
 
 <!--
     <link rel="stylesheet" href="{{ .Site.Home.Permalink}}/css/fa.min.css">
--->
-    <link rel="stylesheet" href="{{ .Site.Home.Permalink}}/css/layout.css">
+
+    <link rel="stylesheet" href="{{ .Site.Home.Permalink}}/css/layout.css">-->
 <!--
     <link rel="stylesheet" href="{{ .Site.Home.Permalink}}/css/ivoa.css">
 -->
-    <link href="{{ "css/tailwind.css" | resources.Get | css.PostCSS | resources.Minify | relURL }}" rel="stylesheet">
+    {{ $css := resources.Get "css/tailwind.css" | postCSS (dict "config" "postcss.config.js") | minify }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <script src="{{ .Site.Home.Permalink}}/js/layout.js" defer></script>
     <title>IVOA.net - International Virtual Observatory Alliance</title>
 </head>

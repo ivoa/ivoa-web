@@ -3,20 +3,22 @@ module.exports = {
     "./layouts/**/*.html",
     "./content/**/*.md",
     "./themes/**/layouts/**/*.html",
-    "./themes/**/content/**/*.md",
+    "./themes/**/content/**/*.md"
   ],
   theme: {
+    colors: {
+      primary: "#012647", // Main text and background color
+      secondary: "#004d91", // Links and headers
+      accent: "#92d5ff", // Footer and sitemap links
+      'light-gray': "#f2f2f2", // Table row background
+      'medium-gray': "#777", // Date caption text
+      'dark-gray': "#555", // Figure caption text
+      'light-bg': "#eee", // Figure caption background
+      white: "#ffffff",
+      black: "#000000",
+    },
     extend: {
-      colors: {
-        primary: "#012647", // Main text and background color
-        secondary: "#004d91", // Links and headers
-        accent: "#92d5ff", // Footer and sitemap links
-        lightGray: "#f2f2f2", // Table row background
-        darkGray: "#555", // Figure caption text
-        lightBackground: "#eee", // Figure caption background
-        white: "#ffffff",
-        black: "#000000",
-      },
+
       fontFamily: {
         sans: ["Inter", "sans-serif"], // Default font
         arial: ["Arial", "Helvetica", "sans-serif"], // For table fallback
