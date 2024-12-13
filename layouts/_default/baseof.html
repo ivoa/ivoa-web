@@ -4,7 +4,7 @@
     {{- .Scratch.Set "canBeIndexed" (or (or (eq .BundleType "branch") (hasPrefix .Type "_")) (or (eq .Kind "term") (eq .Kind "taxonomy"))) }}
     <body class="min-h-screen mx-auto lg:max-w-6xl bg-white" {{- if (.Scratch.Get "canBeIndexed") }} data-pagefind-ignore{{- end }}>
         {{- partial "header.html" . -}}
-        <main {{- if not (.Scratch.Get "canBeIndexed") }} data-pagefind-body data-pagefind-meta="date:{{- .Date.Format "2006-01-02" }}"{{- end }}>
+        <main class="m-4" {{- if not (.Scratch.Get "canBeIndexed") }} data-pagefind-body data-pagefind-meta="date:{{- .Date.Format "2006-01-02" }}"{{- end }}>
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "sitemap.html" . -}}

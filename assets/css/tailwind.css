@@ -3,11 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        font-family: "Inter", sans-serif;
+    }
     a {
         @apply text-secondary hover:text-secondary/80 hover:underline hover:decoration-1;
     }
+    h1 {
+        @apply text-primary text-xl font-bold leading-tight mb-3 mt-3 text-center;
+    }
+    h3 {
+        @apply text-primary text-lg font-bold leading-tight mb-3 mt-3 text-center;
+    }
+    hr {
+        @apply border-primary;
+    }
     p {
-        @apply text-justify;
+        @apply text-justify mb-3;
+    }
+    ul {
+        @apply list-disc ml-6;
+    }
+    ul.menu {
+        @apply list-none;  /* or directly use: list-style-type: none; */
     }
 }
 

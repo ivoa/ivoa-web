@@ -10,10 +10,15 @@ module.exports = {
       primary: "#012647", // Main text and background color
       secondary: "#004d91", // Links and headers
       accent: "#92d5ff", // Footer and sitemap links
+      'accent-hover': "#b3e4ff", // Footer and sitemap links
       'light-gray': "#f2f2f2", // Table row background
+      'soft-gray': "#bbb",
       'medium-gray': "#777", // Date caption text
       'dark-gray': "#555", // Figure caption text
       'light-bg': "#eee", // Figure caption background
+      'sky-blue': '#5dbbf5',
+      'forest-green': '#399110',
+      'brick-red': '#aa3f3f',
       white: "#ffffff",
       black: "#000000",
     },
