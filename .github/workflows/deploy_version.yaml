@@ -54,3 +54,4 @@ jobs:
           key: ${{ secrets.STAGE_ID }}
           uploads: |
             ./public/ => ./ivoa-web-stage/v/${{ env.BRANCH_NAME }}
+        timeout: 120s
