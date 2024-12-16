@@ -1,31 +1,36 @@
-{{- if (.Get "floating" )}}
-<section class="with-image is-floating">
-    <figure class="floating {{ .Get "position" }}">
+{{- if (.Get "floating") }}
+<section class="relative block overflow-hidden">
+    <figure
+            class="{{ if eq (.Get "position") "left" }}float-left mr-4 mb-2{{ else }}float-right ml-4 mb-2{{ end }} w-full md:w-1/3">
     {{- if (.Get "thumbnail") }}
-        <a href="{{ .Get "image" }}"><img src="{{- .Get "thumbnail" }}" /></a>
+    <a href="{{ .Get "image" }}" class="block w-full">
+    <img src="{{ .Get "thumbnail" }}" class="w-full" alt="{{ .Get "alt" | default "Image" }}" />
+    </a>
     {{- else }}
-        <img src="{{- .Get "image" }}" />
+    <img src="{{ .Get "image" }}" class="w-full" alt="{{ .Get "alt" | default "Image" }}" />
     {{- end }}
     {{- with (.Get "caption") }}
-        <figcaption>{{ . | markdownify }}</figcaption>
+    <figcaption class="text-sm text-gray-600 mt-2">{{ . | markdownify }}</figcaption>
     {{- end }}
     </figure>
     {{- .Inner | markdownify }}
 </section>
 {{- else }}
-<section class="with-image {{ .Get "position" }}">
-    <figure>
+<section class="flex {{ if eq (.Get "position") "left" }}flex-row{{ else }}flex-row-reverse{{ end }} gap-4 items-start">
+<figure class="flex-none w-full md:w-1/3">
     {{- if (.Get "thumbnail") }}
-        <a href="{{ .Get "image" }}"><img src="{{- .Get "thumbnail" }}" /></a>
+    <a href="{{ .Get "image" }}" class="block w-full">
+    <img src="{{ .Get "thumbnail" }}" class="w-full" alt="{{ .Get "alt" | default "Image" }}" />
+    </a>
     {{- else }}
-        <img src="{{- .Get "image" }}" />
+    <img src="{{ .Get "image" }}" class="w-full" alt="{{ .Get "alt" | default "Image" }}" />
     {{- end }}
     {{- with (.Get "caption") }}
-        <figcaption>{{ . | markdownify }}</figcaption>
+    <figcaption class="text-sm text-gray-600 mt-2">{{ . | markdownify }}</figcaption>
     {{- end }}
-    </figure>
-    <main>
-        {{- .Inner | markdownify }}
-    </main>
+</figure>
+<main class="flex-1">
+    {{- .Inner | markdownify }}
+</main>
 </section>
 {{- end }}

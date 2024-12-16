@@ -1,38 +1,51 @@
-<div id="share-buttons">
-    
-<!-- Twitter -->
-    <a href="https://twitter.com/share?url={{- .Page.Permalink }}&amp;text=Latest%20IVOA%20Newsletter&amp;hashtags=IVOA" title="See this newsletter in Twitter" target="_blank">
-        <img src="{{ .Site.Home.Permalink}}/images/twitter.png" alt="Twitter">
+<div class="flex justify-center items-center gap-4">
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url={{- .Page.Permalink }}&text=Latest%20IVOA%20Newsletter&hashtags=IVOA"
+       class="hover:opacity-80 transition-opacity"
+       title="See this newsletter in Twitter"
+       target="_blank">
+        <img src="{{ .Site.Home.Permalink}}/images/twitter.png" alt="Twitter" class="w-8 h-8">
     </a>
 
-<!-- Facebook -->
-    <a href="http://www.facebook.com/sharer.php?u={{- .Page.Permalink }}" title="See this newsletter in Facebook" target="_blank">
-        <img src="{{ .Site.Home.Permalink}}/images/facebook.png" alt="Facebook">
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u={{- .Page.Permalink }}"
+       class="hover:opacity-80 transition-opacity"
+       title="See this newsletter in Facebook"
+       target="_blank">
+        <img src="{{ .Site.Home.Permalink}}/images/facebook.png" alt="Facebook" class="w-8 h-8">
     </a>
 
-<!-- Google+ -->
-    <a href="https://plus.google.com/share?url={{- .Page.Permalink }}" title="See this newsletter in Google+" target="_blank">
-        <img src="{{ .Site.Home.Permalink}}/images/google.png" alt="Google">
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{- .Page.Permalink }}"
+       class="hover:opacity-80 transition-opacity"
+       title="See this newsletter in LinkedIn"
+       target="_blank">
+        <img src="{{ .Site.Home.Permalink}}/images/linkedin.png" alt="LinkedIn" class="w-8 h-8">
     </a>
 
-<!-- LinkedIn -->
-    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{- .Page.Permalink }}" title="See this newsletter in LinkedIn" target="_blank">
-        <img src="{{ .Site.Home.Permalink}}/images/linkedin.png" alt="LinkedIn">
-    </a>
-<!--Weibo-->
-    <a href="http://v.t.sina.com.cn/share/share.php?url={{- .Page.Permalink }}&amp;title=Latest IVOA Newsletter" title="See this newsletter in Weibo" target="_blank">
-        <img src="{{ .Site.Home.Permalink}}/images/WeiboLOGO_64x64.png" alt="Weibo">
-    </a>
-
-<!--WeChat-->
-
-    <a href="javascript:void();" onmouseover="toggle_QRCode()" onmouseout="toggle_QRCode()">
-        <img src="{{ .Site.Home.Permalink}}/images/icon64_wx_logo.png" alt="WeChat">
+    <!-- Weibo -->
+    <a href="http://v.t.sina.com.cn/share/share.php?url={{- .Page.Permalink }}&title=Latest IVOA Newsletter"
+       class="hover:opacity-80 transition-opacity"
+       title="See this newsletter in Weibo"
+       target="_blank">
+        <img src="{{ .Site.Home.Permalink}}/images/WeiboLOGO_64x64.png" alt="Weibo" class="w-8 h-8">
     </a>
 
-    <div id="QRcode">
-        <p>Open WeChat to scan</p>
-        <img src="{{ .Site.Home.Permalink}}/images/QRCode.png" alt="Wechat_QRcode" />
+    <!-- WeChat -->
+    <div class="relative group">
+        <a href="javascript:void(0);"
+           class="hover:opacity-80 transition-opacity">
+            <img src="{{ .Site.Home.Permalink}}/images/icon64_wx_logo.png" alt="WeChat" class="w-8 h-8">
+        </a>
+
+        <!-- QR Code popup -->
+        <div class="fixed hidden group-hover:flex flex-col items-center justify-center inset-0 bg-black/50">
+            <div class="bg-white p-6 rounded-lg shadow-xl">
+                <p class="text-center text-lg mb-4">Open WeChat to scan</p>
+                <img src="{{ .Site.Home.Permalink}}/images/QRCode.png"
+                     alt="Wechat_QRcode"
+                     class="w-64 h-64 object-contain">
+            </div>
+        </div>
     </div>
-
 </div>
