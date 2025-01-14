@@ -3,14 +3,14 @@ BOLD=$(shell tput bold)
 NORMAL=$(shell tput sgr0)
 
 HUGO_URL=https://github.com/gohugoio/hugo/releases/download
-HUGO_VERSION=0.135.0
+HUGO_VERSION=0.140.2
 HUGO_ARCHIVE=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 HUGO_DIR=hugo-bin
 HUGO_DIR_OLD=hugo-bin_old
 HUGO_VERSION_FILE=${HUGO_DIR}/.v${HUGO_VERSION}
 
 PAGEFIND_URL=https://github.com/CloudCannon/pagefind/releases/download
-PAGEFIND_VERSION=1.1.1
+PAGEFIND_VERSION=1.3.0
 PAGEFIND_ARCHIVE=pagefind-v${PAGEFIND_VERSION}-x86_64-unknown-linux-musl.tar.gz
 PAGEFIND_DIR=pagefind-bin
 PAGEFIND_DIR_OLD=pagefind-bin_old
