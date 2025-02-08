@@ -1,70 +1,58 @@
-<div class="sitemap">
-    <div class="cards">
-
-        <div class="card">
-            <div class="card-title">About the IVOA</div>
-
-            <div class="card-list">
-                <ul>
-                    <li>
-                        <a href="{{ .Site.Home.Permalink}}about/what_is_vo/">
-                        What is the VO?
-                        </a>
-                    </li>
-                    <li><a href="{{ .Site.Home.Permalink}}about/what_is_ivoa/">What is the IVOA?</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}about/member-organizations/">Who is involved?</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}about/roadmap/">Accomplishments and future plans</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}about/contacts/">How do I contact the IVOA?</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}about/participation/">How can I participate?</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}members/working-groups/IVOA_Code_of_Conduct.pdf">Code of Conduct</a></li>
-                </ul>
-            </div>
+<div class="bg-primary text-white p-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About the IVOA -->
+        <div>
+            <h2 class="text-lg font-bold mb-2">About the IVOA</h2>
+            <div class="h-2 bg-sky-blue mb-4"></div>
+            <ul class="space-y-3 menu">
+                <li><a href="{{ .Site.Home.Permalink}}about/what_is_vo/" class="text-accent hover:text-accent-hover transition-colors duration-200" >What is the VO?</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}about/what_is_ivoa/" class="text-accent hover:text-accent-hover transition-colors duration-200" >What is the IVOA?</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}about/member-organizations/" class="text-accent hover:text-accent-hover transition-colors duration-200" >Who is involved?</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}about/roadmap/" class="text-accent hover:text-accent-hover transition-colors duration-200" >Accomplishments and future plans</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}about/contacts/" class="text-accent hover:text-accent-hover transition-colors duration-200" >How do I contact the IVOA?</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}about/participation/" class="text-accent hover:text-accent-hover transition-colors duration-200" >How can I participate?</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}members/working-groups/IVOA_Code_of_Conduct.pdf" class="text-accent hover:text-accent-hover transition-colors duration-200" >Code of Conduct</a></li>
+            </ul>
         </div>
 
-        <div class="card">
-            <div class="card-title">For Astronomers</div>
-
-            <div class="card-list">
-                <ul>
-                    <li><a href="{{ .Site.Home.Permalink}}astronomers/getting_started/">Getting Started</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}astronomers/using_the_vo/">Using the VO</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}astronomers/vo_glossary/">VO Glossary</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}astronomers/applications/">VO Applications</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}newsletter/">IVOA Newsletters</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}astronomers/vo_for_public/">VO for Students & Public</a></li>
-                </ul>
-            </div>
+        <!-- For Astronomers -->
+        <div>
+            <h2 class="text-lg font-bold mb-2">For Astronomers</h2>
+            <div class="h-2 bg-forest-green mb-4"></div>
+            <ul class="space-y-3 menu">
+                <li><a href="{{ .Site.Home.Permalink}}astronomers/getting_started/" class="text-accent hover:text-accent-hover transition-colors duration-200" >Getting Started</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}astronomers/using_the_vo/" class="text-accent hover:text-accent-hover transition-colors duration-200" >Using the VO</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}astronomers/vo_glossary/" class="text-accent hover:text-accent-hover transition-colors duration-200" >VO Glossary</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}astronomers/applications/" class="text-accent hover:text-accent-hover transition-colors duration-200" >VO Applications</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}newsletter/" class="text-accent hover:text-accent-hover transition-colors duration-200" >IVOA Newsletters</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}astronomers/vo_for_public/" class="text-accent hover:text-accent-hover transition-colors duration-200" >VO for Students & Public</a></li>
+            </ul>
         </div>
 
-        <div class="card">
-            <div class="card-title">For Developers</div>
-
-            <div class="card-list">
-                <ul>
-                    <li><a href="{{ .Site.Home.Permalink}}deployers/intro_to_vo_concepts">Intro to VO Concepts</a></li>
-                    <li><a href="https://www.ivoa.net/documents/">IVOA Standards</a></li>
-                    <li><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/PublishingInTheVONew">Guide to Publishing in the VO</a></li>
-                    <li><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/VOGlossary">Technical Glossary</a></li>
-                </ul>
-            </div>
+        <!-- For Developers -->
+        <div>
+            <h2 class="text-lg font-bold mb-2">For Developers</h2>
+            <div class="h-2 bg-brick-red mb-4"></div>
+            <ul class="space-y-3 menu">
+                <li><a href="{{ .Site.Home.Permalink}}deployers/intro_to_vo_concepts" class="text-accent hover:text-accent-hover transition-colors duration-200" >Intro to VO Concepts</a></li>
+                <li><a href="https://www.ivoa.net/documents/" class="text-accent hover:text-accent-hover transition-colors duration-200" >IVOA Standards</a></li>
+                <li><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/PublishingInTheVONew" class="text-accent hover:text-accent-hover transition-colors duration-200" >Guide to Publishing in the VO</a></li>
+                <li><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/VOGlossary" class="text-accent hover:text-accent-hover transition-colors duration-200" >Technical Glossary</a></li>
+            </ul>
         </div>
 
-        <div class="card">
-            <div class="card-title">For Members</div>
-
-            <div class="card-list">
-                <ul>
-                    <li><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents">IVOA Calendar</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}/members/working-groups">Working Groups</a></li>
-                    <li><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/WebHome">Twiki</a></li>
-                    <li><a href="https://www.ivoa.net/documents/">Documents in Progress</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}/members/working-groups">Mailing Lists</a></li>
-                    <li><a href="{{ .Site.Home.Permalink}}/about/roadmap/">IVOA Roadmap</a></li>
-                </ul>
-            </div>
-
+        <!-- For Members -->
+        <div>
+            <h2 class="text-lg font-bold mb-2">For Members</h2>
+            <div class="h-2 bg-soft-gray mb-4"></div>
+            <ul class="space-y-3 menu">
+                <li><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents" class="text-accent hover:text-accent-hover transition-colors duration-200" >IVOA Calendar</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}/members/working-groups" class="text-accent hover:text-accent-hover transition-colors duration-200" >Working Groups</a></li>
+                <li><a href="http://wiki.ivoa.net/twiki/bin/view/IVOA/WebHome" class="text-accent hover:text-accent-hover transition-colors duration-200" >Twiki</a></li>
+                <li><a href="https://www.ivoa.net/documents/" class="text-accent hover:text-accent-hover transition-colors duration-200" >Documents in Progress</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}/members/working-groups" class="text-accent hover:text-accent-hover transition-colors duration-200" >Mailing Lists</a></li>
+                <li><a href="{{ .Site.Home.Permalink}}/about/roadmap/" class="text-accent hover:text-accent-hover transition-colors duration-200" >IVOA Roadmap</a></li>
+            </ul>
         </div>
-
     </div>
-
 </div>
