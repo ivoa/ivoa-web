@@ -1,16 +1,13 @@
 {{ define "main" }}
 
-<section class="with-only-right-aside" data-pagefind-ignore>
-    <main class="carrousel">
+<section class="flex flex-col md:flex-row gap-4" data-pagefind-ignore>  {{/*  Make the overall layout responsive */}}
+    <main class="carrousel w-full md:w-2/3">  {{/*  Carousel takes full width on small screens, 2/3 on larger */}}
         {{ range $elem_index, $elem_val := where .Site.Pages "Params.tags" "intersect" (slice "banner") }}
-        {{ if (eq $elem_index 0)}}
-        <div id="carrousel-{{$elem_index}}" class="carrousel-item active">
-        {{ else }}
-        <div id="carrousel-{{$elem_index}}" class="carrousel-item">
-        {{ end }}
+        {{/* No changes needed inside the carousel itself for basic responsiveness */}}
+        <div id="carrousel-{{$elem_index}}" class="carrousel-item {{ if (eq $elem_index 0) }}active{{ end }}">
 
             {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
-            <img class="carrousel-img" src="{{ $featured_image }}" />
+            <img class="carrousel-img w-full" src="{{ $featured_image }}" /> {{/*  Ensure image takes full width of carousel */}}
 
             <div class="carrousel-title">{{ .Title }}</div>
 
@@ -34,7 +31,7 @@
         </div>
     </main>
 
-    <aside class="right cards">
+    <aside class="right cards w-full md:w-1/3"> {{/*  Sidebar takes full width on small, 1/3 on larger */}}
         <div class="card">
             <div class="card-title">
                 IVOA News & Upcoming Meetings
@@ -52,8 +49,8 @@
 </section>
 
 <!-- rendered content from content/_index.html -->
-<div>
-{{- .Content -}}
+<div class="mt-4">  {{/*  Add some margin-top for spacing */}}
+    {{- .Content -}}
 </div>
 
 {{ end }}
