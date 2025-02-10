@@ -22,10 +22,6 @@
                     <a href="{{ $slide.Params.link | relLangURL }}" class="no-underline hover:no-underline inline-block bg-accent hover:bg-accent-hover text-primary font-bold py-2 px-6 rounded transition-colors underline-none">
                         {{ $slide.Params.cta | default "READ MORE" }}
                     </a>
-                    <p>Base URL: {{ .Site.BaseURL }}</p>
-                    <p>Link: {{ $slide.Params.link }}</p>
-                    <p>absURL: {{ $slide.Params.link | absURL }}</p>
-                    <p>relLangURL: {{ $slide.Params.link | relLangURL }}</p>
                 </div>
             </div>
         </div>
