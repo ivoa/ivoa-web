@@ -1,0 +1,88 @@
+<!-- layouts/partials/slider.html -->
+<div class="relative w-full overflow-hidden bg-light-gray">
+    {{ $slides := where .Site.RegularPages "Section" "slider" }}
+    {{ $numSlides := len $slides }}
+    {{ $sliderId := printf "slider-%d" now.UnixNano }}
+
+    <div class="relative flex transition-transform duration-500 ease-in-out" id="{{ $sliderId }}-slides">
+        {{ range $index, $slide := $slides }}
+        <div class="w-full flex-shrink-0 relative">
+            {{ if $slide.Params.image }}
+            <img src="{{ $slide.Params.image }}" alt="{{ $slide.Title }}" class="w-full h-[200px] md:h-[300px] object-cover">
+            {{ else }}
+            <div class="w-full h-[200px] md:h-[300px] bg-gradient-to-r from-primary to-secondary"></div>
+            {{ end }}
+
+            <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
+                <div class="p-6 md:p-8">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">{{ $slide.Title }}</h3>
+                    {{ with $slide.Params.subtitle }}
+                    <p class="text-lg md:text-xl text-white/80 mb-4">{{ . }}</p>
+                    {{ end }}
+                    <a href="{{ $slide.Params.link }}" class="no-underline hover:no-underline inline-block bg-accent hover:bg-accent-hover text-primary font-bold py-2 px-6 rounded transition-colors underline-none">
+                        {{ $slide.Params.cta | default "READ MORE" }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+        {{ range $index, $_ := $slides }}
+        <button class="slide-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100" data-index="{{ $index }}"></button>
+        {{ end }}
+    </div>
+
+    <button class="prev absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black bg-opacity-50 rounded-full text-white z-20">←</button>
+    <button class="next absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black bg-opacity-50 rounded-full text-white z-20">→</button>
+
+    <script>
+        (function() {
+            const slider = {
+                container: document.getElementById('{{ $sliderId }}-slides'),
+                currentSlide: 0,
+                slides: {{ $numSlides }},
+
+            init() {
+                this.bindControls();
+                this.startAutoplay();
+            },
+
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.container.style.transform = `translateX(-${index * 100}%)`;
+                this.updateDots();
+            },
+
+            next() {
+                this.goToSlide((this.currentSlide + 1) % this.slides);
+            },
+
+            prev() {
+                this.goToSlide((this.currentSlide - 1 + this.slides) % this.slides);
+            },
+
+            updateDots() {
+                document.querySelectorAll('.slide-dot').forEach((dot, index) => {
+                    dot.style.opacity = index === this.currentSlide ? '1' : '0.5';
+                });
+            },
+
+            bindControls() {
+                document.querySelector('.prev').addEventListener('click', () => this.prev());
+                document.querySelector('.next').addEventListener('click', () => this.next());
+                document.querySelectorAll('.slide-dot').forEach((dot, index) => {
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                });
+            },
+
+            startAutoplay() {
+                setInterval(() => this.next(), 5000);
+            }
+        };
+
+            slider.init();
+        })();
+    </script>
+</div>
