@@ -8,7 +8,7 @@
         {{ range $index, $slide := $slides }}
         <div class="w-full flex-shrink-0 relative">
             {{ if $slide.Params.image }}
-            <img src="{{ $slide.Params.image | relURL }}" alt="{{ $slide.Title }}" class="w-full h-[200px] md:h-[300px] object-cover">
+            <img src="{{ $slide.Params.image | relLangURL }}" alt="{{ $slide.Title }}" class="w-full h-[200px] md:h-[300px] object-cover">
             {{ else }}
             <div class="w-full h-[200px] md:h-[300px] bg-gradient-to-r from-primary to-secondary"></div>
             {{ end }}
@@ -19,7 +19,7 @@
                     {{ with $slide.Params.subtitle }}
                     <p class="text-lg md:text-xl text-white/80 mb-4">{{ . }}</p>
                     {{ end }}
-                    <a href="{{ $slide.Params.link | relURL }}" class="no-underline hover:no-underline inline-block bg-accent hover:bg-accent-hover text-primary font-bold py-2 px-6 rounded transition-colors underline-none">
+                    <a href="{{ $slide.Params.link | relLangURL }}" class="no-underline hover:no-underline inline-block bg-accent hover:bg-accent-hover text-primary font-bold py-2 px-6 rounded transition-colors underline-none">
                         {{ $slide.Params.cta | default "READ MORE" }}
                     </a>
                 </div>
