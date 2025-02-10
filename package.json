@@ -1,0 +1,20 @@
+{
+  "name": "ivoa-web",
+  "version": "1.0.0",
+  "description": "This repository contains the source code to re-write the current [www.ivoa.net](https://www.ivoa.net) webpage.",
+  "main": "postcss.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
+}

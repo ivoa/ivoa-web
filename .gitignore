@@ -21,3 +21,7 @@ hugo_stats.json
 /pagefind-bin/
 /pagefind-bin_old/
 /pagefind*.tar.gz
+
+.idea
+node_modules
+/dist

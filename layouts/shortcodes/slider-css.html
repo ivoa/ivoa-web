@@ -1,0 +1,121 @@
+{{/* layouts/shortcodes/slider-css.html */}}
+{{/* Renamed from pure-css-carousel.html */}}
+{{/*
+Usage (in your content files, NOT in index.html directly):
+{{< slider-css >}}
+{{< slide image="/images/slide1.jpg" title="Slide 1 Title" link="/page1/" >}}
+{{< slide image="/images/slide2.jpg" title="Slide 2 Title" link="/page2/" caption="Optional Caption" >}}
+{{< slide image="/images/slide3.jpg" title="Slide 3 Title" link="/page3/" >}}
+{{< /slider-css >}}
+*/}}
+
+{{- $id := printf "carousel-%d" (now.UnixNano) -}}
+
+<div class="relative w-full overflow-hidden">
+    {{- $numSlides := 0 -}}
+
+    {{/* Count the slides and prepare radio inputs (hidden) */}}
+    {{- $slides := slice -}}
+    {{- range $index, $element := split .Inner "<slide" -}}
+    {{- if gt $index 0 -}}
+    {{- $numSlides = add $numSlides 1 -}}
+    {{- $slides = $slides | append (printf "<input type=\"radio\" name=\"%s\" id=\"%s-slide-%d\" class=\"hidden\"%s>" $id $id $numSlides (cond (eq $numSlides 1) " checked" "")) -}}
+    {{- end -}}
+    {{- end -}}
+    {{- $slides | safeHTML -}}
+
+    <div class="relative flex transition-transform duration-500 ease-in-out" style="width: {{ mul $numSlides 100 }}%;" id="{{ $id }}-slides">
+        {{- $slideIndex := 0 -}}
+        {{- range $index, $element := split .Inner "<slide" -}}
+        {{- if gt $index 0 -}}
+        {{- $slideIndex = add $slideIndex 1 -}}
+        {{- $image := "" -}}
+        {{- $title := "" -}}
+        {{- $caption := "" -}}
+        {{- $link := "" -}}
+
+        {{- $imageMatches := findRE `image="([^"]+)"` $element -}}
+        {{- with index $imageMatches 0 -}}
+        {{- $image = index (findRE `"[^"]+"` .) 0 | strings.Trim "\"" -}}
+        {{- end -}}
+
+        {{- $titleMatches := findRE `title="([^"]+)"` $element -}}
+        {{- with index $titleMatches 0 -}}
+        {{- $title = index (findRE `"[^"]+"` .) 0 | strings.Trim "\"" -}}
+        {{- end -}}
+
+        {{- $captionMatches := findRE `caption="([^"]+)"` $element -}}
+        {{- with index $captionMatches 0 -}}
+        {{- $caption = index (findRE `"[^"]+"` .) 0 | strings.Trim "\"" -}}
+        {{- end -}}
+
+        {{- $linkMatches := findRE `link="([^"]+)"` $element -}}
+        {{- with index $linkMatches 0 -}}
+        {{- $link = index (findRE `"[^"]+"` .) 0 | strings.Trim "\"" -}}
+        {{- end -}}
+
+        <div class="w-full flex-shrink-0 relative" style="width: {{ div 100.0 $numSlides }}%;">
+            <img src="{{ $image }}" alt="{{ $title }}" class="w-full object-cover">
+            <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
+                {{ with $title }}<h3 class="text-xl font-bold">{{ . }}</h3>{{ end }}
+                {{ with $caption }}<p class="text-sm">{{ . }}</p>{{ end }}
+                {{ with $link }}<a href="{{ . }}" class="mt-2 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">READ MORE</a>{{ end }}
+            </div>
+        </div>
+        {{- end -}}
+        {{- end -}}
+    </div>
+
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {{- range seq 1 $numSlides -}}
+        <label for="{{ $id }}-slide-{{ . }}" class="w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 cursor-pointer transition-colors duration-200"></label>
+        {{- end -}}
+    </div>
+
+    <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+        {{ range $i, $v := (seq 1 $numSlides) }}
+        <label for="{{ $id }}-slide-{{ $i }}" class="cursor-pointer opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 {{if ne $i 1}}hidden{{end}}" id="{{$id}}-prev-{{$i}}"><i class="fa-solid fa-chevron-left text-white text-2xl"></i></label>
+        {{end}}
+    </div>
+    <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+        {{ range $i, $v := (seq 1 $numSlides) }}
+        <label for="{{ $id }}-slide-{{ $i }}" class="cursor-pointer opacity-0 hover:opacity-100 transition-opacity duration-300 p-4 {{if ne $i 1}}hidden{{end}}" id="{{$id}}-next-{{$i}}"><i class="fa-solid fa-chevron-right text-white text-2xl"></i></label>
+        {{end}}
+    </div>
+</div>
+
+<script>
+    // JavaScript for automatic slide changes and handling navigation clicks
+    const slidesContainer{{$id}} = document.getElementById('{{$id}}-slides');
+    const radios{{$id}} = document.querySelectorAll('input[name="{{$id}}"]');
+    let currentSlide{{$id}} = 0;
+
+    function nextSlide{{$id}}() {
+        currentSlide{{$id}} = (currentSlide{{$id}} + 1) % radios{{$id}}.length;
+        radios{{$id}}[currentSlide{{$id}}].checked = true;
+        updateSlidePosition{{$id}}();
+        updateNavButtons{{$id}}();
+    }
+
+    function updateSlidePosition{{$id}}() {
+        slidesContainer{{$id}}.style.transform = `translateX(-${currentSlide{{$id}} * (100 / {{ $numSlides }})}%)`;
+    }
+
+    function updateNavButtons{{$id}}(){
+        for (let i = 1; i <= {{$numSlides}}; i++){
+            document.getElementById("{{$id}}-next-" + i).classList.add("hidden");
+            document.getElementById("{{$id}}-prev-" + i).classList.add("hidden");
+        }
+        const nextButton = document.getElementById("{{$id}}-next-" + (currentSlide{{$id}} + 1));
+        const prevButton = document.getElementById("{{$id}}-prev-" + (currentSlide{{$id}} + 1));
+        if (nextButton) {
+            nextButton.classList.remove("hidden");
+        }
+        if (prevButton){
+            prevButton.classList.remove("hidden");
+        }
+    }
+
+    //Auto change slides
+    setInterval(nextSlide{{$id}}, 5000);
+</script>
