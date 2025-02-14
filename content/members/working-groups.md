@@ -19,12 +19,14 @@ Calendar](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents)
 
 [IVOA Code of Conduct](IVOA_Code_of_Conduct.pdf)
 
+{{% comment %}}
 <!-- iss42: Restore search form here.
 <form id="search_form" action="https://mail.ivoa.net/search/" method="get">
      <input id="esmail_search_bar" placeholder="" type="text" name="search" />
      <button formtarget="esmail_tab" type="submit">SEARCH</button>
      </form>
 -->
+{{% /comment %}}
 
 The mailing list archive can be searched [here](http://mail.ivoa.net/search).
 
