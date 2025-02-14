@@ -2,9 +2,9 @@
 <html lang="en">
     {{- partial "head.html" . -}}
     {{- .Scratch.Set "canBeIndexed" (or (or (eq .BundleType "branch") (hasPrefix .Type "_")) (or (eq .Kind "term") (eq .Kind "taxonomy"))) }}
-    <body class="min-h-screen mx-auto lg:max-w-6xl bg-white" {{- if (.Scratch.Get "canBeIndexed") }} data-pagefind-ignore{{- end }}>
+    <body class="min-h-screen mx-auto bg-white" {{- if (.Scratch.Get "canBeIndexed") }} data-pagefind-ignore{{- end }}>
         {{- partial "header.html" . -}}
-        <main class="m-4" {{- if not (.Scratch.Get "canBeIndexed") }} data-pagefind-body data-pagefind-meta="date:{{- .Date.Format "2006-01-02" }}"{{- end }}>
+        <main class="mx-auto max-w-[1200px] my-4 px-4" {{- if not (.Scratch.Get "canBeIndexed") }} data-pagefind-body data-pagefind-meta="date:{{- .Date.Format "2006-01-02" }}"{{- end }}>
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "sitemap.html" . -}}
