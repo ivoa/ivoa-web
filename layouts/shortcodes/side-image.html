@@ -3,17 +3,19 @@
 
 {{- if eq $floating "true" }}
 <section class="relative overflow-hidden">
-    <figure class="
-        mb-4
-        {{ if eq $position "left" }}
+    <figure
+            class="
+      mb-4
+      {{ if eq $position "left" }}
     float-left mr-6
     {{ else }}
     float-right ml-6
     {{ end }}
     w-full
     md:w-1/3
-    ">
-    {{- if (.Get "thumbnail") }}
+    "
+    >
+    {{- if .Get "thumbnail" }}
     <a href="{{ .Get "image" }}" class="block hover:opacity-90 transition-opacity duration-200">
     <img
             src="{{ .Get "thumbnail" }}"
@@ -30,17 +32,27 @@
     loading="lazy"
     />
     {{- end }}
+
     {{- with (.Get "caption") }}
-    <figcaption class="text-sm text-medium-gray mt-2 italic">{{ . | markdownify }}</figcaption>
+    <figcaption class="text-sm text-medium-gray mt-2 italic">
+        {{ . | markdownify }}
+    </figcaption>
     {{- end }}
     </figure>
+
+    <!-- Main text that wraps around the floated figure -->
     <div class="prose max-w-none md:overflow-hidden">
         {{- .Inner | markdownify }}
     </div>
+
+    <!-- Clear the float so content below this section won't wrap -->
     <div class="clear-both"></div>
 </section>
+
 {{- else }}
-<section class="
+
+<section
+        class="
     mb-8
     flex flex-col gap-4
     md:flex-row md:gap-6
@@ -49,9 +61,10 @@ md:items-start
 {{ else }}
 md:flex-row-reverse md:items-start
 {{ end }}
-">
+"
+>
 <figure class="w-full md:w-1/3">
-    {{- if (.Get "thumbnail") }}
+    {{- if .Get "thumbnail" }}
     <a href="{{ .Get "image" }}" class="block hover:opacity-90 transition-opacity duration-200">
     <img
             src="{{ .Get "thumbnail" }}"
@@ -68,12 +81,18 @@ md:flex-row-reverse md:items-start
     loading="lazy"
     />
     {{- end }}
+
     {{- with (.Get "caption") }}
-    <figcaption class="text-sm text-medium-gray mt-2 italic">{{ . | markdownify }}</figcaption>
+    <figcaption class="text-sm text-medium-gray mt-2 italic">
+        {{ . | markdownify }}
+    </figcaption>
     {{- end }}
 </figure>
+
+<!-- Text area that sits beside the figure on wider screens -->
 <div class="flex-1 prose max-w-none">
     {{- .Inner | markdownify }}
 </div>
 </section>
+
 {{- end }}
