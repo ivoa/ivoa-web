@@ -1,4 +1,16 @@
-baseURL = "https://webtest.ivoa.info"
+baseURL = ""
 languageCode = "en-us"
 title = "International Virtual Observatory Alliance"
 author = "IVOA.net"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  writeStats = true
+  useResourceCacheWhen = "fallback"
+
+[minify]
+  disableJS = true

@@ -1,14 +1,57 @@
-<header>
-    <a class="header-logo" href="{{ .Site.Home.RelPermalink}}">
-        <img src="/images/ivoa_logo.png">
-        <span>International Virtual<br/>Observatory Alliance</span>
-    </a>
-    <nav>
-        <a href="{{ .Site.Home.Permalink}}">Home</a>
-        <a href="{{ .Site.Home.Permalink}}astronomers/">Astronomers</a>
-        <a href="{{ .Site.Home.Permalink}}deployers/">Deployers</a>
-        <a href="{{ .Site.Home.Permalink}}members/">Members</a>
-        <a href="{{ .Site.Home.Permalink}}about/">About</a>
-        <a class="search" href="{{ .Site.Home.Permalink}}search/">Search</a>
-    </nav>
+<header class="bg-primary w-full">
+    <div class="max-w-[2560px] mx-auto px-6">
+        <!-- Desktop & Tablet (768px+) -->
+        <div class="hidden md:flex flex-col">
+            <!-- First Row -->
+            <div class="flex items-center h-20">
+                <a href="/"><img src="/images/ivoa_logo.png" alt="IVOA Logo" class="h-14 w-auto mr-4"></a>
+                <span class="text-white text-2xl lg:text-2xl">International Virtual Observatory Alliance</span>
+            </div>
+
+            <!-- Second Row -->
+            <div class="flex justify-end pb-4">
+                <div class="flex gap-8">
+                    <a href="{{ .Site.Home.Permalink}}" class="text-white hover:text-accent-hover text-lg">Home</a>
+                    <a href="{{ .Site.Home.Permalink}}astronomers/" class="text-white hover:text-accent-hover text-lg">Astronomers</a>
+                    <a href="{{ .Site.Home.Permalink}}deployers/" class="text-white hover:text-accent-hover text-lg">Deployers</a>
+                    <a href="{{ .Site.Home.Permalink}}members/" class="text-white hover:text-accent-hover text-lg">Members</a>
+                    <a href="{{ .Site.Home.Permalink}}about/" class="text-white hover:text-accent-hover text-lg">About</a>
+                    <a href="{{ .Site.Home.Permalink}}search/" class="text-white hover:text-accent-hover text-lg">Search</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile (<768px) -->
+        <div class="md:hidden">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <img src="/images/ivoa_logo.png" alt="IVOA Logo" class="h-12 w-auto">
+                    <span class="text-white text-xlg">International Virtual Observatory Alliance</span>
+                </div>
+                <button
+                        id="mobileMenuButton"
+                        type="button"
+                        class="p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu"
+                >
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden mt-2 border-t border-white/10">
+                <nav class="py-2">
+                    <a href="{{ .Site.Home.Permalink}}" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Home</a>
+                    <a href="{{ .Site.Home.Permalink}}astronomers/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Astronomers</a>
+                    <a href="{{ .Site.Home.Permalink}}deployers/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Deployers</a>
+                    <a href="{{ .Site.Home.Permalink}}members/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Members</a>
+                    <a href="{{ .Site.Home.Permalink}}about/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">About</a>
+                    <a href="{{ .Site.Home.Permalink}}search/" class="block text-white hover:text-accent-hover hover:bg-white/10 text-sm px-4 py-2 transition-colors">Search</a>
+                </nav>
+            </div>
+        </div>
+    </div>
 </header>
