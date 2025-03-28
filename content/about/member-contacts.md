@@ -5,7 +5,7 @@ draft: false
 tags:
 - about
 ---
-
+{{<my-table>}}
 |  **Acronym** |  **VO Project/Country**  |  **Primary Contact**  |
 | ---: | :--- | :---: |
 |  NOVA | [Argentina Virtual Observatory](http://nova.org.ar/) |  [Sebastian Gurovich](mailto:gurovich@mail.oac.uncor.edu) |
@@ -31,4 +31,4 @@ tags:
 |  USVOA | [US Virtual Observatory Alliance](http://usvoa.cfa.harvard.edu) |  [Pepi Fabbiano](mailto:gfabbiano@cfa.harvard.edu) |
 |  VO-India | [Virtual Observatory India](http://vo.iucaa.ernet.in/%7Evoi/) |  [Ajit Kembhavi](mailto:akk@iucaa.ernet.in) |
 |  VObs.it | [Italian Virtual Observatory](http://vobs.it) |  [Marco Molinaro](mailto:marco.molinaro@inaf.it) |
-
+{{</my-table>}}
