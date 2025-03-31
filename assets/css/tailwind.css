@@ -14,6 +14,10 @@
         background-color: theme('colors.primary') !important;
     }
 
+    .prose .customtable > table thead > th {
+        vertical-align: center;
+    }
+
     /* Override the text color in headers */
     .prose .customtable > table :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)) {
         color: theme('colors.white') !important; /* Or any color you prefer */

@@ -7,7 +7,7 @@ tags:
 
 In this section, scientists can find available VO-compatible applications for their immediate use to do science. The level of maturity of the applications depends on a high degree on the level of maturity of the corresponding IVOA protocols and standards.. As a consequence of the flexibility of the standards, several of the applications might overlap in functionality. **The IVOA does not manage or guarantee these services/tools.**
 {{<my-table>}}
-| Applications (in alphabetical order) | Publisher | Short Description |
+| Applications | Publisher | Short Description |
 | --- | --- | --- |
 | [Aladin](http://aladin.u-strasbg.fr/aladin.gml) | CDS | Aladin is an interactive sky atlas allowing the user to visualize digitized astronomical images or full surveys, superimpose entries from astronomical catalogues or databases, and interactively access related data and information from the Simbad database, the VizieR service and other archives for all known astronomical objects in the field. |
 | [APERICubes](https://voparis-apericubes.obspm.fr/) | VOFrance | APERICubes is a web-based tool to preview spectral cubes and facilitate their exploration with existing spectrum analysis programs. It is part of VESPA, an integrated system connecting many data services related to Planetary Sciences and Heliophysics. After being prepared on the server, the cube image planes are browsable through JS9, and the user has access to various plugins for image analysis. When a pixel or a region of interest is selected, the corresponding (average) spectrum, computed by a servlet in real time, is plotted. Thanks to the VO SAMP protocol, the generated spectra can be sent to dedicated clients such as CASSIS to be analyzed and compared. |
