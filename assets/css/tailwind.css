@@ -11,7 +11,7 @@
     }
 
     .prose .customtable > table thead {
-        background-color: theme('colors.primary') !important;
+        background-color: theme('colors.secondary') !important;
     }
 
     .prose .customtable > table thead > th {
