@@ -6,8 +6,8 @@ tags:
 ---
 
 In this section, scientists can find available VO-compatible applications for their immediate use to do science. The level of maturity of the applications depends on a high degree on the level of maturity of the corresponding IVOA protocols and standards.. As a consequence of the flexibility of the standards, several of the applications might overlap in functionality. **The IVOA does not manage or guarantee these services/tools.**
-
-| Applications (in alphabetical order) | Publisher | Short Description |
+{{<my-table>}}
+| Applications | Publisher | Short Description |
 | --- | --- | --- |
 | [Aladin](http://aladin.u-strasbg.fr/aladin.gml) | CDS | Aladin is an interactive sky atlas allowing the user to visualize digitized astronomical images or full surveys, superimpose entries from astronomical catalogues or databases, and interactively access related data and information from the Simbad database, the VizieR service and other archives for all known astronomical objects in the field. |
 | [APERICubes](https://voparis-apericubes.obspm.fr/) | VOFrance | APERICubes is a web-based tool to preview spectral cubes and facilitate their exploration with existing spectrum analysis programs. It is part of VESPA, an integrated system connecting many data services related to Planetary Sciences and Heliophysics. After being prepared on the server, the cube image planes are browsable through JS9, and the user has access to various plugins for image analysis. When a pixel or a region of interest is selected, the corresponding (average) spectrum, computed by a servlet in real time, is plotted. Thanks to the VO SAMP protocol, the generated spectra can be sent to dedicated clients such as CASSIS to be analyzed and compared. |
@@ -27,7 +27,9 @@ In this section, scientists can find available VO-compatible applications for th
 | [STILTS](http://www.star.bris.ac.uk/%7Embt/stilts/) | | The STIL Tool Set is a set of command-line tools based on STIL, the Starlink Tables Infrastructure Library. It deals with the processing of tabular data; the package has been designed for, but is not restricted to, astronomical tables such as source catalogues. Some of the tools are generic and can work with multiple formats (including FITS, VOTable, CDF, ECSV, CSV, PDS4, Parquet, MRT, Feather, GBIN, SQL and ASCII), and others are specific to the VOTable format. STILTS is the command-line counterpart of the GUI table analysis tool TOPCAT. The package is robust, fully documented, and designed for efficiency, especially with very large datasets. |
 | [VESPA](http://vespa.obspm.fr) | | VESPA (Virtual European Solar and Planetary Access) is a web-based data search interface for Planetary Science and Heliophysics data. VESPA is a project of the Europlanet-2024 programme funded by European Community. |
 | [VOSA](http://svo2.cab.inta-csic.es/theory/vosa/) | | VO SED Analyzer |
+{{</my-table>}}
 
+{{<my-table>}}
 | Functionality |
 | --- |
 | **Search for Images:** [Aladin](http://aladin.u-strasbg.fr/aladin.gml), [Datascope](http://heasarc.gsfc.nasa.gov/cgi-bin/vo/datascope/init.pl), [SkyView](http://skyview.gsfc.nasa.gov/), [SVO Discovery Tool](http://sdc.cab.inta-csic.es/SVODiscoveryTool), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
@@ -46,7 +48,8 @@ In this section, scientists can find available VO-compatible applications for th
 | **SED building:** [VOSA](http://svo2.cab.inta-csic.es/theory/vosa/), [VOSpec](http://www.sciops.esa.int/index.php?project=SAT&page=vospec) |
 | **Fixing WCS:** [Aladin](http://aladin.u-strasbg.fr/aladin.gml) |
 | **Query Databases** [TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [TAPHandle](http://saada.u-strasbg.fr/taphandle/), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
-
+{{</my-table>}}
+{{<my-table>}}
 | VO-compliant Tools & Services |
 | --- |
 | [DS9](http://hea-www.harvard.edu/RD/ds9/): Image visualisation |
@@ -62,6 +65,7 @@ In this section, scientists can find available VO-compatible applications for th
 | [RSS Feed of New & Updated Services in the VO](http://dc.zah.uni-heidelberg.de/registryrss/q/rss/info) |
 | [AppLauncher](http://www.jmmc.fr/applauncher) |
 | [EURO-VO Registry](https://registry.euro-vo.org/evor/) |
+{{</my-table>}}
 
 _If you are interested in having your own project linked here, please [contact us](mailto:ivoadoc@ivoa.net)._
 

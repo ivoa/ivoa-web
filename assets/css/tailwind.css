@@ -1,7 +1,55 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
+/* Add custom components between components and utilities */
+@layer components {
+    /* IVOA Table Styles with higher specificity */
+    .prose .customtable > table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        text-indent: 0 !important;
+    }
+
+    .prose .customtable > table thead {
+        background-color: theme('colors.secondary') !important;
+    }
+
+    .prose .customtable > table thead > th {
+        vertical-align: center;
+    }
+
+    /* Override the text color in headers */
+    .prose .customtable > table :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)) {
+        color: theme('colors.white') !important; /* Or any color you prefer */
+        padding: theme('spacing.4') !important;
+        text-align: left !important;
+        font-weight: 600 !important;
+        border: 1px solid theme('colors.soft-gray') !important;
+    }
+
+    .prose .customtable > table td {
+        border: 1px solid theme('colors.soft-gray') !important;
+        padding: theme('spacing.4') !important;
+    }
+
+    .prose .customtable > table a {
+        color: theme('colors.secondary') !important;
+    }
+
+    .prose .customtable > table a:hover {
+        text-decoration: underline !important;
+    }
+
+    .prose .customtable > table tbody tr:nth-child(even) {
+        background-color: theme('colors.light-gray / 50') !important;
+    }
+
+    .prose .customtable > table tbody tr:hover {
+        background-color: theme('colors.light-bg') !important;
+    }
+}
+
+@tailwind utilities;
 @layer base {
     html {
         font-family: "Inter", sans-serif;
@@ -28,4 +76,3 @@
         @apply list-none;  /* or directly use: list-style-type: none; */
     }
 }
-
