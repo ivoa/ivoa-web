@@ -29,7 +29,7 @@ Calendar](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents)
 The mailing list archive can be searched [here](http://mail.ivoa.net/search).
 
 ## Working Groups
-
+{{<my-table>}}
 | Working Group Page | Previous Messages | Subscribe | Send Mail | Chair | Vice Chair |
 | --- | --- | --- | --- | --- | --- |
 | [Applications](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaApplications) | [archive](http://mail.ivoa.net/pipermail/apps/) | [options](http://mail.ivoa.net/mailman/listinfo/apps) | [apps@ivoa.net](mailto:apps@ivoa.net) | Pierre Le Sidaner | Adrian Damian |
@@ -38,11 +38,12 @@ The mailing list archive can be searched [here](http://mail.ivoa.net/search).
 | [Grid &amp; Web Services](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaGridAndWebServices) | [archive](http://mail.ivoa.net/pipermail/grid/) | [options](http://mail.ivoa.net/mailman/listinfo/grid) | [grid@ivoa.net](mailto:grid@ivoa.net) | Jesus Salgado | Sara Bertocco |
 | [Registry](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaResReg) | [archive](http://mail.ivoa.net/pipermail/registry/) | [options](http://mail.ivoa.net/mailman/listinfo/registry) | [registry@ivoa.net](mailto:registry@ivoa.net) | Renaud Savalle | Tess Jaffe |
 | [Semantics](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSemantics) | [archive](http://mail.ivoa.net/pipermail/semantics/) | [options](http://mail.ivoa.net/mailman/listinfo/semantics) | [semantics@ivoa.net](mailto:semantics@ivoa.net) | Baptiste Cecconi | Sebastien Derriere |
+{{</my-table>}}
 
 See the [Policy on IVOA Working Group/Interest Group Chairs and Vice chairs](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaGroupChairsPolicy) for an explanation of the role of Chairs and Vice-chairs. You can also look at the [IVOA History](http://wiki.ivoa.net/twiki/bin/view/IVOA/IVOAHistoryPage#workinggroups) page on the wiki to see term dates for the positions.
 
 ## Interest Groups
-
+{{<my-table>}}
 | Interest Group Page | Previous Messages | Subscribe | Mailing List | Chair | Vice Chair |
 | --- | --- | --- | --- | --- | --- |
 | [Data Curation & Preservation](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaDCP) | [archives](http://mail.ivoa.net/pipermail/datacp/) | [options](http://mail.ivoa.net/mailman/listinfo/datacp) | [datacp@ivoa.net](mailto:datacp@ivoa.net) | Gilles Landais | Gus Muench |
@@ -54,9 +55,10 @@ See the [Policy on IVOA Working Group/Interest Group Chairs and Vice chairs](htt
 | [Time Domain](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaVOEvent) | [archives](http://mail.ivoa.net/pipermail/voevent/) | [options](http://mail.ivoa.net/mailman/listinfo/voevent) | [voevent@ivoa.net](mailto:voevent@ivoa.net) | Rafael Martinez Galarzai | Pierre Fernique |
 | [Radio](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaRadio) | [archives](http://mail.ivoa.net/pipermail/radioig/) | [options](http://mail.ivoa.net/mailman/listinfo/radioig) | [radioig@ivoa.net](mailto:radio@ivoa.net) | Francois Bonnarel | Mark Kettenis |
 | High Energy | [archives](http://mail.ivoa.net/pipermail/heig/) | [options](http://mail.ivoa.net/mailman/listinfo/heig) | [radioig@ivoa.net](mailto:heig@ivoa.net) | Janet Evans |  |
+{{</my-table>}}
 
 ## Other Groups, Activities and Committees
-
+{{<my-table>}}
 | Group/Committee Page | Previous Messages | Subscribe | Mailing List | Chair | Vice Chair |
 | --- | --- | --- | --- | --- | --- |
 | Interop | [archives](http://mail.ivoa.net/pipermail/interop/) | [options](http://mail.ivoa.net/mailman/listinfo/interop) | [interop@ivoa.net](mailto:interop@ivoa.net) | N/A | N/A |
@@ -66,6 +68,7 @@ See the [Policy on IVOA Working Group/Interest Group Chairs and Vice chairs](htt
 | [Standing Committee on Science Priorities](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSciencePriorities) |  |  | [csp@ivoa.net](mailto:csp@ivoa.net) | Ada Nebot | Francesca Civano |
 | [Standing Committee on Standards & Processes](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaStdsDocsProc) | [archives](http://mail.ivoa.net/pipermail/stdproc/) | [options](http://mail.ivoa.net/mailman/listinfo/stdproc) | stdproc@ivoa.net | Patrick Dowler | N/A |
 | IVOA Document Coordinator |  |  | [ivoadoc@ivoa.net](mailto:ivoadoc@ivoa.net) | Giulia Iafrate | N/A |
+{{</my-table>}}
 
 ## Inactive Working Groups
 
