@@ -72,6 +72,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            '--tw-prose-body': theme('colors.black'),
             thead: {
               backgroundColor: theme("colors.light-gray"),
             },
