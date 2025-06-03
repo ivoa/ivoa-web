@@ -47,6 +47,10 @@
     .prose .customtable > table tbody tr:hover {
         background-color: theme('colors.light-bg') !important;
     }
+
+    .prose h1, .prose h2, .prose h3 {
+        @apply text-primary;
+    }
 }
 
 @tailwind utilities;
@@ -60,8 +64,11 @@
     h1 {
         @apply text-primary text-xl font-bold leading-tight mb-3 mt-3 text-center;
     }
+    h2 {
+        @apply text-primary text-lg font-bold leading-tight mb-3 mt-3;
+    }
     h3 {
-        @apply text-primary text-lg font-bold leading-tight mb-3 mt-3 text-center;
+        @apply text-primary text-lg font-bold leading-tight mb-3 mt-3;
     }
     hr {
         @apply border-primary;
