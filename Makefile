@@ -53,6 +53,17 @@ else
   DOWNLOAD = wget -q --show-progress
 endif
 
+help:
+	@printf "\nMake targets for ivoa-web:\n"
+	@printf "* help        Display help (default target).\n"
+	@printf "* preview     Start the preview service (on port 1313). All required tools\n              are installed/upgraded automatically, when needed.\n"
+	@printf "* newsletter  Create a new newsletter.\n"
+	@printf "* html        Generate the HTML version of the IVOA Website (with search\n              index).\n"
+	@printf "* list-draft  List all draft pages (i.e. all pages only visible in preview\n              mode).\n"
+	@printf "* clear       Delete local search index and generated public pages.\n"
+	@printf "* install     Install Hugo and PageFind (or upgrade them if a different\n              version is set in Makefile).\n"
+	@printf "* uninstall   Uninstall Hugo and PageFind.\n"
+
 # Ensure Node is installed and its major version is at least 20.
 .PHONY: ensure-node
 ensure-node:
@@ -79,17 +90,6 @@ npm-install: ensure-node
 
 # Help target
 .PHONY: help preview update-search-index clear-search-index newsletter list-draft html generate-public-pages clear-generated-public-pages index-public-pages clear-public-pages-index clear install uninstall uninstall-hugo uninstall-pagefind
-
-help:
-	@echo "\nMake targets for ivoa-web:\n"
-	@echo "* help        Display help (default target).\n"
-	@echo "* preview     Start the preview service (on port 1313). All required tools\n              are installed/upgraded automatically, when needed.\n"
-	@echo "* newsletter  Create a new newsletter.\n"
-	@echo "* html        Generate the HTML version of the IVOA Website (with search\n              index).\n"
-	@echo "* list-draft  List all draft pages (i.e. all pages only visible in preview\n              mode).\n"
-	@echo "* clear       Delete local search index and generated public pages.\n"
-	@echo "* install     Install Hugo and PageFind (or upgrade them if a different\n              version is set in Makefile).\n"
-	@echo "* uninstall   Uninstall Hugo and PageFind.\n"
 
 # Preview target (now depends on Node deps)
 preview: npm-install install update-search-index list-draft
