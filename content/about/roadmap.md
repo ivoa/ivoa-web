@@ -26,11 +26,11 @@ to send flexible queries to a wide variety of databases.
 The IVOA is working hard on further standards, including those needed for virtual storage 
 addressing, single sign on, semantic reasoning, grid and web service modularisation.
 
-The last semestral roadmap document maintained by the TCG is the 2024A
-Roadmap, spanning the time between the May 2024 and November 2024
+The last semestral roadmap document maintained by the TCG is the 2025A
+Roadmap, spanning the time between the June 2025 and November 2025
 Interoperability meetings and can be found
-[here](http://wiki.ivoa.net/twiki/bin/view/IVOA/2024ARoadmap) 
-([Roadmap 2024A](http://wiki.ivoa.net/twiki/bin/view/IVOA/2024ARoadmap)).
+[here](http://wiki.ivoa.net/twiki/bin/view/IVOA/2025ARoadmap) 
+([Roadmap 2025A](http://wiki.ivoa.net/twiki/bin/view/IVOA/2025ARoadmap)).
 
 All [Technical Roadmap Documents](https://wiki.ivoa.net/twiki/bin/view/IVOA/TCGRoadmaps) 
 can be found at this [wiki page](https://wiki.ivoa.net/twiki/bin/view/IVOA/TCGRoadmaps).
