@@ -7,8 +7,8 @@ tags:
 ---
 
 _IVOA Executive Committee_
-- **IVOA Chair**: [Simon O'Toole](mailto:simon.otoole@mq.edu.au)
-- **Deputy Chair**: [JJ Kavelaars](mailto:jj.kavelaars@nrc-cnrc.gc.ca)
+- **IVOA Chair**: [JJ Kavelaars](mailto:jj.kavelaars@nrc-cnrc.gc.ca)
+- **Deputy Chair**: [Mark Allen](mailto:mark.allen@astro.unistra.fr)
 - *Secretary*: [Marcy Harbut](mailto:mharbut@ipac.caltech.edu)
 
 Contacts for the [_IVOA Member Organizations_](../member-contacts)

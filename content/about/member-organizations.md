@@ -31,7 +31,7 @@ Contact points for the single
 - [Square Kilometer Array Observatory](http://www.skatelescope.org)
 - [South African Astroinformatics Alliance](http://www.sa3.ac.za/)
 - [Spanish Virtual Observatory](http://svo.cab.inta-csic.es/)
-- [Italian Virtual Observatory](http://vobs.astro.it)
+- [Italian Virtual Observatory](https://www.vobs.it/en/)
 - [Ukrainian Virtual Observatory](http://ukr-vo.org)
 - [US Virtual Observatory Alliance](http://usvoa.cfa.harvard.edu)
 - [Virtual Observatory India](http://voi.iucaa.in)
