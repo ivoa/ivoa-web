@@ -22,13 +22,13 @@ tags:
 |  NLVO | [Netherland Virtual Observatory](http://www.virtualobservatory.nl) |  [Yan Grange](mailto:grange@astron.nl) |
 |  JVO | [Japanese Virtual Observatory](http://jvo.nao.ac.jp/) |  [Yuji Shirasaki](mailto:yuji.shirasaki@nao.ac.jp) |
 |  KazVO | [Kazakstan Virtual Observatory](https://fai.kz/) |  [Chingis Omarov](mailto:chingis.omarov@gmail.com) |
-|  OV-France | [Observatoire Virtuel France](http://www.france-vo.org/) |  [Franck Le Petit](mailto:Franck.LePetit@obspm.fr) |
+|  OV-France | [Observatoire Virtuel France](http://www.france-vo.org/) |  [Ada Nebot](mailto:ada.nebot@astro.unistra.fr) |
 |  RVO | [Russian Virtual Observatory](http://www.inasan.rssi.ru/eng/rvo/) |  [Oleg Malkov](mailto:malkov@inasan.ru) |
-|  SA<sup>3</sup> | [South Africa Astroinformatics Alliance](http://www.sa3.ac.za) |  [Patricia Whitelock](mailto:paw@saao.ac.za) |
+|  SA<sup>3</sup> | [South Africa Astroinformatics Alliance](http://www.sa3.ac.za) |  [Encarni Romero Colmenero](mailto:erc@saao.ac.za) |
 |  SKAO | [Square Kilometre Array Observatory](https://www.skao.int/) |  [Antonio Chrysostomou](mailto:Antonio.Chrysostomou@skao.int) |
 |  SVO | [Spanish Virtual Observatory](http://svo.cab.inta-csic.es/) |  [Enrique Solano](mailto:esm@cab.inta-csic.es) |
 |  UkrVO | [Ukrainian Virtual Observatory](http://www.ukr-vo.org) |  [Irina Vavilova](mailto:irivav@MAO.Kiev.UA) |
 |  USVOA | [US Virtual Observatory Alliance](http://usvoa.cfa.harvard.edu) |  [Pepi Fabbiano](mailto:gfabbiano@cfa.harvard.edu) |
-|  VO-India | [Virtual Observatory India](http://vo.iucaa.ernet.in/%7Evoi/) |  [Ajit Kembhavi](mailto:akk@iucaa.ernet.in) |
+|  VO-India | [Virtual Observatory India](http://vo.iucaa.ernet.in/%7Evoi/) |  [Sudhanshu Barway](mailto:sudhanshu.barway@iiap.res.in) |
 |  VObs.it | [Italian Virtual Observatory](http://vobs.it) |  [Marco Molinaro](mailto:marco.molinaro@inaf.it) |
 {{</my-table>}}
