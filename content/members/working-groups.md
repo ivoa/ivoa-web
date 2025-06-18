@@ -52,7 +52,7 @@ See the [Policy on IVOA Working Group/Interest Group Chairs and Vice chairs](htt
 | [Knowledge Discovery](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaKDD) | [archives](http://mail.ivoa.net/pipermail/kdd/) | [options](http://mail.ivoa.net/mailman/listinfo/kdd) | [kdd@ivoa.net](mailto:kdd@ivoa.net) | Yihan Tao | Andre Schaaff |
 | [Operations](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaOps) | [archives](http://mail.ivoa.net/pipermail/ops/) | [options](http://mail.ivoa.net/mailman/listinfo/ops) | [ops@ivoa.net](mailto:ops@ivoa.net) | Steve Groom | Tamara Civera |
 | [Radio](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaRadio) | [archives](http://mail.ivoa.net/pipermail/radioig/) | [options](http://mail.ivoa.net/mailman/listinfo/radioig) | [radioig@ivoa.net](mailto:radio@ivoa.net) | Mark Kettenis | OPEN |
-| [Solar System](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSS) | [archives](http://mail.ivoa.net/pipermail/ssig/) | [options](http://mail.ivoa.net/mailman/listinfo/ssig) | [ssig@ivoa.net](mailto:ssig@ivoa.net) | TBA | Markus Demleitner |
+| [Solar System](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSS) | [archives](http://mail.ivoa.net/pipermail/ssig/) | [options](http://mail.ivoa.net/mailman/listinfo/ssig) | [ssig@ivoa.net](mailto:ssig@ivoa.net) | St&eacute;phane Erard | Markus Demleitner |
 | [Time Domain](http://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaVOEvent) | [archives](http://mail.ivoa.net/pipermail/voevent/) | [options](http://mail.ivoa.net/mailman/listinfo/voevent) | [voevent@ivoa.net](mailto:voevent@ivoa.net) | Judith Racusin | Pierre Fernique |
 {{</my-table>}}
 
