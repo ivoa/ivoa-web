@@ -5,8 +5,7 @@ draft: false
 author: Klaas Kliffen
 featured_image: new_website.png
 tags:
-- banner
-- news
+- post
 ---
 
 Today we launched the new updated homepage for https://ivoa.net.

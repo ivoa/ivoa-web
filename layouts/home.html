@@ -1,30 +1,69 @@
 {{ define "main" }}
 
-<section class="flex flex-col md:flex-row gap-4" data-pagefind-ignore>  {{/*  Make the overall layout responsive */}}
-    <main class="carrousel w-full md:w-2/3">
-        {{ partial "slider.html" . }}
-    </main>
+<section class="flex flex-col md:flex-row gap-4" data-pagefind-ignore>
+	{{/* Make the overall layout responsive */}}
+	<div class="carrousel md:w-2/3">{{ partial "slider.html" . }}</div>
 
-    <aside class="right cards w-full md:w-1/3"> {{/*  Sidebar takes full width on small, 1/3 on larger */}}
-        <div class="card">
-            <div class="card-title">
-                IVOA News & Upcoming Meetings
-            </div>
-            <div class="card-list">
-                <ul>
-                    {{ range first 3 (where .Site.Pages "Params.tags" "intersect" (slice "news")) }}
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                    {{ end }}
-                </ul>
-            </div>
+	<aside class="right cards w-full md:w-1/3">
+		{{/* Sidebar takes full width on small, 1/3 on larger */}}
+		<div class="bg-white rounded-sm shadow-md mt-4 p-1 max-w-content mx-auto">
+			<div class="relative inline-block">
+				<span
+					class="bg-primary text-white text-xs font-bold px-6 py-2 rounded-l-xl rounded-r-md shadow-md uppercase tracking-wide before:content-[''] before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-4 before:bg-accent before:rounded-l-lg before:shadow-sm"
+					style="box-shadow: 2px 4px 12px 0 #0126471a"
+				>
+					IVOA News & Upcoming Meetings
+				</span>
+			</div>
 
-        </div>
-    </aside>
+			<div class="mt-4">
+				<ul class="list-disc pl-6 space-y-2">
+					{{ range first 3 (where .Site.Pages "Params.tags" "intersect" (slice
+					"news")) }}
+					<li>
+						<a
+							href="{{ .RelPermalink }}"
+							class="text-primary hover:text-accent font-semibold transition"
+						>
+							{{ .Title }}
+						</a>
+					</li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+		<div class="bg-white rounded-sm shadow-md mt-4 p-1 max-w-content mx-auto">
+			<div class="relative inline-block">
+				<span
+					class="bg-primary text-white text-xs font-bold px-6 py-2 rounded-l-xl rounded-r-md shadow-md uppercase tracking-wide before:content-[''] before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-4 before:bg-accent before:rounded-l-lg before:shadow-sm"
+					style="box-shadow: 2px 4px 12px 0 #0126471a"
+				>
+					IVOA Members Posts
+				</span>
+			</div>
+
+			<div class="mt-4">
+				<ul class="list-disc pl-6 space-y-2">
+					{{ range first 3 (where .Site.Pages "Params.tags" "intersect" (slice
+					"post")) }}
+					<li>
+						<a
+							href="{{ .RelPermalink }}"
+							class="text-primary hover:text-accent font-semibold transition"
+						>
+							{{ .Title }}
+						</a>
+					</li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+	</aside>
 </section>
 
 <!-- rendered content from content/_index.html -->
-<div class="mt-4">  {{/*  Add some margin-top for spacing */}}
-    {{- .Content -}}
+<div class="mt-4">
+	{{/* Add some margin-top for spacing */}} {{- .Content -}}
 </div>
 
 {{ end }}
