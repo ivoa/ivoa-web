@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
     {{- partial "head.html" . -}}
     {{- .Scratch.Set "canBeIndexed" (or (or (eq .BundleType "branch") (hasPrefix .Type "_")) (or (eq .Kind "term") (eq .Kind "taxonomy"))) }}
-    <body class="min-h-screen mx-auto bg-white" {{- if (.Scratch.Get "canBeIndexed") }} data-pagefind-ignore{{- end }}>
+    <body class="h-full mx-auto bg-white" {{- if (.Scratch.Get "canBeIndexed") }} data-pagefind-ignore{{- end }}>
         {{- partial "header.html" . -}}
-        <main class="mx-auto my-4 px-4 max-w-[800px] 2xl:max-w-[1000px]" {{- if not (.Scratch.Get "canBeIndexed") }} data-pagefind-body data-pagefind-meta="date:{{- .Date.Format "2006-01-02" }}"{{- end }}>
+        <main class="min-h-[70%] mx-auto my-4 px-4 max-w-[800px] 2xl:max-w-[1000px]" {{- if not (.Scratch.Get "canBeIndexed") }} data-pagefind-body data-pagefind-meta="date:{{- .Date.Format "2006-01-02" }}"{{- end }}>
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "sitemap.html" . -}}
