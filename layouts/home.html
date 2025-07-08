@@ -8,16 +8,16 @@
 		{{/* Sidebar takes full width on small, 1/3 on larger */}}
 		<div class="bg-white rounded-sm shadow-md mt-4 p-1 max-w-content mx-auto">
 			<div class="relative inline-block">
-				<span
-					class="bg-primary text-white text-xs font-bold px-6 py-2 shadow-md tracking-wide before:content-[''] before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-4 before:rounded-l-lg before:shadow-sm"
+				<a href='{{ "/news/" | relURL }}'
+					class="text-black text-lg font-bold px-6 py-2 shadow-md tracking-wide before:content-[''] before:absolute before:-left-4 before:top-1/2 before:-translate-y-1/2 before:w-4 before:h-4 before:rounded-l-lg before:shadow-sm"
 					style="box-shadow: 2px 4px 12px 0 #0126471a"
 				>
-					Posts
-				</span>
+					News
+				</a>
 			</div>
 
 			<div class="mt-4">
-				<ul class="list-disc pl-6 space-y-2">
+				<ul class="list-none pl-1 space-y-2">
 					{{ range first 3 (where .Site.Pages "Params.tags" "intersect" (slice
 					"post")) }}
 					<li>
