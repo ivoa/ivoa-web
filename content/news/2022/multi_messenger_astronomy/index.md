@@ -4,7 +4,7 @@ date: 2022-03-01T08:00:00+02:00
 author:  Deborah Baines
 draft: false
 tags:
-- banner
+- post
 ---
 
 ESASky is a science-driven discovery portal developed at the European Space Agency’s ESAC Science Data Centre that allows the interactive exploration of a large collection of astronomical data, providing a very useful tool for exploring the multi-wavelength sky with the click of a button. The latest release of ESASky is branching into multi-messenger astronomy and shows gravitational wave (GW) event probability maps on the sky, allowing users to look for electromagnetic counterparts for the GW events and using ESASky to quickly access all available archival electromagnetic data. Near future releases intend on expanding the multi-messenger feature and include, for example, the IceCube neutrino footprint.
