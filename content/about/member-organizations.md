@@ -9,13 +9,12 @@ tags:
 The Virtual Observatory [is a federation](what_is_vo) of independently funded
 organizations publishing astronomical data.  Organizations that want to go
 beyond just standards-compliant publication and to contribute to the
-development of standards form [the IVOA](what_is_ivoa).  Following the funding
-system, many of these organizations are still defined by national borders,
-although some large international organizations like ESA or SKA are members,
-too.  The image below visualizes the organisations that form the IVOA.
+development of standards form [the IVOA](what_is_ivoa).
+The image below visualizes the organisations that form the IVOA.
 
 See [IVOA member contacts](../contacts) if you need to get in touch with one of
-our members.
+our members.  [How can I participate](participation) has more
+information on how to become involved with the IVOA.
 
 {{< side-image image="ivoa-members.png" position="left" >}}
 - [Argentine Virtual Observatory](http://nova.conicet.gov.ar/)
