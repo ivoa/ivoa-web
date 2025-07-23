@@ -7,22 +7,16 @@ tags:
 
 ## Participation
 
-The IVOA welcomes participation, in several ways.
+The IVOA welcomes participation in several ways.
 
-- We strongly encourage universities, facilities, data centres, and astronomy projects worldwide to become involved as providers of data, services, information, and software, by following standardised VO methods and interfaces.
-To do this, there is no need to make a formal link to IVOA, but we welcome your input.
+**Universities, data centres, and astronomcal facilities** worldwide are invited to adopt our standards, thus becoming providers of interoperable data, services, information, or software.  Everyone can do that by just following standardised VO methods and interfaces.
+No formal link to the IVOA is necessary, but it is likely that by asking a suitable (not necessarily yours) national organisation will greatly ease the takeup of VO standards and technologies.
 
-- We encourage individuals to participate in the IVOA working groups that develop and agree standards, as well as the Interest Groups that discuss wider issues.
-Normally working group members are drawn from IVOA Member Projects, but we also welcome others, such as astronomers, technical staff, or developers at data centres or astronomical facilities.
-If you wish to participate as a Working Group or Interest Group member, please contact the appropriate chair (see [working group contacts](/members/working-groups)).
+*Individual implementors* of software and services in astronomy are invited to participate in the IVOA working groups that develop and agree standards, as well as the Interest Groups that discuss wider, in particular subdomain-specific, issues.
+IVOA participation is open;
+to participate in a Working Group or Interest Group member, start by subscibing the group's [mailing list](/members) and perhaps state why you are there; the communities are, in general, very welcoming.
 
-- We welcome proposals for VO projects who wish to become members of IVOA.
-Our expectation is that development teams and data providers will organise themselves at national level, and that it is these national projects who will be members of IVOA.
-(For example, we do not normally expect that individual observatories will be member projects of IVOA.)
+We welcome proposals for *VO projects* who wish to become members of IVOA.
+Traditionally, once a national VO community has reached a critical mass, they have organized themselves on a national level.  Having such a national organisation is useful not only as a conduit of VO participation.
 
-It should be recognised that becoming a member project represents a serious commitment to contribute to the VO in general and the IVOA in particular.
-If you are organising a project that you think should become a member project, please start by consulting the [guidelines for participation](https://ivoa.net/documents/latest/IVOAParticipation.html), and then contact the current IVOA chair to discuss your proposal.
-
-- [Guidelines for Participation](https://ivoa.net/documents/latest/IVOAParticipation.html)
-- [IVOA contacts](/about/contacts)
-- [Working Group contacts](/members/working-groups)
+If you are building an organization that you think should become a member project, please start by consulting the [guidelines for participation](https://ivoa.net/documents/latest/IVOAParticipation.html), and then [contact the current IVOA chair](/about/contacts) to discuss your proposal.

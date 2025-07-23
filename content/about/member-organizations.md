@@ -6,10 +6,15 @@ tags:
 - about
 ---
 
-Here's the picture of the IVOA _family_ members with related logos.
+The Virtual Observatory [is a federation](what_is_vo) of independently funded
+organizations publishing astronomical data.  Organizations that want to go
+beyond just standards-compliant publication and to contribute to the
+development of standards form [the IVOA](what_is_ivoa).
+The image below visualizes the organisations that form the IVOA.
 
-Contact points for the single 
-[IVOA Member Organizations](../contacts) can be found [here](../contacts).
+See [IVOA member contacts](../contacts) if you need to get in touch with one of
+our members.  [How can I participate](participation) has more
+information on how to become involved with the IVOA.
 
 {{< side-image image="ivoa-members.png" position="left" >}}
 - [Argentine Virtual Observatory](http://nova.conicet.gov.ar/)

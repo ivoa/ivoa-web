@@ -5,19 +5,13 @@ tags:
 - about
 ---
 
-The International Virtual Observatory Alliance (IVOA) was formed in June 2002 with a mission to "facilitate the international coordination and collaboration necessary for the development and deployment of the tools, systems and organizational structures necessary to enable the international utilization of astronomical archives as an integrated and interoperating virtual observatory."  The IVOA now comprises [over 20 VO programs from around the world](/members). Membership is open to other national and international projects according to the IVOA Guidelines for Participation.
+The International Virtual Observatory Alliance (IVOA) was formed in June 2002 in order to foster international coordination and collaboration towards building the [Virtual Observatory](what_is_vo): A seamless, integrated research data infrastructure for astronomy and its neighbouring disciplines.  The IVOA now comprises [over 20 member organizations from around the world](/members). Membership is open to other national and international projects according to the IVOA Guidelines for Participation.
 
-The work of the IVOA focuses on the development of standards. Working Groups are constituted with cross-project membership in those areas where key interoperability standards and technologies have to be defined and agreed upon. The Working Groups develop standards using a process modeled after the World Wide Web Consortium, in which Working Drafts progress to Proposed Recommendations and finally to Recommendations. Recommendations are ultimately endorsed by the Virtual Observatory Working Group of Commission 5 (Astronomical Data) of the International Astronomical Union. The IVOA also has Interest Groups that discuss experiences using VO technologies and provide feedback to the Working Groups.
+Much of the IVOA's work is about developing standards for how astronomical data should be found, queried, and read. This happens in Working Groups that develop and finally agree upon these. The IVOA's process ist modeled after the World Wide Web Consortium's one, in which Working Drafts progress to Proposed Recommendations and finally to Recommendations, which are the IVOA's endorsed outputs.  The IVOA also has Interest Groups that discuss experiences using VO technologies, often from a sub-discipline point of view (solar system, time domain, high energy, …) and provide feedback to the Working Groups.
 
-Senior representatives from each national VO project form the [IVOA Executive Committee](/about/member-contacts). A chair is chosen from among the representatives and serves a one-year term, preceded by a one-year term as deputy chair. The Executive Committee meets 3-4 times a year to discuss goals, priorities, and strategies.
+Senior representatives from each national VO project form the [IVOA Executive Committee](/about/member-contacts). A chair is chosen from among the representatives and serves a one-year term, preceded by a one-year term as deputy chair. The Executive Committee regularly meets to discuss goals, priorities, and strategies.
 
-The IVOA holds two Interoperability Workshops each year: a week-long meeting in spring, typically May, and a shorter meeting in fall that is either coordinated with the annual ADASS conference or with a regional VO project meeting. These meetings are opportunities for the [Working Groups and Interest Groups](/members) to have face-to-face discussions and for the more difficult technical questions to be resolved.
+The IVOA holds two Interoperability Workshops each year: a week-long meeting in spring, typically May, and a shorter meeting in fall back-to-back the annual [ADASS conference](https://adass.org). These meetings are opportunities for the VO community to meet face-to-face and to resolve questions and problems in a concentrated effort.
 
-**Additional Information:**
-
-- VO from a user's point of view: [Astronomers](/astronomers)
-- How to publish VO services or write VO-compatible software: [Deployers](/deployers)
-- IVOA participant discussions: [Members](/members)
-
-**Historical References:**
+**Historical Reference:**
 - [The IVOA (R. J. Hanisch & P. J. Quinn)](TheIVOA.pdf)
