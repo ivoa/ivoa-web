@@ -4,7 +4,7 @@ inputs:
   hugo_version:
     description: 'Version of Hugo to download'
     required: false
-    default: '0.148.1'
+    default: '0.149.1'
 runs:
   using: 'composite'
   steps:
