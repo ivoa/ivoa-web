@@ -81,5 +81,6 @@
     }
     ul.menu {
         @apply list-none;  /* or directly use: list-style-type: none; */
+        @apply ml-0;
     }
 }
