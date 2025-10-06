@@ -34,7 +34,7 @@
     background: none;
 }
 
-// fix for IE bug (can't do position: fixed): http://www.cssplay.co.uk/layouts/fixed.html
+/* fix for IE bug (can't do position: fixed): http://www.cssplay.co.uk/layouts/fixed.html */
 body { height:100%; overflow-y:auto; }
 * html #generated-toc {position:absolute;}
 * html #generated-toc-show {position:absolute;}
