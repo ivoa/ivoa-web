@@ -1,4 +1,4 @@
-name: "Deploy the main version of the website"
+name: "Deploy the production version of the website"
 
 on:
   workflow_dispatch:
@@ -9,6 +9,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    name: "Deploy production site"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,12 +33,12 @@ jobs:
       - name: Build the website
         run: make html
 
-      - name: Deploy the website
+      - name: Upload the site to the production server with SFTP
         uses: Dylan700/sftp-upload-action@latest
         with:
-          username: webstage
-          server: web.ivoa.net
-          port: ${{ secrets.SFTP_PORT }}
-          key: ${{ secrets.STAGE_ID }}
+          username: ${{ secrets.SFTP_PROD_USER }}
+          server: ${{ secrets.SFTP_PROD_SERVER }}
+          port: ${{ secrets.SFTP_PROD_PORT }}
+          key: ${{ secrets.SFTP_PROD_KEY }}
           uploads: |
-            ./public/ => ./ivoa-web-stage/
+            ./public/ => ${{ secrets.SFTP_PROD_PATH }}
