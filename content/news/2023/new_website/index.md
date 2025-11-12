@@ -1,11 +1,11 @@
 ---
 title: "New IVOA Homepage"
-date: 2023-07-04T10:58:36+02:00
+date: 2025-11-11T10:58:36+01:00
 draft: false
-author: Klaas Kliffen
+author: NewWebsite Group
 featured_image: new_website.png
 tags:
 - post
 ---
 
-Today we launched the new updated homepage for https://ivoa.net.
+We are launching the [new website for the IVOA](for https://ivoa.net).
