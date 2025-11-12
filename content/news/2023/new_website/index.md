@@ -8,4 +8,4 @@ tags:
 - post
 ---
 
-We are launching the [new website for the IVOA](for https://ivoa.net).
+We are launching the [new website for the IVOA](https://ivoa.net).
