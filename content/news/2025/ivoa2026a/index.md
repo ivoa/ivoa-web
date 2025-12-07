@@ -1,5 +1,5 @@
 ---
-title: "IVOA November 2025 Interoperability Meeting"
+title: "Event announcement: IVOA June 2026 Interoperability Meeting"
 date: 2025-12-07T08:00:00+01:00
 author:  Marco Molinaro
 draft: false
