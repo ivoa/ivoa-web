@@ -7,7 +7,7 @@ NORMAL=$(shell tput sgr0)
 
 # URLs and Versions
 HUGO_URL=https://github.com/gohugoio/hugo/releases/download
-HUGO_VERSION=0.152.2
+HUGO_VERSION=0.154.5
 
 PAGEFIND_URL=https://github.com/CloudCannon/pagefind/releases/download
 PAGEFIND_VERSION=1.4.0
