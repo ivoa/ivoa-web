@@ -32,6 +32,6 @@ Alliance](/about/what_is_vo) (IVOA), which debates and agrees the
 technical standards that are needed to make the VO possible.  If you
 have suggestions for how to evolve the VO or provide other input, your
 first contact should be the [member
-organisation](/about/member_organizations) next to you.  But your input
+organisation](/about/member-organizations) next to you.  But your input
 is also welcome directly with the [IVOA's Working and Interest
 Groups](/members/working-groups).
