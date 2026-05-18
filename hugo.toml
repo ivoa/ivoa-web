@@ -1,4 +1,4 @@
-languageCode = "en-us"
+locale = "en-us"
 title = "International Virtual Observatory Alliance"
 author = "IVOA.net"
 
