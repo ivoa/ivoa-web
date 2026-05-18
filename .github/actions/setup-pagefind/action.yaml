@@ -4,7 +4,7 @@ inputs:
   pagefind_version:
     description: 'Version of PageFind to download'
     required: false
-    default: '1.4.0'
+    default: '1.5.2'
 runs:
   using: 'composite'
   steps:
