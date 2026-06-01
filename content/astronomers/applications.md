@@ -16,6 +16,8 @@ In this section, scientists can find available VO-compatible applications for th
 | [CDS Xmatch Service](http://cdsxmatch.u-strasbg.fr/xmatch) | CDS | A Crossmatch Service |
 | [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) | SVO | Filter Profile Service is a repository of Filter information for the VO |
 | [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) | |  |
+| [MOCPy](https://cds-astro.github.io/mocpy/) | CDS | A Python package to manipulate Multi-Order Coverages (MOC) |
+| [MOC CLI](https://github.com/cds-astro/cds-moc-rust/tree/main/crates/cli) | CDS | A Command Line Interface to manipulate Multi Order Coverages (MOC) |
 | [Montage](http://montage.ipac.caltech.edu/docs/index.html) | IRSA | Astronomical Image mosaic engine |
 | [PyVO](https://pyvo.readthedocs.io/en/latest/) | | PyVO is a package providing access to remote data and services of the Virtual observatory (VO) using Python. |
 | [SkyView](http://skyview.gsfc.nasa.gov/) | NASA/HEASARC | A Virtual Observatory on the Net application for generating images of any part of the sky at wavelengths in all regimes from Radio to Gamma-Ray. |
@@ -43,6 +45,7 @@ In this section, scientists can find available VO-compatible applications for th
 | **Scatter, 3D plots and histograms:** [TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [IPAC Firefly](https://github.com/Caltech-IPAC/firefly) |
 | **Statistics:** [AstroStat](http://voi.iucaa.in/voi/AstroStat.html) |
 | **Footprint Service:** [Aladin](http://aladin.u-strasbg.fr/aladin.gml), [VOServices](http://voservices.net/footprint/) |
+| **Coverage Maps manipulation:** [Aladin](http://aladin.u-strasbg.fr/aladin.gml), [MOCPy](https://cds-astro.github.io/mocpy/), [MOC CLI](https://github.com/cds-astro/cds-moc-rust/tree/main/crates/cli) |
 | **Table format conversion:** [TOPCAT](http://www.star.bris.ac.uk/%7Embt/topcat/), [STILTS](http://www.star.bris.ac.uk/%7Embt/stilts/) |
 | **Filter curves:** [VOServices](http://voservices.net/filter/), [Filter Profile Service](http://svo2.cab.inta-csic.es/theory/fps/) |
 | **SED building:** [VOSA](http://svo2.cab.inta-csic.es/theory/vosa/), [VOSpec](http://www.sciops.esa.int/index.php?project=SAT&page=vospec) |
