@@ -13,3 +13,6 @@ author = "IVOA.net"
 
 [minify]
   disableJS = true
+
+[security.node.permissions]
+  allowRead = ['*']
