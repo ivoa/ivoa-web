@@ -31,7 +31,7 @@ information on how to become involved with the IVOA.
 - [Japanese Virtual Observatory](http://jvo.nao.ac.jp/)
 - [Kazakhstan Virtual Observatory](https://vo.fai.kz/)
 - [Netherlands Virtual Observatory](http://www.virtualobservatory.nl)
-- [Observatoire Virtuel France](http://www.france-vo.org/)
+- [Observatoire Virtuel France](https://asov.obspm.fr/)
 - [Russian Virtual Observatory](http://www.inasan.ru/en/organizational-activity/rvo/)
 - [Square Kilometer Array Observatory](http://www.skatelescope.org)
 - [South African Astroinformatics Alliance](http://www.sa3.ac.za/)
