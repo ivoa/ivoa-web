@@ -34,11 +34,11 @@ jobs:
         run: make html
 
       - name: Upload the site to the production server with SFTP
-        uses: Dylan700/sftp-upload-action@latest
+        uses: ./.github/actions/sftp-upload
         with:
           username: ${{ secrets.SFTP_PROD_USER }}
           server: ${{ secrets.SFTP_PROD_SERVER }}
           port: ${{ secrets.SFTP_PROD_PORT }}
           key: ${{ secrets.SFTP_PROD_KEY }}
-          uploads: |
-            ./public/ => ${{ secrets.SFTP_PROD_PATH }}
+          local_path: ./public
+          remote_path: ${{ secrets.SFTP_PROD_PATH }}
