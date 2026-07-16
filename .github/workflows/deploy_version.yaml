@@ -27,7 +27,7 @@ jobs:
         run: echo "BRANCH_NAME=${{ env.BRANCH_NAME }}"
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@latest
         with:
           node-version: '24'
 
