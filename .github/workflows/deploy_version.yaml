@@ -46,11 +46,11 @@ jobs:
         run: BASEURL="https://webtest.ivoa.info/v/${{ env.BRANCH_NAME }}" make html
 
       - name: Upload the branch version of the website
-        uses: Dylan700/sftp-upload-action@latest
+        uses: ./.github/actions/sftp-upload
         with:
           username: webstage
           server: web.ivoa.net
           port: ${{ secrets.SFTP_PORT }}
           key: ${{ secrets.STAGE_ID }}
-          uploads: |
-            ./public/ => ./ivoa-web-stage/v/${{ env.BRANCH_NAME }}
+          local_path: ./public
+          remote_path: ./ivoa-web-stage/v/${{ env.BRANCH_NAME }}
