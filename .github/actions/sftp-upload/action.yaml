@@ -1,0 +1,102 @@
+name: 'Upload directory via SFTP'
+description: 'Uploads a local directory to a remote path using OpenSSH SFTP'
+inputs:
+  server:
+    description: 'SFTP server hostname'
+    required: true
+  username:
+    description: 'SFTP username'
+    required: true
+  port:
+    description: 'SFTP port'
+    required: false
+    default: '22'
+  key:
+    description: 'Private SSH key for SFTP authentication'
+    required: true
+  local_path:
+    description: 'Local directory to upload (contents are mirrored into remote_path)'
+    required: true
+  remote_path:
+    description: 'Remote destination directory'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Upload directory via SFTP
+      shell: bash
+      env:
+        SFTP_SERVER: ${{ inputs.server }}
+        SFTP_USERNAME: ${{ inputs.username }}
+        SFTP_PORT: ${{ inputs.port }}
+        SFTP_KEY: ${{ inputs.key }}
+        LOCAL_PATH: ${{ inputs.local_path }}
+        REMOTE_PATH: ${{ inputs.remote_path }}
+      run: |
+        set -euo pipefail
+
+        if [[ -z "${SFTP_SERVER}" || -z "${SFTP_USERNAME}" || -z "${SFTP_KEY}" ]]; then
+          echo "server, username, and key are required" >&2
+          exit 1
+        fi
+
+        LOCAL_PATH="${LOCAL_PATH%/}"
+        REMOTE_PATH="${REMOTE_PATH#./}"
+        REMOTE_PATH="${REMOTE_PATH%/}"
+
+        if [[ ! -d "${LOCAL_PATH}" ]]; then
+          echo "Local path is not a directory: ${LOCAL_PATH}" >&2
+          exit 1
+        fi
+
+        file_count="$(find "${LOCAL_PATH}" -type f | wc -l | tr -d ' ')"
+        echo "Uploading ${file_count} files from ${LOCAL_PATH}/ -> ${SFTP_USERNAME}@${SFTP_SERVER}:${REMOTE_PATH}/ (port ${SFTP_PORT})"
+
+        key_file="$(mktemp)"
+        batch_file="$(mktemp)"
+        cleanup() {
+          rm -f "${key_file}" "${batch_file}"
+        }
+        trap cleanup EXIT
+
+        # Support secrets stored with either real newlines or literal \n sequences.
+        key="${SFTP_KEY//$'\r'/}"
+        if [[ "${key}" != *$'\n'* ]]; then
+          key="${key//\\n/$'\n'}"
+        fi
+        printf '%s\n' "${key}" > "${key_file}"
+        chmod 600 "${key_file}"
+
+        {
+          abs=0
+          [[ "${REMOTE_PATH}" == /* ]] && abs=1
+          acc=""
+          while IFS= read -r -d '/' part || [[ -n "${part}" ]]; do
+            [[ -z "${part}" ]] && continue
+            if [[ -z "${acc}" ]]; then
+              if [[ "${abs}" -eq 1 ]]; then
+                acc="/${part}"
+              else
+                acc="${part}"
+              fi
+            else
+              acc="${acc}/${part}"
+            fi
+            # Leading '-' means "continue on error" (directory may already exist).
+            echo "-mkdir ${acc}"
+          done <<< "${REMOTE_PATH}/"
+          # Trailing "/." uploads directory contents into the remote path.
+          echo "put -R ${LOCAL_PATH}/. ${REMOTE_PATH}"
+        } > "${batch_file}"
+
+        echo "SFTP batch:"
+        cat "${batch_file}"
+
+        sftp -i "${key_file}" \
+          -P "${SFTP_PORT}" \
+          -oBatchMode=yes \
+          -oStrictHostKeyChecking=accept-new \
+          -b "${batch_file}" \
+          "${SFTP_USERNAME}@${SFTP_SERVER}"
+
+        echo "Upload complete."
