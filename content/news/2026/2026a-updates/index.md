@@ -1,6 +1,6 @@
 ---
 title: "IVOA Newsletter 27 & Nov. 2026 Interop save-the-date"
-date: 2026-07-28T10:00:00+01:00
+date: 2026-07-27T10:00:00+01:00
 author:  Marco Molinaro
 draft: false
 tags:
