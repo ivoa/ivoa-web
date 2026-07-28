@@ -1,6 +1,6 @@
 ---
 title: "IVOA Roadmap"
-date: 2025-11-15T11:00:00+01:00
+date: 2026-06-12T11:00:00+01:00
 draft: false
 tags:
 - about
@@ -26,9 +26,9 @@ to send flexible queries to a wide variety of databases.
 The IVOA is working hard on further standards, including those needed for virtual storage 
 addressing, single sign on, semantic reasoning, grid and web service modularisation.
 
-The last semestral roadmap document maintained by the TCG is the [2025B
-Roadmap](http://wiki.ivoa.net/twiki/bin/view/IVOA/2025ARoadmap), spanning the time between
-the November 2025 and June 2026 Interoperability meetings.
+The last semestral roadmap document maintained by the TCG is the [2026A
+Roadmap](http://wiki.ivoa.net/twiki/bin/view/IVOA/2026ARoadmap), spanning the time between
+the June 2026 and November 2026 Interoperability meetings.
 
 All previous roadmap documents can be found in the [Technical Roadmap 
 Documents](https://wiki.ivoa.net/twiki/bin/view/IVOA/TCGRoadmaps) 
