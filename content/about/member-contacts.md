@@ -8,7 +8,7 @@ tags:
 {{<my-table>}}
 |  **Acronym** |  **VO Project/Country**  |  **Primary Contact**  |
 | ---: | :--- | :---: |
-|  NOVA | [Argentina Virtual Observatory](http://nova.org.ar/) |  [Sebastian Gurovich](mailto:gurovich@mail.oac.uncor.edu) |
+|  NOVA | [Argentina Virtual Observatory](http://nova.org.ar/) | VACANT |
 |  ArVO | [Armenian Virtual Observatory](http://arvo.sci.am) |  [Areg Mickaelian](mailto:aregmick@aras.am) |
 |  AstroGrid | [Virtual Observatory United Kingdom](http://astrogrid.roe.ac.uk/) |  [Andy Lawrence](mailto:al@roe.ac.uk) |
 |  ASVO | [Australian All-Sky Virtual Observatory](http://www.asvo.org.au/) |  [Simon O'Toole](mailto:simon.otoole@mq.edu.au) |
@@ -18,10 +18,10 @@ tags:
 |  CVO | [Canadian Virtual Observatory](http://services.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/cvo/) |  [JJ Kavelaars](mailto:jj.kavelaars@nrc-cnrc.gc.ca) |
 |  ESA | [ESA](https://www.cosmos.esa.int/web/esdc) |  [Christophe Arviset](mailto:Christophe.Arviset@esa.int) |
 |  EURO-VO | [European Virtual Observatory](http://www.euro-vo.org/) |  [Mark Allen](mailto:mark.allen@astro.unistra.fr) |
-|  GAVO | [German Astrophysical Virtual Observatory](http://www.g-vo.org/) |  [Joachim Wambsganss](mailto:jkw@ari.uni-heidelberg.de) |
+|  GAVO | [German Astrophysical Virtual Observatory](http://www.g-vo.org/) |  [Markus Demleitner](mailto:msdemlei@ari.uni-heidelberg.de) |
 |  NLVO | [Netherland Virtual Observatory](http://www.virtualobservatory.nl) |  [Yan Grange](mailto:grange@astron.nl) |
 |  JVO | [Japanese Virtual Observatory](http://jvo.nao.ac.jp/) |  [Yuji Shirasaki](mailto:yuji.shirasaki@nao.ac.jp) |
-|  KazVO | [Kazakstan Virtual Observatory](https://fai.kz/) |  [Chingis Omarov](mailto:chingis.omarov@gmail.com) |
+|  KazVO | [Kazakstan Virtual Observatory](https://fai.kz/) |  [Yerlan Aimuratov](mailto:yaimuratov@gmail.com) |
 |  OV-France | [Observatoire Virtuel France](http://www.france-vo.org/) |  [Ada Nebot](mailto:ada.nebot@astro.unistra.fr) |
 |  RVO | [Russian Virtual Observatory](http://www.inasan.rssi.ru/eng/rvo/) |  [Oleg Malkov](mailto:malkov@inasan.ru) |
 |  SA<sup>3</sup> | [South Africa Astroinformatics Alliance](http://www.sa3.ac.za) |  [Encarni Romero Colmenero](mailto:erc@saao.ac.za) |
