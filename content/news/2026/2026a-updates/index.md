@@ -13,10 +13,11 @@ published. It brings you:
 - advances on VO standards for high-energy astrophysics;
 - highlights on VO applications and implementations.
 
+
 It also alerts the dates for the next IVOA Interoperability Meeting
 that will happen in Perth (Australia) on 6-8 November 2026 (just after
-the ADASS XXXVI conference, happening in the same town.
+the ADASS XXXVI conference, happening in the same town).
 
 Mark your calendars and stay tuned for further information about it
-(e.g. following the [IVOA Events page](https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents)!
+(e.g. following the [IVOA Events page](https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaEvents))!
 
