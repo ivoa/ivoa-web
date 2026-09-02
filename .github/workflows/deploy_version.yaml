@@ -48,9 +48,9 @@ jobs:
       - name: Upload the branch version of the website
         uses: ./.github/actions/sftp-upload
         with:
-          username: webstage
-          server: web.ivoa.net
-          port: ${{ secrets.SFTP_PORT }}
-          key: ${{ secrets.STAGE_ID }}
+          username: ${{ secrets.SFTP_STAGE_USER }}
+          server: ${{ secrets.SFTP_STAGE_SERVER }}
+          port: ${{ secrets.SFTP_STAGE_PORT }}
+          key: ${{ secrets.SFTP_STAGE_KEY }}
           local_path: ./public
-          remote_path: ./ivoa-web-stage/v/${{ env.BRANCH_NAME }}
+          remote_path: ${{ secrets.SFTP_VERSION_PATH }}/${{ env.BRANCH_NAME }}
