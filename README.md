@@ -1,12 +1,13 @@
 # IVOA Website
 
-This repository contains the source code to re-write the current [www.ivoa.net](https://www.ivoa.net) webpage.
-
-The existing HTML pages are present in the _current-html_ folder.
+The source of the pages of the IVOA, online at
+[www.ivoa.net](https://www.ivoa.net).
 
 ## Contributing
 
-Please see the detailed [Contributing Guide](CONTRIBUTING.md) on contributing to the project.
+Please see the detailed [Contributing Guide](CONTRIBUTING.md) if you
+would like to help out with the maintenance of the ivoa.net (or just
+contribute a minor fix).
 
 ## License
 

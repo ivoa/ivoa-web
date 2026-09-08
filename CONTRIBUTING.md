@@ -1,6 +1,6 @@
 # Contributing
 
-The new version of the IVOA website is being developed with [Hugo](https://gohugo.io/), a popular open-source tool for generating static websites. Instead of creating and modifying the site content directly in HTML, contributors will write [markdown](https://www.markdownguide.org/tools/hugo/) for most content. Since the site is now managed in Github using source control, development will follow a typical Git workflow, which will be covered in detail.
+The IVOA website is being developed with [Hugo](https://gohugo.io/), a popular open-source tool for generating static websites. Instead of creating and modifying the site content directly in HTML, contributors will write [markdown](https://www.markdownguide.org/tools/hugo/) for most content. Since the site is now managed in Github using source control, development will follow a typical Git workflow, which will be covered in detail.
 
 # Development with Git and Github
 
@@ -8,7 +8,8 @@ You should [install git](https://github.com/git-guides/install-git) if it is not
 
 An account on [Github](https://github.com) is required, along with write permissions on the [ivoa-web repository](https://github.com/ivoa/ivoa-web). Please refer to the [Getting Help](#getting-help) section for information on how to request write access to the repository.
 
-In the future, the administrators plan to accept pull requests from forks, after which write access will not be required.
+One-time contributions are encouraged from forks; you will not benefit
+from CI-based previews then, though.
 
 Pushing changes to the repository also requires working authentication, which is covered in the [set up git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) documentation.
 
