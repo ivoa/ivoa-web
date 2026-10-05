@@ -1,0 +1,14 @@
+.git
+.github
+node_modules
+public
+preview
+hugo-bin
+hugo-bin_old
+pagefind-bin
+pagefind-bin_old
+static/pagefind
+.public_tmp
+*.tar.gz
+.idea
+resources/_gen

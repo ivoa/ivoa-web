@@ -1,0 +1,29 @@
+services:
+  preview:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1313:1313"
+    volumes:
+      - .:/site
+      - preview_node_modules:/site/node_modules
+    environment:
+      BASEURL: ${BASEURL:-}
+    # Live-edit preview aligned with `make preview` / local_preview.bash
+    # (binds 0.0.0.0 so the host can reach http://localhost:1313).
+    command: ["/usr/local/bin/preview-entrypoint.sh"]
+
+  deploy-mock:
+    build:
+      context: .
+      dockerfile: docker/deploy-mock/Dockerfile
+    ports:
+      # Host 2222 -> container SSH 22
+      - "2222:22"
+    volumes:
+      - deploy_mock_www:/var/www/html
+
+volumes:
+  preview_node_modules:
+  deploy_mock_www:

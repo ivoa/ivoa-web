@@ -1,0 +1,100 @@
+name: "CI"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: "Build site"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Hugo
+        uses: ./.github/actions/setup-hugo
+
+      - name: Setup PageFind
+        uses: ./.github/actions/setup-pagefind
+
+      - name: Build the website
+        run: make html
+
+      - name: Upload public/ artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-public
+          path: public/
+          if-no-files-found: error
+
+  deploy-smoke:
+    runs-on: ubuntu-latest
+    name: "Deploy smoke (mock SSH/rsync)"
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download public/ artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-public
+          path: public
+
+      - name: Start deploy-mock
+        run: docker compose up -d --build deploy-mock
+
+      - name: Wait for SSH on localhost:2222
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 30); do
+            if nc -z localhost 2222; then
+              echo "deploy-mock SSH is up"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "deploy-mock did not become ready on port 2222" >&2
+          docker compose logs deploy-mock || true
+          exit 1
+
+      - name: Load mock SSH private key (TEST ONLY; not org SFTP secrets)
+        id: mock_key
+        run: |
+          {
+            echo 'key<<EOF'
+            cat deploy/mock-ssh/id_ed25519
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Rsync upload to mock
+        uses: ./.github/actions/rsync-upload
+        with:
+          server: localhost
+          username: deploy
+          port: '2222'
+          key: ${{ steps.mock_key.outputs.key }}
+          local_path: ./public
+          remote_path: /var/www/html
+
+      - name: Assert index.html present on mock
+        run: |
+          set -euo pipefail
+          docker compose exec -T deploy-mock test -f /var/www/html/index.html
+          docker compose exec -T deploy-mock ls -la /var/www/html/index.html
+          echo "deploy-smoke OK: index.html present under /var/www/html"
+
+      - name: Stop deploy-mock
+        if: always()
+        run: docker compose down -v

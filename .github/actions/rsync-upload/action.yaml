@@ -1,0 +1,87 @@
+name: 'Upload directory via rsync'
+description: 'Uploads a local directory to a remote path using rsync over SSH'
+inputs:
+  server:
+    description: 'SSH server hostname'
+    required: true
+  username:
+    description: 'SSH username'
+    required: true
+  port:
+    description: 'SSH port'
+    required: false
+    default: '22'
+  key:
+    description: 'Private SSH key for authentication'
+    required: true
+  local_path:
+    description: 'Local directory to upload (contents are mirrored into remote_path)'
+    required: true
+  remote_path:
+    description: 'Remote destination directory'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Upload directory via rsync
+      shell: bash
+      env:
+        RSYNC_SERVER: ${{ inputs.server }}
+        RSYNC_USERNAME: ${{ inputs.username }}
+        RSYNC_PORT: ${{ inputs.port }}
+        RSYNC_KEY: ${{ inputs.key }}
+        LOCAL_PATH: ${{ inputs.local_path }}
+        REMOTE_PATH: ${{ inputs.remote_path }}
+      run: |
+        set -euo pipefail
+
+        if [[ -z "${RSYNC_SERVER}" || -z "${RSYNC_USERNAME}" || -z "${RSYNC_KEY}" ]]; then
+          echo "server, username, and key are required" >&2
+          exit 1
+        fi
+
+        LOCAL_PATH="${LOCAL_PATH%/}"
+        REMOTE_PATH="${REMOTE_PATH#./}"
+        REMOTE_PATH="${REMOTE_PATH%/}"
+
+        if [[ ! -d "${LOCAL_PATH}" ]]; then
+          echo "Local path is not a directory: ${LOCAL_PATH}" >&2
+          exit 1
+        fi
+
+        if ! command -v rsync >/dev/null 2>&1; then
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq rsync openssh-client
+        fi
+
+        file_count="$(find "${LOCAL_PATH}" -type f | wc -l | tr -d ' ')"
+        echo "Uploading ${file_count} files from ${LOCAL_PATH}/ -> ${RSYNC_USERNAME}@${RSYNC_SERVER}:${REMOTE_PATH}/ (port ${RSYNC_PORT})"
+
+        key_file="$(mktemp)"
+        cleanup() {
+          rm -f "${key_file}"
+        }
+        trap cleanup EXIT
+
+        # Support secrets stored with either real newlines or literal \n sequences.
+        key="${RSYNC_KEY//$'\r'/}"
+        if [[ "${key}" != *$'\n'* ]]; then
+          key="${key//\\n/$'\n'}"
+        fi
+        printf '%s\n' "${key}" > "${key_file}"
+        chmod 600 "${key_file}"
+
+        # Ensure the remote parent path exists, then mirror contents with --delete.
+        ssh -i "${key_file}" \
+          -p "${RSYNC_PORT}" \
+          -o BatchMode=yes \
+          -o StrictHostKeyChecking=accept-new \
+          "${RSYNC_USERNAME}@${RSYNC_SERVER}" \
+          "mkdir -p '${REMOTE_PATH}'"
+
+        rsync -avz --delete \
+          -e "ssh -i ${key_file} -p ${RSYNC_PORT} -o BatchMode=yes -o StrictHostKeyChecking=accept-new" \
+          "${LOCAL_PATH}/" \
+          "${RSYNC_USERNAME}@${RSYNC_SERVER}:${REMOTE_PATH}/"
+
+        echo "Upload complete."
