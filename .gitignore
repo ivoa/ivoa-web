@@ -25,3 +25,6 @@ hugo_stats.json
 .idea
 node_modules
 /dist
+
+# Generated calendars
+content/calendars/*.ics
