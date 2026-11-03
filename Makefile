@@ -7,7 +7,7 @@ NORMAL=$(shell tput sgr0)
 
 # URLs and Versions
 HUGO_URL=https://github.com/gohugoio/hugo/releases/download
-HUGO_VERSION=0.165.0
+HUGO_VERSION=0.169.0
 
 PAGEFIND_URL=https://github.com/CloudCannon/pagefind/releases/download
 PAGEFIND_VERSION=1.5.2
@@ -39,6 +39,25 @@ else ifeq ($(UNAME_S),Darwin)
 else
    $(error Unsupported OS: $(UNAME_S))
 endif
+
+.DELETE_ON_ERROR:
+
+# Prepare calendars
+CALENDAR_SRC_DIR = data/calendars
+CALENDAR_DIR = content/calendars
+
+$(CALENDAR_DIR):
+	mkdir -p $(CALENDAR_DIR)
+
+yaml2ics-install:
+	@python -c 'import yaml2ics' 2> /dev/null || python -m pip install -q -r requirements.txt
+
+$(CALENDAR_DIR)/%.ics: $(CALENDAR_SRC_DIR)/%.yaml | $(CALENDAR_DIR) yaml2ics-install
+	python -m yaml2ics $< > $@
+
+CALENDAR_SOURCES = $(wildcard $(CALENDAR_SRC_DIR)/*.yaml)
+calendars: $(patsubst $(CALENDAR_SRC_DIR)/%.yaml,$(CALENDAR_DIR)/%.ics,$(CALENDAR_SOURCES))
+
 
 # Determine download command: use wget if available, otherwise curl.
 WGET := $(shell command -v wget 2>/dev/null)
@@ -89,7 +108,7 @@ npm-install: ensure-node
 	fi
 
 # Help target
-.PHONY: help preview update-search-index clear-search-index newsletter list-draft html generate-public-pages clear-generated-public-pages index-public-pages clear-public-pages-index clear install uninstall uninstall-hugo uninstall-pagefind
+.PHONY: help preview update-search-index clear-search-index newsletter list-draft html generate-public-pages clear-generated-public-pages index-public-pages clear-public-pages-index clear install yaml2ics-install uninstall uninstall-hugo uninstall-pagefind calendars
 
 # Preview target (now depends on Node deps)
 preview: npm-install install update-search-index list-draft
@@ -149,7 +168,7 @@ list-draft: install
 	@echo
 
 # Generate HTML version with search index (now depends on Node deps)
-html: npm-install install generate-public-pages index-public-pages
+html: npm-install install generate-public-pages index-public-pages calendars
 
 generate-public-pages: clear-generated-public-pages
 	@echo "- Generating the HTML pages..."
@@ -165,6 +184,8 @@ generate-public-pages: clear-generated-public-pages
 clear-generated-public-pages:
 	@echo "- Deleting all generated public pages..."
 	@rm -rf "${DIR_PUBLIC}"
+	@rm -rf preview
+	@rm -rf content/calendars/*.ics
 
 index-public-pages: clear-public-pages-index
 	@echo "- Indexing the generated public pages..."

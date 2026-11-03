@@ -1,0 +1,20 @@
+name: IVOA TCG
+events:
+  - summary: IVOA TCG October
+    description: |
+      TCG monthly telecon
+
+      Meeting Link: https://meet.google.com/xrf-imee-uyj?authuser=0&hs=122
+      Meeting agenda: https://wiki.ivoa.net/twiki/bin/view/IVOA/TCG-TC-20261026
+    begin: 2026-10-26 20:00:00
+    duration: { minutes: 60 }
+
+  - summary: IVOA TCG November
+    description: |
+      TCG monthly telecon, hybrid with interop
+
+      Meeting Link: https://aao.zoom.us/j/86707722958?pwd=8xMHrfOV3wlLci8GFqkJeLCeOw9ckZ.1
+      Meeting agenda: https://wiki.ivoa.net/twiki/bin/view/IVOA/TCGf2f20261105
+    timezone: "Australia/Perth"
+    begin: 2026-11-05 14:00:00
+    duration: { minutes: 60 }

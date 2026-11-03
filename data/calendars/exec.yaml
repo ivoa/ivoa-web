@@ -1,0 +1,10 @@
+name: IVOA Exec
+events:
+  - summary: IVOA Exec Q3
+    description: |
+      IVOA Exec Committee meeting
+
+      Meeting Link: tbd
+      Meeting agenda: tbd
+    begin: 2026-09-15 20:00:00
+    duration: { minutes: 60 }
