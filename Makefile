@@ -40,6 +40,20 @@ else
    $(error Unsupported OS: $(UNAME_S))
 endif
 
+# Prepare calendars
+CALENDAR_DIR = content/calendars
+
+$(CALENDAR_DIR):
+	mkdir -p $(CALENDAR_DIR)
+
+$(CALENDAR_DIR)/%.ics: calendars/%.yaml $(CALENDAR_DIR)
+	python -m yaml2ics $< > $@
+
+CALENDAR_SOURCES = $(wildcard calendars/*.yaml)
+calendars: $(subst calendars,$(CALENDAR_DIR),$(CALENDAR_SOURCES:.yaml=.ics))
+	((python -c 'import yaml2ics' && pre-commit) > /dev/null 2>&1) || python -m pip install -q -r requirements.txt
+
+
 # Determine download command: use wget if available, otherwise curl.
 WGET := $(shell command -v wget 2>/dev/null)
 CURL := $(shell command -v curl 2>/dev/null)
@@ -89,7 +103,7 @@ npm-install: ensure-node
 	fi
 
 # Help target
-.PHONY: help preview update-search-index clear-search-index newsletter list-draft html generate-public-pages clear-generated-public-pages index-public-pages clear-public-pages-index clear install uninstall uninstall-hugo uninstall-pagefind
+.PHONY: help preview update-search-index clear-search-index newsletter list-draft html generate-public-pages clear-generated-public-pages index-public-pages clear-public-pages-index clear install uninstall uninstall-hugo uninstall-pagefind calendars
 
 # Preview target (now depends on Node deps)
 preview: npm-install install update-search-index list-draft
@@ -149,7 +163,7 @@ list-draft: install
 	@echo
 
 # Generate HTML version with search index (now depends on Node deps)
-html: npm-install install generate-public-pages index-public-pages
+html: npm-install install generate-public-pages index-public-pages calendars
 
 generate-public-pages: clear-generated-public-pages
 	@echo "- Generating the HTML pages..."
@@ -165,6 +179,7 @@ generate-public-pages: clear-generated-public-pages
 clear-generated-public-pages:
 	@echo "- Deleting all generated public pages..."
 	@rm -rf "${DIR_PUBLIC}"
+	@rm -rf content/calendars/*.ics
 
 index-public-pages: clear-public-pages-index
 	@echo "- Indexing the generated public pages..."
