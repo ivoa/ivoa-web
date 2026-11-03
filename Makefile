@@ -179,6 +179,7 @@ generate-public-pages: clear-generated-public-pages
 clear-generated-public-pages:
 	@echo "- Deleting all generated public pages..."
 	@rm -rf "${DIR_PUBLIC}"
+	@rm -rf preview
 	@rm -rf content/calendars/*.ics
 
 index-public-pages: clear-public-pages-index
