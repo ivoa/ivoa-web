@@ -1,0 +1,135 @@
+.hero-title,
+.navbar-logo-text {
+  font-family: "Lato";
+}
+
+table.spec__table {
+  width: 100%;
+  margin-top: 1.2rem;
+  display: inline-table;
+}
+
+table.spec__table thead {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.spec__status {
+  width: 20rem;
+}
+
+.spec__status a {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.spec__table {
+  border-spacing: 0;
+}
+
+tr.spec td {
+  padding-top: 0.35rem;
+  padding-bottom: 0.45rem;
+  padding-left: 0.5rem;
+}
+
+td.spec__title a {
+  display: inline-block;
+  width: 100%;
+}
+
+tr.spec img {
+  vertical-align: middle;
+}
+
+html[data-theme="light"] tr.spec.alt-row {
+  background-color: #efefef;
+}
+
+html[data-theme="light"] tr.spec:hover {
+  background-color: #e0e0e0;
+}
+
+html[data-theme="dark"] tr.spec.alt-row {
+  background-color: #202020;
+}
+
+html[data-theme="dark"] tr.spec:hover {
+  background-color: #2f2f2f;
+}
+
+.calendar-list .calendar {
+  padding-bottom: 1rem;
+}
+
+.calendar-list .calendar:last-of-type {
+  padding-bottom: 0rem;
+}
+
+.calendar-list .calendar-copy {
+  height: 1rem;
+  cursor: pointer;
+  padding-left: 0.25rem;
+}
+
+.calendar-list .calendar-event {
+  padding-left: 1rem;
+  font-size: 0.8rem;
+}
+
+/* FullCalendar layout needs regular tables, not the theme's scrollable block tables. */
+.fc table {
+  display: table;
+  width: 100%;
+  max-width: none;
+  overflow: visible;
+}
+
+.grant {
+  background-color: var(--pst-color-surface);
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.25rem;
+  line-height: 1.2em;
+  margin: 1.5em 0;
+  padding: 1rem;
+}
+
+.grant .title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.grant .title .pdf {
+  display: inline;
+}
+
+.grant .authors {
+  display: inline;
+}
+
+.grant .author {
+  display: inline;
+  font-weight: bold;
+}
+
+.grant .date::before {
+  content: "·";
+}
+
+.grant .date {
+  display: inline;
+}
+
+.grant .summary {
+  padding-top: 0.5rem;
+  font-style: italic;
+}
+
+.grant .status-label {
+  display: inline-block;
+  font-weight: bold;
+  padding-top: 0.75rem;
+}
+
+.grant .status {
+  display: inline;
+}
