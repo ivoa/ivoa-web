@@ -46,7 +46,7 @@ jobs:
         run: BASEURL="https://webtest.ivoa.info/v/${{ env.BRANCH_NAME }}" make html
 
       - name: Upload the branch version of the website
-        uses: ./.github/actions/sftp-upload
+        uses: ./.github/actions/rsync-upload
         with:
           username: ${{ secrets.SFTP_STAGE_USER }}
           server: ${{ secrets.SFTP_STAGE_SERVER }}

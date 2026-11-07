@@ -143,7 +143,7 @@ It would also be helpful under "Development" on the righthand menu to select you
 
 ## Branch Versions of the Site
 
-Your changes will be included in a new branch version of the website after you open a PR. The deployment of this site is triggered automatically in the PR checks.
+Your changes will be included in a new branch version of the website after you open a PR. The deployment of this site is triggered automatically in the PR checks. Branch and production uploads use **rsync over SSH** (first-party `rsync-upload` action) with the same `SFTP_*` GitHub secrets as before; see [#146](https://github.com/ivoa/ivoa-web/issues/146).
 
 Assuming the issue branch was called `iss10` and the action complete succesfully, the development version would be accessible at:
 
