@@ -1,5 +1,8 @@
 name: 'Upload directory via SFTP'
-description: 'Uploads a local directory to a remote path using OpenSSH SFTP'
+description: >-
+  DEPRECATED: prefer ./.github/actions/rsync-upload (see #146).
+  Uploads a local directory to a remote path using OpenSSH SFTP.
+  Kept temporarily until rsync is confirmed on staging/production.
 inputs:
   server:
     description: 'SFTP server hostname'
